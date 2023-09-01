@@ -12,6 +12,9 @@
         <div>
           <router-link :to="{ name: 'contact' }">Contact</router-link>
         </div>
+        <div>
+          <router-link :to="{ name: 'blog' }">blog</router-link>
+        </div>
       </nav>
     </header>
     <main>

@@ -1,3 +1,3 @@
 <template>
-  <p>This is the page!</p>
+  <vue-markdown-it source="# This is a title!" />
 </template>
