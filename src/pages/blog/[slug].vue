@@ -9,12 +9,14 @@ const route = useRoute();
 const source = ref();
 
 onServerPrefetch(async () => {
-  getData();
+  await getData();
+  window[`pageSource${route.params.slug}`] = source.value;
 });
 
 onMounted(async () => {
   // Will only run client side when source was not fetched on the server side
-  if (!source.value) getData();
+  source.value = window[`pageSource${route.params.slug}`];
+  if (!source.value) await getData();
 });
 
 async function getData() {

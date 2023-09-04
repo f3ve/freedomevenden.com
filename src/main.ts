@@ -27,13 +27,13 @@ export const createApp = ViteSSG(
 );
 
 export async function includedRoutes(paths, routes) {
-  return Promise.all(
-    routes.flatMap(async (route) => {
-      return route.path.includes('/blog/')
-        ? (await getPostsSlugs()).data.data.map(
-            (post) => `/blog/${post.attributes.slug}`,
-          )
-        : route.path;
-    }),
+  const posts = await getPostsSlugs();
+
+  const staticPaths = paths.filter((path) => !path.includes(':'));
+
+  const dynamicPosts = posts.data.data.map(
+    (item: any) => `/blog/${item.attributes.slug}`,
   );
+
+  return [...dynamicPosts, ...staticPaths];
 }
