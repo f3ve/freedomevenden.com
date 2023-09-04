@@ -8,18 +8,24 @@ const route = useRoute();
 
 const source = ref();
 
+onServerPrefetch(async () => {
+  getData();
+});
+
 onMounted(async () => {
-  console.log(route.params.slug);
+  // Will only run client side when source was not fetched on the server side
+  if (!source.value) getData();
+});
+
+async function getData() {
   if (typeof route.params.slug === 'string')
     try {
       const res = await getPostBySlug(route.params.slug);
       if (res.data) {
         source.value = res.data.data[0].attributes.body;
       }
-    } catch (err) {
-      console.error(err);
-    }
-});
+    } catch (err) {}
+}
 </script>
 
 <template>

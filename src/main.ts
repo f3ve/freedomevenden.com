@@ -1,4 +1,5 @@
 import '@/styles/globals.scss';
+import axios from 'axios';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
@@ -28,7 +29,7 @@ export const createApp = ViteSSG(
 export async function includedRoutes(paths, routes) {
   return Promise.all(
     routes.flatMap(async (route) => {
-      return route.name === 'post'
+      return route.path.includes('/blog/')
         ? (await getPostsSlugs()).data.data.map(
             (post) => `/blog/${post.attributes.slug}`,
           )

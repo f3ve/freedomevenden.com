@@ -8,7 +8,11 @@ const api = axios.create({
 });
 
 export function getPostsSlugs() {
-  return api.get(`/posts?filters?fields[0]=slug`);
+  return api.get(`/posts`, {
+    params: {
+      'fields[0]': 'slug',
+    },
+  });
 }
 
 export function getPosts(search?: string) {
