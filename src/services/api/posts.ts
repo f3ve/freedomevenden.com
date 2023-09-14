@@ -1,4 +1,5 @@
 import axios from 'axios';
+import type { BlogPost, ServerResponsePaginated } from './apiTypes';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -15,8 +16,19 @@ export function getPostsSlugs() {
   });
 }
 
-export function getPosts(search?: string) {
-  return api.get(`/posts`, {
+export function getAllPosts() {
+  return api.get<ServerResponsePaginated<BlogPost>>('/posts', {
+    params: {
+      pagination: {
+        page: 1,
+        pageSize: 1000,
+      },
+    },
+  });
+}
+
+export function getPostsList(search?: string) {
+  return api.get<ServerResponsePaginated>(`/posts`, {
     params: {
       'filters[title][$contains]': search,
       'fields[0]': 'title',
