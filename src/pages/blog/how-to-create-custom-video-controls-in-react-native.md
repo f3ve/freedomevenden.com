@@ -1,8 +1,9 @@
 ---
 title: How to Create Custom Video Controls in React Native
+lang: en
+duration: 10min
+description: This is a test
 ---
-
-# {{frontmatter.title}}
 
 Videos are an extremely common way for users to consume information. On average there are 1 million video views per day on YouTube, and everyone has a Netflix subscription.
 

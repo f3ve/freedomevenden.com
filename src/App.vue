@@ -1,8 +1,9 @@
 <template>
-  <div class="app-container">
+  <div class="app-container font-sans">
     <CoreNavBar />
-    <main>
+    <main class="">
       <RouterView />
     </main>
+    <CoreFooter />
   </div>
 </template>

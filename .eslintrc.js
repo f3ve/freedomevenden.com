@@ -11,6 +11,7 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-prettier',
+    '@unocss',
     './.eslintrc-auto-import.json',
   ],
   rules: {
@@ -21,6 +22,7 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vue/no-v-text-v-html-on-component': 'warn',
     'prettier/prettier': 'error',
+    '@unocss/blocklist': 'warn',
   },
   settings: {
     'import/extensions': ['.js', '.vue', '.ts', '.json'],

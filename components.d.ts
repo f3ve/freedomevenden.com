@@ -7,6 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BlogPostList: typeof import('./src/pages/blog/components/BlogPostList.vue')['default']
+    CoreFooter: typeof import('./src/core/components/CoreFooter.vue')['default']
+    CoreMdWrapper: typeof import('./src/core/components/CoreMdWrapper.vue')['default']
     CoreNavBar: typeof import('./src/core/components/CoreNavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
