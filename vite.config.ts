@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import Pages from 'vite-plugin-pages';
-import Layouts from 'vite-plugin-vue-layouts';
+import md from 'unplugin-vue-markdown/vite';
 
 import 'vite-ssg';
 
@@ -29,11 +29,15 @@ export default defineConfig({
   },
 
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+    md({
+      headEnabled: true,
+    }),
     AutoImport({
       imports: [
         'vue',
-        'pinia',
         {
           'vue-router': [
             'createRouter',
@@ -54,21 +58,12 @@ export default defineConfig({
     }),
 
     Components({
-      dirs: [
-        'src/core/components',
-        'src/layouts/**/components/**',
-        'src/pages/**/components/**',
-      ],
+      dirs: ['src/core/components', 'src/pages/**/components/**'],
     }),
 
     Pages({
       exclude: ['**/components/**'],
-      extensions: ['vue'],
-    }),
-
-    Layouts({
-      exclude: ['**/components/**'],
-      layoutsDirs: ['src/layouts'],
+      extensions: ['vue', 'md'],
     }),
   ],
 });
