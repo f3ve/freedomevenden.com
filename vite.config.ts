@@ -5,8 +5,12 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import Pages from 'vite-plugin-pages';
 import md from 'unplugin-vue-markdown/vite';
+import matter from 'gray-matter';
+import fs from 'fs-extra';
+import UnoCSS from 'unocss/vite';
 
 import 'vite-ssg';
+import { resolve } from 'node:path';
 
 export default defineConfig({
   optimizeDeps: {
@@ -34,6 +38,7 @@ export default defineConfig({
     }),
     md({
       headEnabled: true,
+      wrapperComponent: 'CoreMdWrapper',
     }),
     AutoImport({
       imports: [
@@ -57,13 +62,32 @@ export default defineConfig({
       },
     }),
 
+    UnoCSS({
+      configFile: './uno.config.ts',
+    }),
+
     Components({
       dirs: ['src/core/components', 'src/pages/**/components/**'],
+      extensions: ['vue', 'md'],
+      dts: true,
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
 
     Pages({
       exclude: ['**/components/**'],
       extensions: ['vue', 'md'],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1));
+
+        if (path.endsWith('.md')) {
+          const markdown = fs.readFileSync(path, 'utf-8');
+          const { data } = matter(markdown);
+
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data });
+        }
+
+        return route;
+      },
     }),
   ],
 });

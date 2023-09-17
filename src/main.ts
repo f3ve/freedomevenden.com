@@ -1,21 +1,14 @@
-import '@/styles/globals.scss';
+import '@unocss/reset/tailwind.css';
+import 'virtual:uno.css';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
-// import { createHead } from '@unhead/vue';
 import routes from '~pages';
 
-export const createApp = ViteSSG(
-  App,
-  {
-    scrollBehavior(to, from, savedPosition) {
-      if (savedPosition) return savedPosition;
-      return { top: 0 };
-    },
-    routes,
+export const createApp = ViteSSG(App, {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition;
+    return { top: 0 };
   },
-  // ({ app }) => {
-  //   const head = createHead();
-  //   app.use(head);
-  // },
-);
+  routes,
+});
