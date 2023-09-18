@@ -1,21 +1,19 @@
 <script lang="ts" setup>
+import type { BlogPostFrontmatter } from './types';
+
 const router = useRouter();
 
-const routes = router
+const posts: BlogPostFrontmatter[] = router
   .getRoutes()
-  .filter((route) => route.path.startsWith('/blog/'));
-
-onMounted(() => {
-  console.log(routes);
-});
+  .filter((route) => route.path.startsWith('/blog/'))
+  .map((route) => ({
+    path: route.path,
+    ...route.meta.frontmatter,
+  }));
 </script>
 
 <template>
-  <ul>
-    <li>
-      <RouterLink v-for="route in routes" :key="route.path" :to="route.path">
-        {{ route.meta.frontmatter.title }}
-      </RouterLink>
-    </li>
+  <ul class="flex flex-col list-none gap-sm pl-none">
+    <BlogListItem v-for="post in posts" :key="post.path" :post="post" />
   </ul>
 </template>

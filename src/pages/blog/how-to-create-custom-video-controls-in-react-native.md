@@ -1,8 +1,8 @@
 ---
 title: How to Create Custom Video Controls in React Native
-lang: en
 duration: 10min
 description: This is a test
+datePublished: 2023-09-17T00:00:00
 ---
 
 Videos are an extremely common way for users to consume information. On average there are 1 million video views per day on YouTube, and everyone has a Netflix subscription.
@@ -28,6 +28,8 @@ Once the app is created, navigate into the base directory and install expo-av an
 Expo AV is a package provided by Expo that gives us access to their Video and Audio components. React Native Elements is a component library that will allow us to easily create some customizable controls.
 
 Once that finishes installing open App.js and the code with this:
+
+<!-- asda -->
 
 ```jsx
 import React from 'react';
