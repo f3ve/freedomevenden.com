@@ -4,6 +4,7 @@ import {
   presetUno,
   presetWebFonts,
   presetIcons,
+  transformerDirectives,
 } from 'unocss';
 
 export default defineConfig({
@@ -18,4 +19,19 @@ export default defineConfig({
       },
     }),
   ],
+
+  transformers: [transformerDirectives()],
+
+  shortcuts: {
+    'list-item-clickable':
+      'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
+    'bg-base': 'bg-white dark:bg-black',
+  },
+  theme: {
+    colors: {
+      dark: {
+        primary: '#BA5624',
+      },
+    },
+  },
 });

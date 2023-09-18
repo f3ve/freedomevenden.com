@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BlogListItem: typeof import('./src/pages/blog/components/BlogListItem.vue')['default']
     BlogPostList: typeof import('./src/pages/blog/components/BlogPostList.vue')['default']
     CoreFooter: typeof import('./src/core/components/CoreFooter.vue')['default']
     CoreMdWrapper: typeof import('./src/core/components/CoreMdWrapper.vue')['default']

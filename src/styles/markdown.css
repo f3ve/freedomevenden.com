@@ -1,0 +1,8 @@
+
+.markdown-body p > a {
+  --at-apply: text-dark-primary
+}
+
+.markdown-body code {
+  --at-apply: bg-dark rounded-lg border dark:border-white dark-border-op-20
+}

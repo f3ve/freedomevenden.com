@@ -8,6 +8,7 @@ import md from 'unplugin-vue-markdown/vite';
 import matter from 'gray-matter';
 import fs from 'fs-extra';
 import UnoCSS from 'unocss/vite';
+import markdownItHighlights from 'markdown-it-highlightjs';
 
 import 'vite-ssg';
 import { resolve } from 'node:path';
@@ -39,6 +40,15 @@ export default defineConfig({
     md({
       headEnabled: true,
       wrapperComponent: 'CoreMdWrapper',
+      markdownItSetup(md) {
+        md.use(markdownItHighlights, {
+          auto: true, // default true
+          code: true, //default true
+          register: null, // default null
+          inline: false, // default false
+          ignoreIllegals: true, // default true
+        });
+      },
     }),
     AutoImport({
       imports: [

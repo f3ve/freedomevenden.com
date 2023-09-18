@@ -1,0 +1,7 @@
+html {
+  --at-apply: bg-base
+}
+
+html.dark {
+  --at-apply: bg-dark
+}
