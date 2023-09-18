@@ -416,11 +416,8 @@ import { Icon, Slider } from 'react-native-elements';
 
 export default function App() {
   const [playing, setPlaying] = useState(false);
-
   const [duration, setDuration] = useState(0);
-
   const [position, setPosition] = useState(0);
-
   const videoRef = useRef(null);
 
   function togglePlayPause() {
@@ -440,30 +437,22 @@ export default function App() {
 
     if (duration === 0) {
       console.log(e.durationMillis);
-
       setDuration(e.durationMillis);
     }
   }
 
   async function skip(bool) {
     const status = await videoRef.current.getStatusAsync();
-
     const tenSeconds = 10000;
-
     const curPos = status.positionMillis;
-
     const newPos = bool ? curPos + tenSeconds : curPos - tenSeconds;
-
     setPosition(newPos);
-
     videoRef.current.setPositionAsync(newPos);
   }
 
   function handleDoneSliding(value) {
     setPosition(value);
-
     console.log(value);
-
     videoRef.current.setPositionAsync(value);
   }
 
@@ -483,7 +472,7 @@ export default function App() {
           resizeMode="cover"
           shouldPlay
           isLooping
-          style={styles.video}
+          syle={styles.video}
           onPlaybackStatusUpdate={handlePlaybackStatusUpdate}
         />
 
@@ -520,19 +509,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     alignItems: 'center',
   },
 
   video: {
     width: Dimensions.get('screen').width,
-
     height: Dimensions.get('screen').width * 0.5625,
   },
 
   buttonContainer: {
     flexDirection: 'row',
-
     justifyContent: 'space-evenly',
   },
 });
