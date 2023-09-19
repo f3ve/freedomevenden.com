@@ -11,7 +11,14 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetTypography(),
-    presetIcons(),
+    presetIcons({
+      extraProperties: {
+        display: 'inline-block',
+        height: '1.2em',
+        width: '1.2em',
+        'vertical-align': 'text-bottom',
+      },
+    }),
     presetWebFonts({
       fonts: {
         sans: 'Quicksand',
