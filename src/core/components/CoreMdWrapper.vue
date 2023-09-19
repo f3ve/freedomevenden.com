@@ -11,11 +11,19 @@ defineProps<{
   <article class="m-a prose">
     <div class="mb-4 w-fit">
       <h1 v-if="frontmatter.title" class="mb-1">{{ frontmatter.title }}</h1>
+      <div
+        v-if="frontmatter.datePublished || frontmatter.dateUpdated"
+        class="flex justify-between text-sm"
+      >
+        <p v-if="frontmatter.datePublished">
+          {{ formatDate(frontmatter.datePublished) }}
+        </p>
+        <p v-if="frontmatter.dateUpdated" class="op-60 italic">
+          Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
+        </p>
+      </div>
       <core-divider />
     </div>
-    <p v-if="frontmatter.datePublished">
-      {{ formatDate(frontmatter.datePublished) }}
-    </p>
     <slot />
   </article>
 </template>
