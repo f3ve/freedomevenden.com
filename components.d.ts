@@ -12,6 +12,7 @@ declare module 'vue' {
     CoreFooter: typeof import('./src/core/components/CoreFooter.vue')['default']
     CoreMdWrapper: typeof import('./src/core/components/CoreMdWrapper.vue')['default']
     CoreNavBar: typeof import('./src/core/components/CoreNavBar.vue')['default']
+    CoreNavButton: typeof import('./src/core/components/CoreNavButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
