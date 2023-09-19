@@ -1,5 +1,6 @@
 html {
-  --at-apply: bg-base
+  --at-apply: bg-light;
+  transition: background-color 0.3s !important;
 }
 
 html.dark {

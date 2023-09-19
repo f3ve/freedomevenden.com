@@ -7,10 +7,10 @@ const toggleDark = useToggle(isDark);
 
 <template>
   <header class="flex items-center justify-between px-4" style="height: 60px">
-    <RouterLink to="/" title="Home">f3ve</RouterLink>
-    <nav class="flex gap-4">
+    <core-nav-button to="/" title="Home">f3ve</core-nav-button>
+    <nav class="flex items-center gap-4">
       <core-nav-button to="/Blog" title="blog">Blog</core-nav-button>
-      <button @click="toggleDark()" class="i-ph-sun dark:i-ph-moon" />
+      <button class="i-ph-sun dark:i-ph-moon" @click="toggleDark()" />
     </nav>
   </header>
 </template>

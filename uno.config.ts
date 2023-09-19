@@ -29,14 +29,23 @@ export default defineConfig({
 
   transformers: [transformerDirectives()],
 
-  shortcuts: {
-    'list-item-clickable':
-      'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
-    'bg-base': 'bg-white dark:bg-black',
-  },
+  shortcuts: [
+    {
+      'list-item-clickable':
+        'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
+      'bg-base': 'bg-white dark:bg-black',
+    },
+    [
+      /^(bg|text)-(primary|secondary)$/,
+      ([, t, c]) => `${t}-light-${c} dark:${t}-dark-${c}`,
+    ],
+  ],
   theme: {
     colors: {
       dark: {
+        primary: '#e0692d',
+      },
+      light: {
         primary: '#BA5624',
       },
     },

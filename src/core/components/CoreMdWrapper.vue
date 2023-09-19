@@ -8,8 +8,11 @@ defineProps<{
 </script>
 
 <template>
-  <article class="prose m-a">
-    <h1 v-if="frontmatter.title">{{ frontmatter.title }}</h1>
+  <article class="m-a prose">
+    <div class="mb-4 w-fit">
+      <h1 v-if="frontmatter.title" class="mb-1">{{ frontmatter.title }}</h1>
+      <core-divider />
+    </div>
     <p v-if="frontmatter.datePublished">
       {{ formatDate(frontmatter.datePublished) }}
     </p>
