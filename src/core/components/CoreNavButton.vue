@@ -14,21 +14,14 @@ const tagName = computed(() =>
 <template>
   <component
     :is="tagName"
+    v-slot="p"
     :href="href"
     :to="to"
     class="cursor-pointer"
-    v-slot="props"
   >
     <span>
       <slot />
     </span>
-    <div
-      class="bg-dark-primary transition-width"
-      :class="{
-        'w-0': !props?.isActive,
-        'w-full': props?.isActive,
-      }"
-      style="height: 2px"
-    ></div>
+    <core-divider :full-width="p?.isActive" />
   </component>
 </template>

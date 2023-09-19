@@ -1,6 +1,6 @@
 
 .markdown-body p > a {
-  --at-apply: text-dark-primary
+  --at-apply: text-primary
 }
 
 .markdown-body code {

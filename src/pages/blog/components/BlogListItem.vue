@@ -20,7 +20,7 @@ const publishDate = computed(() =>
       </h4>
       <p
         v-if="publishDate"
-        class="ma-none text-sm text-dark-primary"
+        class="ma-none text-sm text-primary"
         v-text="publishDate"
       />
 
