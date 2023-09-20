@@ -45,7 +45,7 @@ export default defineConfig({
           auto: true, // default true
           code: true, //default true
           register: null, // default null
-          inline: false, // default false
+          inline: true, // default false
           ignoreIllegals: true, // default true
         });
       },

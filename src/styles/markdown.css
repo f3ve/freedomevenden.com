@@ -3,6 +3,6 @@
   --at-apply: text-primary
 }
 
-.markdown-body code {
-  --at-apply: bg-dark rounded-lg border dark:border-white dark-border-op-20
+.markdown-body pre {
+  --at-apply: px-0
 }

@@ -28,12 +28,12 @@ function focusInput() {
 
 <template>
   <div
-    class="cursor-text border rounded-lg bg-white pa-2 outline-none transition-colors focus-border-gray-700 dark:bg-gray-800"
+    class="dark:bg-dark-700 cursor-text border rounded-lg bg-white pa-2 outline-none transition-colors"
     :class="{
       'border-gray-700': focused,
       'dark:border-gray-400': focused,
       'border-gray-200': !focused,
-      'dark:border-gray-900': !focused,
+      'dark:border-dark-200': !focused,
     }"
     @click="focusInput"
   >
@@ -46,7 +46,7 @@ function focusInput() {
         id="search"
         ref="input"
         v-model="search"
-        class="w-full outline-none dark:bg-gray-800"
+        class="dark:bg-dark-700 w-full outline-none"
         :placeholder="placeholder"
         @focus="focused = true"
         @blur="focused = false"
