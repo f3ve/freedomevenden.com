@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const height = ref('');
 onMounted(() => {
-  const footer = document.querySelector('footer')?.getBoundingClientRect();
+  const footer = document.querySelector('footer');
 
   if (footer) {
-    height.value = `${footer.height}px`;
+    height.value = `${footer.offsetHeight}px`;
   }
 });
 </script>

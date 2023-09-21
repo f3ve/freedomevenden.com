@@ -8,7 +8,9 @@ defineProps<{
 </script>
 
 <template>
-  <article class="m-a prose">
+  <article
+    class="m-a h-full border border-gray-300 rounded-lg bg-white pa-10 prose dark:border-black dark:bg-dark"
+  >
     <div class="mb-4 w-fit">
       <h1 v-if="frontmatter.title" class="mb-1">{{ frontmatter.title }}</h1>
       <div
@@ -18,7 +20,7 @@ defineProps<{
         <p v-if="frontmatter.datePublished">
           {{ formatDate(frontmatter.datePublished) }}
         </p>
-        <p v-if="frontmatter.dateUpdated" class="op-60 italic">
+        <p v-if="frontmatter.dateUpdated" class="italic op-60">
           Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
         </p>
       </div>
