@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@types/markdown-it':
-    specifier: ^13.0.1
-    version: 13.0.1
   '@unhead/vue':
     specifier: ^1.7.4
     version: 1.7.4(vue@3.3.4)
@@ -17,9 +14,6 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
-  markdown-it-table-of-contents:
-    specifier: ^0.6.0
-    version: 0.6.0
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -34,6 +28,9 @@ devDependencies:
   '@types/fs-extra':
     specifier: ^11.0.2
     version: 11.0.2
+  '@types/markdown-it':
+    specifier: ^13.0.1
+    version: 13.0.1
   '@types/node':
     specifier: ^20.6.3
     version: 20.6.3
@@ -85,6 +82,9 @@ devDependencies:
   markdown-it-highlightjs:
     specifier: ^4.0.1
     version: 4.0.1
+  markdown-it-table-of-contents:
+    specifier: ^0.6.0
+    version: 0.6.0
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -575,15 +575,18 @@ packages:
 
   /@types/linkify-it@3.0.3:
     resolution: {integrity: sha512-pTjcqY9E4nOI55Wgpz7eiI8+LzdYnw3qxXCfHyBDdPbYvbyLgWLJGh8EdPvqawwMK1Uo1794AUkkR38Fr0g+2g==}
+    dev: true
 
   /@types/markdown-it@13.0.1:
     resolution: {integrity: sha512-SUEb8Frsxs3D5Gg9xek6i6EG6XQ5s+O+ZdQzIPESZVZw3Pv3CPQfjCJBI+RgqZd1IBeu18S0Rn600qpPnEK37w==}
     dependencies:
       '@types/linkify-it': 3.0.3
       '@types/mdurl': 1.0.2
+    dev: true
 
   /@types/mdurl@1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
+    dev: true
 
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
@@ -2628,7 +2631,7 @@ packages:
   /markdown-it-table-of-contents@0.6.0:
     resolution: {integrity: sha512-jHvEjZVEibyW97zEYg19mZCIXO16lHbvRaPDkEuOfMPBmzlI7cYczMZLMfUvwkhdOVQpIxu3gx6mgaw46KsNsQ==}
     engines: {node: '>6.4.0'}
-    dev: false
+    dev: true
 
   /markdown-it@13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
