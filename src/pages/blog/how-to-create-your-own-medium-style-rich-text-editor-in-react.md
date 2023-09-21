@@ -7,11 +7,11 @@ dateUpdated: 2023-09-21T00:00:00
 
 > _Note: This is tutorial is intended as practice to improve your JavaScript and React skills. I would not recommend using this in a production application. The way we are inserting html into the DOM is not secure and can lead to potential security vulnerabilities. There are some great libraries for building custom text editors that would be more suitable for a production application_
 
-[Slate.js](https://github.com/ianstormtaylor/slate) - is popular library for building text editors similar to medium.
+[Slate.js](https://github.com/ianstormtaylor/slate) - A popular library for building text editors similar to medium.
 
-[React Markdown](https://github.com/remarkjs/react-markdown) - React Component to render Markdown.
+[React Markdown](https://github.com/remarkjs/react-markdown) - A React Component to render Markdown.
 
-[Markdown-it](https://github.com/markdown-it/markdown-it) - Framework agnostic markdown parser that a lot of Markdown components and built on top of. Has a robust plugin system and is highly customizable.
+[Markdown-it](https://github.com/markdown-it/markdown-it) - Framework agnostic markdown parser that a lot of Markdown components are built on top of. Has a robust plugin system and is highly customizable.
 
 Recently I was building a blog similar to Medium as a personal project and I needed to build a WYSIWYG text editor. I considered using a framework but I figured it would be a better learning experience to actually build it from scratch. It was easier than I expected it to be, but I did find that text editors are very finicky and hard to get right. The text editor we will build here is not perfect, but it works and it is a good starting point to build on top of. Setting Up
 
@@ -123,8 +123,6 @@ import React from 'react';
 
 import Toolbar from '../toolbar/Toolbar';
 
-import './Editor.css';
-
 export default function Editor() {
   function paste(e) {}
 
@@ -153,7 +151,7 @@ export default function Editor() {
 
 Inside of `<React.Fragment>` we render `<ToolBar />` and then create two `<div>` elements. Each `<div>` has an attribute called `contentEditable` that we have set to true. This allows the `<div>` elements to act as inputs in which the user can write. The reason we created two is for one to act as the title of the blog and the other to act as the body.
 
-The other thing we did here is create an attribute called data-placeholder on each <div> That, with a little CSS, will act as a placeholder for our input areas. Here is the CSS to make it happen:
+The other thing we did here is create an attribute called data-placeholder on each `<div>` That, with a little CSS, will act as a placeholder for our input areas. Here is the CSS to make it happen:
 
 ```css
 #title:empty:before,
@@ -241,7 +239,7 @@ These functions should all be written inside Toolbar.js
 
 ### execCommand()
 
-First, let's talk about `execCommand()` . This becomes available when you set an HTML element’s `contenteditable` attribute to true. It basically allows you to run commands that manipulate the editable area. Be aware that MDN shows an obsolete warning for this method so it’s possible that it might not work the way you expect between browsers, so be sure to try your text editor in different browsers. It might be better to figure out your own way to implement certain features instead of relying on `.execCommand()`; for the purpose of this post we will stick with `execCommand()`.
+First, let's talk about `execCommand()` . This becomes available when you set an HTML element’s `contenteditable` attribute to true. It basically allows you to run commands that manipulate the editable area. Be aware that MDN shows an obsolete warning for this method so it’s possible that it might not work the way you expect between browsers, so be sure to try your text editor in different browsers. It might be better to figure out your own way to implement certain features instead of relying on `execCommand()`; for the purpose of this post we will stick with `execCommand()`.
 
 ```js
 // Basic syntax
@@ -321,7 +319,7 @@ function setHeader() {
 }
 ```
 
-Here we are targeting the current selection and wrapping it in <h2> tags and inserting it into the DOM.
+Here we are targeting the current selection and wrapping it in `<h2>` tags and inserting it into the DOM.
 
 ### addCodeBlock()
 
