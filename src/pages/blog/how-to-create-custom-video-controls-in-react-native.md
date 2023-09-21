@@ -1,8 +1,7 @@
 ---
 title: How to Create Custom Video Controls in React Native
-duration: 10min
 description: This is a test
-datePublished: 2023-09-17T00:00:00
+datePublished: 2020-12-18T00:00:00
 dateUpdated: 2023-09-17T00:00:00
 ---
 
