@@ -29,8 +29,6 @@ Expo AV is a package provided by Expo that gives us access to their Video and Au
 
 Once that finishes installing open App.js and the code with this:
 
-<!-- asda -->
-
 ```jsx
 import React from 'react';
 
@@ -114,7 +112,7 @@ We are going to create a new view just below the video element that will contain
     <TouchableOpacity>
       <Icon name="pause" size={50} />
     </TouchableOpacity>
-    // skip foward
+    // skip forward
     <TouchableOpacity>
       <Icon name="forward-10" size={50} />
     </TouchableOpacity>
@@ -206,7 +204,7 @@ export default function App() {
 
 Now we're going to use a prop on the Video component called onPlaybackStatusUpdate that gets called regularly and will give us the playback status of the video. This is will allow us to see if the video is playing, if it has ended, and what our current position in the video is. For now we will just check if it is playing.
 
-Let's create a funtion for handling the status update.
+Let's create a function for handling the status update.
 
 ```js
 function handlePlayBackStatusUpdate(e) {
@@ -339,7 +337,7 @@ import { Icon, Slider } from 'react-native-elements';
 </View>;
 ```
 
-If you look closely you can see we have added some variables we need to define: `position`, `puration`, and `handleDoneSliding`.
+If you look closely you can see we have added some variables we need to define: `position`, `duration`, and `handleDoneSliding`.
 
 `Position` is how we will track the current position of the video. We will use the onStatusUpdate to keep track of this.
 
@@ -474,7 +472,7 @@ export default function App() {
           resizeMode="cover"
           shouldPlay
           isLooping
-          syle={styles.video}
+          style={styles.video}
           onPlaybackStatusUpdate={handlePlaybackStatusUpdate}
         />
 
