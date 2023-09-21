@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 
 <template>
   <footer class="flex items-center px-4 text-sm prose w-full max-w-full">
-    <p class="op-50">
+    <p class="op-70 dark:op-50">
       &#169; {{ dayjs().format('YYYY') }}
       <a
         xmlns:cc="http://creativecommons.org/ns#"

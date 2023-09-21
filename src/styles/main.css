@@ -3,6 +3,32 @@ html {
 }
 
 html.dark {
-  --at-apply: bg-dark
+  --at-apply: bg-black
   
+}
+
+.prose {
+  max-width: 70ch
+}
+
+.box {
+  --mask:
+    radial-gradient(15.76px at 50% calc(100% + 11.70px),#0000 calc(99% - 2px),#000 calc(101% - 2px) 99%,#0000 101%) calc(50% - 18px) calc(50% - 5.5px + .5px)/36px 11px ,
+    radial-gradient(15.76px at 50% -11.7px,#0000 calc(99% - 2px),#000 calc(101% - 2px) 99%,#0000 101%) 50% calc(50% + 5.5px)/36px 11px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  /* animation: wave 60s linear infinite; */
+  right: 0px;
+  top: 0px;
+  position: fixed;
+  min-width: 200vw;
+}
+
+@keyframes wave{
+  0%{
+    right: 0px; 
+  }
+  100%{
+   right: -100vw; 
+  }
 }
