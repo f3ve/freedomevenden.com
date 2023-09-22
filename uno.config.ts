@@ -39,7 +39,7 @@ export default defineConfig({
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
       ([a, b]) => {
         const borderClass = b ? `border-${b}` : `border`;
-        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-black`;
+        return `${borderClass} ${borderClass}-dark-300 dark:${borderClass}-black`;
       },
     ],
   ],

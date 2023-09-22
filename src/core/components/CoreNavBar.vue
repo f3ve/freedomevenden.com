@@ -7,7 +7,7 @@ const toggleDark = useToggle(isDark);
 
 <template>
   <header
-    class="w-full flex items-center justify-between px-4 shadow py-4"
+    class="w-full flex items-center justify-between px-4 py-4 shadow dark:shadow-none dark:fe-border-b"
     style="backdrop-filter: blur(2px)"
   >
     <core-nav-button to="/" title="Home">f3ve</core-nav-button>
