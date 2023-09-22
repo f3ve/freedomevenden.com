@@ -3,6 +3,9 @@ title: How to Create Custom Video Controls in React Native
 description: This is a test
 datePublished: 2020-12-18T00:00:00
 dateUpdated: 2023-09-17T00:00:00
+meta:
+  - name: keywords
+    content: how to create custom video controls,react native,react,video controls
 ---
 
 Videos are an extremely common way for users to consume information. On average there are 1 million video views per day on YouTube, and everyone has a Netflix subscription.

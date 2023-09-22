@@ -1,6 +1,11 @@
 <script lang="ts" setup>
+import { useHead } from '@unhead/vue';
+
 const top = ref('');
 const bottom = ref('');
+
+useHead({});
+
 onMounted(() => {
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');

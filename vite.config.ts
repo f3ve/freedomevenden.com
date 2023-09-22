@@ -9,6 +9,7 @@ import matter from 'gray-matter';
 import fs from 'fs-extra';
 import UnoCSS from 'unocss/vite';
 import markdownItHighlights from 'markdown-it-highlightjs';
+import generateSitemap from 'vite-ssg-sitemap';
 
 import 'vite-ssg';
 import { resolve } from 'node:path';
@@ -25,11 +26,16 @@ export default defineConfig({
   },
 
   ssgOptions: {
-    script: 'async',
     formatting: 'prettify',
     format: 'cjs',
     crittersOptions: {
       pruneSource: true,
+    },
+    onFinished() {
+      generateSitemap({
+        readable: true,
+        hostname: 'https://freedomevenden.com',
+      });
     },
   },
 

@@ -112,6 +112,9 @@ devDependencies:
   vite-ssg:
     specifier: ^0.23.3
     version: 0.23.3(critters@0.0.20)(vite@4.4.9)(vue-router@4.2.4)(vue@3.3.4)
+  vite-ssg-sitemap:
+    specifier: ^0.5.1
+    version: 0.5.1
 
 packages:
 
@@ -3537,6 +3540,10 @@ packages:
       yaml: 2.3.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-ssg-sitemap@0.5.1:
+    resolution: {integrity: sha512-X3ZImSVpFMypBTIhaTqEOdKj7tO9n7Puzd8vsxuQluFUyu6x/e2Dzv8qk5qZsC34ZR6iHt0wa2sPhDu1OjdOsA==}
     dev: true
 
   /vite-ssg@0.23.3(critters@0.0.20)(vite@4.4.9)(vue-router@4.2.4)(vue@3.3.4):
