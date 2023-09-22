@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <article class="m-a prose pt-2">
     <div class="mb-4">
-      <h1 v-if="frontmatter.title" class="mb-1">
+      <h1 v-if="frontmatter.title" class="mb-1 text-center">
         {{ frontmatter.title }}
       </h1>
       <div
