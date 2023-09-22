@@ -42,10 +42,17 @@ export default defineConfig({
         return `${borderClass} ${borderClass}-dark-300 dark:${borderClass}-black`;
       },
     ],
+    [
+      /^(\w+)-primary$/,
+      ([a, b]) => `${b}-primary-dark dark:${b}-primary-default`,
+    ],
   ],
   theme: {
     colors: {
-      primary: '#e0692d',
+      primary: {
+        default: '#02FFD7',
+        dark: '#00C5A0',
+      },
     },
   },
 });
