@@ -1,8 +1,7 @@
-
 .markdown-body p > a {
-  --at-apply: text-primary
+  --at-apply: text-primary;
 }
 
 .markdown-body pre {
-  --at-apply: px-0
+  --at-apply: px-0;
 }

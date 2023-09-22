@@ -13,7 +13,7 @@ const publishDate = computed(() =>
 
 <template>
   <RouterLink :key="post.path" :to="post.path" class="decoration-none">
-    <li class="rounded-lg transition-colors pa-1 @hover:bg-gray @hover:bg-op-7">
+    <li class="rounded-lg pa-1 transition-colors @hover:bg-gray @hover:bg-op-7">
       <h5 class="ma-none">
         {{ post.title }} -
         <span

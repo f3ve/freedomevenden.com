@@ -8,11 +8,11 @@ defineProps<{
 </script>
 
 <template>
-  <article
-    class="m-a h-full border border-gray-300 rounded-lg bg-white pa-10 prose dark:border-black dark:bg-dark"
-  >
-    <div class="mb-4 w-fit">
-      <h1 v-if="frontmatter.title" class="mb-1">{{ frontmatter.title }}</h1>
+  <article class="m-a prose pt-2">
+    <div class="mb-4">
+      <h1 v-if="frontmatter.title" class="mb-1">
+        {{ frontmatter.title }}
+      </h1>
       <div
         v-if="frontmatter.datePublished || frontmatter.dateUpdated"
         class="flex justify-between text-sm"
