@@ -33,13 +33,19 @@ export default defineConfig({
     {
       'list-item-clickable':
         'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
-      'bg-base': 'bg-white dark:bg-black',
+      'bg-base': 'bg-white dark:bg-dark',
     },
+    [
+      /fe-border$|fe-border-(x|y|b|t|l|r)$/,
+      ([a, b]) => {
+        const borderClass = b ? `border-${b}` : `border`;
+        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-black`;
+      },
+    ],
   ],
   theme: {
     colors: {
       primary: '#e0692d',
-      // dark: '#181826',
     },
   },
 });
