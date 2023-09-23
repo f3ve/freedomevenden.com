@@ -6,10 +6,6 @@ html.dark {
   --at-apply: bg-dark-900;
 }
 
-.prose {
-  /* max-width: 70ch; */
-}
-
 .box {
   --mask: radial-gradient(
         15.76px at 50% calc(100% + 11.7px),
@@ -30,5 +26,4 @@ html.dark {
   right: 0px;
   top: 0px;
   position: fixed;
-  min-width: 200vw;
 }
