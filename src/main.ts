@@ -1,10 +1,8 @@
 import '@unocss/reset/tailwind.css';
-import 'virtual:uno.css';
-
-import './styles/main.css';
 import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';
+import 'uno.css';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';

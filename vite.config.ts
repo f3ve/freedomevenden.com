@@ -26,11 +26,8 @@ export default defineConfig({
   },
 
   ssgOptions: {
-    formatting: 'prettify',
+    formatting: 'minify',
     format: 'cjs',
-    crittersOptions: {
-      pruneSource: true,
-    },
     onFinished() {
       generateSitemap({
         readable: true,
