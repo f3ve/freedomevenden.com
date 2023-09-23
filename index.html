@@ -7,9 +7,23 @@
     <meta name="revisit-after" content="7 days" />
     <link rel="icon" href="/favicon.ico" />
     <title>Freedom Evenden</title>
+    <script>
+      // This prevents the screen from flashing white when the user refreshes in dark mode
+      (function () {
+        const prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)',
+        ).matches;
+
+        const mode =
+          window.localStorage.getItem('vueuse-color-scheme') || 'auto';
+
+        if (mode === 'dark' || (prefersDark && mode !== 'light')) {
+          document.documentElement.classList.toggle('dark', true);
+        }
+      })();
+    </script>
   </head>
   <body class="text-dark dark:text-light overflow-x-hidden">
-    <!-- <div class="box min-h-screen bg-dark op-10 dark:op-80"></div> -->
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
