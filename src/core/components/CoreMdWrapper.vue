@@ -8,24 +8,26 @@ defineProps<{
 </script>
 
 <template>
-  <article class="m-a prose pt-2">
+  <article class="oborder-base m-a prose pa-4 px-8 w-fit">
+    <!-- <div class="prose"> -->
     <div class="mb-4">
       <h1 v-if="frontmatter.title" class="mb-1 text-center">
         {{ frontmatter.title }}
       </h1>
       <div
         v-if="frontmatter.datePublished || frontmatter.dateUpdated"
-        class="flex justify-between text-sm"
+        class="text-center text-sm"
       >
-        <p v-if="frontmatter.datePublished">
+        <p v-if="frontmatter.datePublished" class="mb-0">
           {{ formatDate(frontmatter.datePublished) }}
         </p>
-        <p v-if="frontmatter.dateUpdated" class="italic op-60">
+        <p v-if="frontmatter.dateUpdated" class="my-0 italic op-75">
           Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
         </p>
       </div>
-      <core-divider />
+      <core-divider class="my-4" />
+      <slot />
     </div>
-    <slot />
+    <!-- </div> -->
   </article>
 </template>

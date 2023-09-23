@@ -11,23 +11,19 @@ const props = withDefaults(
     height: 2,
   },
 );
-const mounted = ref(false);
-const show = computed(() => props.fullWidth && mounted.value);
+
+const show = computed(() => props.fullWidth);
 
 const compHeight = computed(() =>
   typeof props.height === 'number' || !/(px|%|vh|rem|em|pt)$/.test(props.height)
     ? `${props.height}px`
     : props.height,
 );
-
-onMounted(() => {
-  mounted.value = true;
-});
 </script>
 
 <template>
   <div
-    class="transition-width duration-500 ease-in-out"
+    class="transition-width duration-300 ease-in-out"
     :class="{
       'bg-primary': true,
       'w-0': !show,

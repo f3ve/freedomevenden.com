@@ -3,8 +3,8 @@ import dayjs from 'dayjs';
 </script>
 
 <template>
-  <footer class="w-full flex items-center pa-2 px-4 text-sm">
-    <p class="op-70 dark:op-50">
+  <footer class="w-full flex items-center px-4 py-2 text-sm">
+    <p class="op-70 dark:op-75">
       &#169; {{ dayjs().format('YYYY') }}
       <a
         xmlns:cc="http://creativecommons.org/ns#"

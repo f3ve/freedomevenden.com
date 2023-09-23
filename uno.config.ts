@@ -33,7 +33,7 @@ export default defineConfig({
     {
       'list-item-clickable':
         'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
-      'bg-base': 'bg-white dark:bg-dark',
+      'bg-base': 'bg-light-100 dark:bg-dark-700',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
