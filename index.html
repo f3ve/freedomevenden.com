@@ -9,7 +9,7 @@
     <title>Freedom Evenden</title>
     <script>
       // This prevents the screen from flashing white when the user refreshes in dark mode
-      (function () {
+      function checkThemePreference() {
         const prefersDark = window.matchMedia(
           '(prefers-color-scheme: dark)',
         ).matches;
@@ -20,7 +20,9 @@
         if (mode === 'dark' || (prefersDark && mode !== 'light')) {
           document.documentElement.classList.toggle('dark', true);
         }
-      })();
+      }
+
+      checkThemePreference();
     </script>
   </head>
   <body class="text-dark-800 dark:text-light relative">
