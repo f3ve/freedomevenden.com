@@ -10,6 +10,8 @@ meta:
 
 > _Note: This is tutorial is intended as practice to improve your JavaScript and React skills. I would not recommend using this in a production application. The way we are inserting html into the DOM is not secure and can lead to potential security vulnerabilities. There are some great libraries for building custom text editors that would be more suitable for a production application_
 
+[[toc]]
+
 [Slate.js](https://github.com/ianstormtaylor/slate) - A popular library for building text editors similar to medium.
 
 [React Markdown](https://github.com/remarkjs/react-markdown) - A React Component to render Markdown.

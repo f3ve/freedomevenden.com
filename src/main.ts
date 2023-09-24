@@ -10,8 +10,14 @@ import routes from '~pages';
 
 export const createApp = ViteSSG(App, {
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) return savedPosition;
-    return { top: 0 };
+    if (savedPosition && !to.hash) {
+      savedPosition.behavior = 'instant';
+      return savedPosition;
+    }
+
+    if (!to.hash) {
+      return { top: 0, behavior: 'instant' };
+    }
   },
   routes,
 });

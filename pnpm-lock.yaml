@@ -85,6 +85,9 @@ devDependencies:
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
+  markdown-it-anchor:
+    specifier: ^8.6.7
+    version: 8.6.7(@types/markdown-it@13.0.1)(markdown-it@13.0.1)
   markdown-it-highlightjs:
     specifier: ^4.0.1
     version: 4.0.1
@@ -2638,6 +2641,16 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.1)(markdown-it@13.0.1):
+    resolution: {integrity: sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+    dependencies:
+      '@types/markdown-it': 13.0.1
+      markdown-it: 13.0.1
+    dev: true
 
   /markdown-it-highlightjs@4.0.1:
     resolution: {integrity: sha512-EPXwFEN6P5nqR3G4KjT20r20xbGYKMMA/360hhSYFmeoGXTE6hsLtJAiB/8ID8slVH4CWHHEL7GX0YenyIstVQ==}

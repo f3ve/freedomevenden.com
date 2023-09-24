@@ -10,6 +10,8 @@ import fs from 'fs-extra';
 import UnoCSS from 'unocss/vite';
 import markdownItHighlights from 'markdown-it-highlightjs';
 import generateSitemap from 'vite-ssg-sitemap';
+import anchor from 'markdown-it-anchor';
+import toc from 'markdown-it-table-of-contents';
 
 import 'vite-ssg';
 import { resolve } from 'node:path';
@@ -43,7 +45,15 @@ export default defineConfig({
     md({
       headEnabled: true,
       wrapperComponent: 'CoreMdWrapper',
+      markdownItOptions: {
+        linkify: true,
+        breaks: true,
+      },
       markdownItSetup(md) {
+        md.use(anchor, {
+          permalink: anchor.permalink.headerLink(),
+        });
+        md.use(toc);
         md.use(markdownItHighlights, {
           auto: true, // default true
           code: true, //default true

@@ -4,18 +4,7 @@ datePublished: 2023-09-22T00:00:00
 description: I decided to redesign my website. I talk about the reasons why and the process of doing it.
 ---
 
-## What's Changed
-
-If you're a returning user you probably notice I redesigned my website. If you're a new visitor, welcome!
-
-It's been a long time since I did much with my website. In the time that's passed a lot has happened.
-
-1. I moved out of my home state and then I moved back.
-1. I got a new job as a Frontend Web Developer at [OBSKUR](https://obskur.com).
-1. I became a home owner.
-1. I became a father.
-
-Needless to say, it's been a very eventful couple of years. There's been some ups and downs, but mostly ups. I've learned a lot about myself and what I want out of life.
+[[toc]]
 
 ## What's Changed
 

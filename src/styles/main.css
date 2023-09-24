@@ -1,5 +1,5 @@
 html {
-  --at-apply: bg-light;
+  --at-apply: bg-light, scroll-smooth;
 }
 
 html.dark {

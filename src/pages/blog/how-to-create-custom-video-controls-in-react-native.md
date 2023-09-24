@@ -8,6 +8,8 @@ meta:
     content: how to create custom video controls,react native,react,video controls
 ---
 
+[[toc]]
+
 Videos are an extremely common way for users to consume information. On average there are 1 million video views per day on YouTube, and everyone has a Netflix subscription.
 
 Video controls have a huge impact on the viewing experience. They can make or break an app so it's important to get it right. You can't just rely on the native controls because it might not fit the theme of your app and you can't guarantee that the user experience is uniform between devices. The only option is to create your own and I will show you how to do just that.
