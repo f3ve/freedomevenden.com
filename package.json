@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vite-ssg build && esno ./scripts/rss.ts",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -29,6 +29,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
+    "esno": "^0.17.0",
     "fast-glob": "^3.3.1",
     "feed": "^4.2.2",
     "fs-extra": "^11.1.1",

@@ -20,7 +20,7 @@ const md = MarkdownIt({
 });
 
 async function buildRSSFeed() {
-  const filePaths = await fastGlob('pages/blog/*.md');
+  const filePaths = await fastGlob('src/pages/blog/*.md');
 
   const blogPosts: any[] = await getPostDataFromFiles(filePaths);
 
