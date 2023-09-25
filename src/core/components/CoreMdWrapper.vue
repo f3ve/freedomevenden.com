@@ -8,8 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <article class="oborder-base m-a prose pa-4 px-8 w-fit">
-    <!-- <div class="prose"> -->
+  <article class="oborder-base m-a px-6">
     <div class="mb-4">
       <h1 v-if="frontmatter.title" class="mb-1 text-center">
         {{ frontmatter.title }}
@@ -28,6 +27,5 @@ defineProps<{
       <core-divider class="my-4" />
       <slot />
     </div>
-    <!-- </div> -->
   </article>
 </template>

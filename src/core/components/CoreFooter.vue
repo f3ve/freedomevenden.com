@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 </script>
 
 <template>
-  <footer class="w-full flex items-center px-4 py-2 text-sm">
+  <footer class="w-full flex items-center px-6 py-2 text-sm">
     <p class="op-70 dark:op-75">
       &#169; {{ dayjs().format('YYYY') }}
       <a
@@ -25,7 +25,7 @@ import dayjs from 'dayjs';
         href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
         class="underline"
       >
-        CC-BY-NC-SA-4.0
+        CC BY-NC-SA 4.0
       </a>
       .
     </p>

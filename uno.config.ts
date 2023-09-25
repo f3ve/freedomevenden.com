@@ -21,8 +21,8 @@ export default defineConfig({
     }),
     presetWebFonts({
       fonts: {
-        sans: 'Quicksand',
-        mono: ['Fira Code', 'Fira Mono:400,700'],
+        sans: 'Lato',
+        serif: 'Ubuntu',
       },
     }),
   ],

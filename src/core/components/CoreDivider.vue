@@ -2,12 +2,10 @@
 const props = withDefaults(
   defineProps<{
     fullWidth?: boolean;
-    color?: string;
     height?: string | number;
   }>(),
   {
     fullWidth: true,
-    color: 'primary',
     height: 2,
   },
 );
@@ -23,9 +21,8 @@ const compHeight = computed(() =>
 
 <template>
   <div
-    class="transition-width duration-300 ease-in-out"
+    class="transition-width duration-300 ease-in-out bg-primary"
     :class="{
-      'bg-primary': true,
       'w-0': !show,
       'w-full': show,
     }"
