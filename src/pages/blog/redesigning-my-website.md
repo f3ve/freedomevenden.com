@@ -7,6 +7,8 @@ meta:
     content: article
 ---
 
+## Table of Contents
+
 [[toc]]
 
 ## What's Changed

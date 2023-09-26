@@ -1,5 +1,5 @@
 ---
-title: Freedom Evenden | Blog
+title: Blog - Freedom Evenden
 description: Freedom Evenden's Blog
 meta:
   - name: keywords

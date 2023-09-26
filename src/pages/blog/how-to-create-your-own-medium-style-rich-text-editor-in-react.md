@@ -12,7 +12,11 @@ meta:
 
 > _Note: This is tutorial is intended as practice to improve your JavaScript and React skills. I would not recommend using this in a production application. The way we are inserting html into the DOM is not secure and can lead to potential security vulnerabilities. There are some great libraries for building custom text editors that would be more suitable for a production application_
 
+## Table of Contents
+
 [[toc]]
+
+## Tools
 
 [Slate.js](https://github.com/ianstormtaylor/slate) - A popular library for building text editors similar to medium.
 
@@ -21,6 +25,8 @@ meta:
 [Markdown-it](https://github.com/markdown-it/markdown-it) - Framework agnostic markdown parser that a lot of Markdown components are built on top of. Has a robust plugin system and is highly customizable.
 
 Recently I was building a blog similar to Medium as a personal project and I needed to build a WYSIWYG text editor. I considered using a framework but I figured it would be a better learning experience to actually build it from scratch. It was easier than I expected it to be, but I did find that text editors are very finicky and hard to get right. The text editor we will build here is not perfect, but it works and it is a good starting point to build on top of. Setting Up
+
+## Getting Started
 
 To get started make sure you have Node.js installed on your machine and run this in the terminal:
 

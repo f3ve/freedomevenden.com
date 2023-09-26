@@ -7,7 +7,7 @@ const toggleDark = useToggle(isDark);
 
 <template>
   <header
-    class="w-full flex items-center justify-between px-6 py-4 shadow dark:fe-border-b dark:shadow-none"
+    class="w-full flex items-center justify-between px-6 py-4 fe-border-b dark:shadow-none"
   >
     <core-nav-button to="/" title="Home">f3ve</core-nav-button>
     <nav class="flex items-center gap-4">

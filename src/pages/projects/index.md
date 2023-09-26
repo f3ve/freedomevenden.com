@@ -1,5 +1,5 @@
 ---
-title: Freedom Evenden | Projects
+title: Projects - Freedom Evenden
 description: Projects Freedom Evenden has worked on
 meta:
   - name: type

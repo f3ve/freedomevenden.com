@@ -53,7 +53,7 @@ export default defineConfig({
         md.use(anchor, {
           permalink: anchor.permalink.headerLink(),
         });
-        md.use(toc);
+        md.use(toc, { includeLevel: [1, 2, 3, 4] });
         md.use(markdownItHighlights, {
           auto: true, // default true
           code: true, //default true

@@ -10,6 +10,8 @@ meta:
     content: article
 ---
 
+## Table of contents
+
 [[toc]]
 
 Videos are an extremely common way for users to consume information. On average there are 1 million video views per day on YouTube, and everyone has a Netflix subscription.

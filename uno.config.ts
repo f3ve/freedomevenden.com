@@ -23,10 +23,10 @@ export default defineConfig({
       },
     }),
     presetWebFonts({
+      provider: 'bunny',
       fonts: {
-        header: [{ name: 'Lato' }, sansSerif],
-        'body-1': [{ name: 'ubuntu' }, serif],
-        'body-2': [{ name: 'Ubuntu' }, sansSerif],
+        'body-1': [{ name: 'Open Sans' }, sansSerif],
+        header: [{ name: 'Georgia' }, serif],
       },
     }),
   ],
@@ -37,13 +37,14 @@ export default defineConfig({
     {
       'list-item-clickable':
         'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
-      'bg-base': 'bg-light-100 dark:bg-dark-700',
+      'bg-base': 'bg-light-100 dark:bg-dark-900',
+      'text-base-color': 'text-dark-200 dark:text-light-100',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
       ([a, b]) => {
         const borderClass = b ? `border-${b}` : `border`;
-        return `${borderClass} ${borderClass}-dark-300 dark:${borderClass}-black`;
+        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-dark`;
       },
     ],
     [

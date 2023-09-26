@@ -22,7 +22,7 @@ h6 {
 }
 
 .prose {
-  max-width: 40rem !important;
+  max-width: 50rem !important;
 }
 
 .box {
@@ -45,4 +45,14 @@ h6 {
   right: 0px;
   top: 0px;
   position: fixed;
+}
+
+.prose h1 {
+  /* prettier-ignore */
+  --at-apply: text-4xl md:text-6xl;
+}
+
+.prose ul:not(.blog-list),
+.prose ol:not(.blog-list) {
+  --at-apply: ml-6;
 }
