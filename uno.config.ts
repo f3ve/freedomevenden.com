@@ -7,6 +7,9 @@ import {
   transformerDirectives,
 } from 'unocss';
 
+const serif: any = { name: 'serif', provider: 'none' };
+const sansSerif: any = { name: 'sans-serif', provider: 'none' };
+
 export default defineConfig({
   presets: [
     presetUno(),
@@ -21,8 +24,9 @@ export default defineConfig({
     }),
     presetWebFonts({
       fonts: {
-        sans: 'Lato',
-        serif: 'Ubuntu',
+        header: [{ name: 'Lato' }, sansSerif],
+        'body-1': [{ name: 'ubuntu' }, serif],
+        'body-2': [{ name: 'Ubuntu' }, sansSerif],
       },
     }),
   ],
