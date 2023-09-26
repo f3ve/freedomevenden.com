@@ -11,7 +11,10 @@ const toggleDark = useToggle(isDark);
   >
     <core-nav-button to="/" title="Home">f3ve</core-nav-button>
     <nav class="flex items-center gap-4">
-      <core-nav-button to="/Blog" title="blog">Blog</core-nav-button>
+      <core-nav-button to="/projects" title="projects">
+        Projects
+      </core-nav-button>
+      <core-nav-button to="/blog" title="blog">Blog</core-nav-button>
       <button
         class="i-ph-sun dark:i-ph-moon"
         aria-label="Toggle Theme"

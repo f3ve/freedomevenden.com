@@ -2,6 +2,9 @@
 title: Redesigning my Website
 datePublished: 2023-09-22T00:00:00
 description: I decided to redesign my website. I talk about the reasons why and the process of doing it.
+meta:
+  - name: type
+    content: article
 ---
 
 [[toc]]

@@ -5,7 +5,9 @@ datePublished: 2020-06-25T00:00:00
 dateUpdated: 2023-09-21T00:00:00
 meta:
   - name: keywords
-    content: medium-style rich text editor, react, how to, create your own,
+    content: medium-style rich text editor, react, how to, create your own
+  - name: type
+    content: article
 ---
 
 > _Note: This is tutorial is intended as practice to improve your JavaScript and React skills. I would not recommend using this in a production application. The way we are inserting html into the DOM is not secure and can lead to potential security vulnerabilities. There are some great libraries for building custom text editors that would be more suitable for a production application_

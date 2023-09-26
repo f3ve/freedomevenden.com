@@ -6,6 +6,8 @@ dateUpdated: 2023-09-17T00:00:00
 meta:
   - name: keywords
     content: how to create custom video controls,react native,react,video controls
+  - name: type
+    content: article
 ---
 
 [[toc]]

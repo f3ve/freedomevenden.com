@@ -4,6 +4,8 @@ description: Freedom Evenden's personal website
 meta:
   - name: keywords
     content: freedom evenden,freedom,evenden,programmer,obskur,f3ve
+  - name: type
+    content: website
 ---
 
 Hey 👋, I'm Freedom. Thanks for checking out my little corner of the internet. I'm a programmer, currently working at [OBSKUR](https://obskur.com). I'm starting to dip my toes into the open-source community. I recently launched my first [NPM module](https://www.npmjs.com/package/@f3ve/vue-markdown-it) and I've got some other ideas in the works.
