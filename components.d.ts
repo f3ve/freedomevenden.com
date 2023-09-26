@@ -15,6 +15,7 @@ declare module 'vue' {
     CoreMdWrapper: typeof import('./src/core/components/CoreMdWrapper.vue')['default']
     CoreNavBar: typeof import('./src/core/components/CoreNavBar.vue')['default']
     CoreNavButton: typeof import('./src/core/components/CoreNavButton.vue')['default']
+    ProjectListItem: typeof import('./src/pages/projects/components/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/pages/projects/components/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

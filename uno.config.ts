@@ -39,12 +39,14 @@ export default defineConfig({
         'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
       'bg-base': 'bg-light-100 dark:bg-dark-900',
       'text-base-color': 'text-dark-200 dark:text-light-100',
+      hoverable:
+        'transition-colors @hover:bg-dark @hover:bg-op-10 @hover:dark:bg-op-30',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
       ([a, b]) => {
         const borderClass = b ? `border-${b}` : `border`;
-        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-dark`;
+        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-dark-300`;
       },
     ],
     [

@@ -13,6 +13,9 @@ defineProps<{
       <h1 v-if="frontmatter.title" class="mb-5 text-center">
         {{ frontmatter.title.replace('- Freedom Evenden', '') }}
       </h1>
+      <p v-if="frontmatter.subtitle" class="text-center">
+        {{ frontmatter.subtitle }}
+      </p>
       <div
         v-if="frontmatter.datePublished || frontmatter.dateUpdated"
         class="text-center text-sm"
