@@ -11,12 +11,22 @@ const toggleDark = useToggle(isDark);
   >
     <core-nav-button to="/" title="Home">f3ve</core-nav-button>
     <nav class="flex items-center gap-4">
+      <core-nav-button to="/blog" title="blog">Blog</core-nav-button>
       <core-nav-button to="/projects" title="projects">
         Projects
       </core-nav-button>
-      <core-nav-button to="/blog" title="blog">Blog</core-nav-button>
+      <a
+        class="i-ic-round-alternate-email"
+        href="mailto:me@freedomevenden.com"
+      ></a>
+      <a
+        class="i-mdi-github"
+        href="https://github.com/f3ve"
+        target="_blank"
+        rel="noopener"
+      ></a>
       <button
-        class="i-ph-sun dark:i-ph-moon"
+        class="dark:i-solar-moon-outline i-solar-sun-2-outline"
         aria-label="Toggle Theme"
         @click="toggleDark()"
       />

@@ -11,6 +11,7 @@ import UnoCSS from 'unocss/vite';
 import markdownItHighlights from 'markdown-it-highlightjs';
 import generateSitemap from 'vite-ssg-sitemap';
 import anchor from 'markdown-it-anchor';
+import linkAttrs from 'markdown-it-link-attributes';
 import toc from 'markdown-it-table-of-contents';
 
 import 'vite-ssg';
@@ -60,6 +61,13 @@ export default defineConfig({
           register: null, // default null
           inline: true, // default false
           ignoreIllegals: true, // default true
+        });
+        md.use(linkAttrs, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
         });
       },
     }),

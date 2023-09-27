@@ -8,7 +8,12 @@ defineProps<{
 
 <template>
   <li class="hoverable rounded-lg">
-    <a class="block pa-4 decoration-none" :href="project.link">
+    <a
+      class="block pa-4 decoration-none"
+      :href="project.link"
+      target="_blank"
+      rel="noopener"
+    >
       <p class="font-header ma-none mb-0 text-2xl font-bold italic">
         {{ project.name }}
       </p>

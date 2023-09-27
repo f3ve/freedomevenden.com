@@ -14,8 +14,6 @@ import dayjs from 'dayjs';
         property="cc:attributionName"
         rel="cc:attributionURL"
         class="underline"
-        target="_blank"
-        referrerpolicy="no-referrer"
       >
         Freedom Evenden
       </a>
@@ -29,7 +27,6 @@ import dayjs from 'dayjs';
         href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
         class="underline"
         target="_blank"
-        referrerpolicy="no-referrer"
       >
         CC BY-NC-SA 4.0
       </a>

@@ -94,6 +94,9 @@ devDependencies:
   markdown-it-highlightjs:
     specifier: ^4.0.1
     version: 4.0.1
+  markdown-it-link-attributes:
+    specifier: ^4.0.1
+    version: 4.0.1
   markdown-it-table-of-contents:
     specifier: ^0.6.0
     version: 0.6.0
@@ -2676,6 +2679,10 @@ packages:
     resolution: {integrity: sha512-EPXwFEN6P5nqR3G4KjT20r20xbGYKMMA/360hhSYFmeoGXTE6hsLtJAiB/8ID8slVH4CWHHEL7GX0YenyIstVQ==}
     dependencies:
       highlight.js: 11.8.0
+    dev: true
+
+  /markdown-it-link-attributes@4.0.1:
+    resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
     dev: true
 
   /markdown-it-table-of-contents@0.6.0:
