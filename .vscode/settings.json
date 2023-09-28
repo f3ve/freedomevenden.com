@@ -1,9 +1,14 @@
 {
+  "eslint.experimental.useFlatConfig": true,
   "cSpell.words": [
+    "esno",
     "Evenden",
     "frontmatter",
+    "highlightjs",
+    "iconify",
     "Millis",
     "OBSKUR",
+    "unhead",
     "unocss",
     "vueuse"
   ]

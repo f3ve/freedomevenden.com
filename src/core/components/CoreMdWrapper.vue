@@ -22,11 +22,11 @@ defineProps<{
       >
         <p
           v-if="frontmatter.datePublished"
-          class="mb-0 text-primary font-header"
+          class="mb-0 font-header text-primary"
         >
           {{ formatDate(frontmatter.datePublished) }}
         </p>
-        <p v-if="frontmatter.dateUpdated" class="my-0 italic op-75 font-header">
+        <p v-if="frontmatter.dateUpdated" class="my-0 font-header italic op-75">
           Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
         </p>
       </div>
