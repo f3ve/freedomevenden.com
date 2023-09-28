@@ -10,7 +10,7 @@ meta:
 
 Hey 👋, I'm Freedom. Thanks for checking out my little corner of the internet. I'm a programmer, currently working at [OBSKUR](https://obskur.com). I'm starting to dip my toes into the open-source community. I recently launched my first [NPM module](https://www.npmjs.com/package/@f3ve/vue-markdown-it) and I've got some other ideas in the works.
 
-Outside of programming I'm a dad, a gym-goer, and an avid gamer.
+Outside of programming, I'm a husband and father. My wife and I live in a cabin in the woods with our daughter and our kitty. I'm also a gym-goer and an avid gamer.
 
 If you want to connect with me, feel free to [send me an email](mailto:me@freedomevenden.com).
 
