@@ -19,12 +19,37 @@ const eslintrc = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const files = ['**/*.js', '**/*.ts', '**/*.vue', '**/*.md'];
+const files = ['**/*.js', '**/*.ts', '**/*.vue'];
+const ignores = [
+  '**/node_modules',
+  '**/dist',
+  '**/package-lock.json',
+  '**/yarn.lock',
+  '**/pnpm-lock.yaml',
+
+  '**/output',
+  '**/coverage',
+  '**/temp',
+  '**/.vitepress/cache',
+  '**/.nuxt',
+  '**/.vercel',
+  '**/.changeset',
+  '**/.idea',
+  '**/.output',
+  '**/.vite-inspect',
+
+  '**/CHANGELOG*.md',
+  '**/*.min.*',
+  '**/LICENSE*',
+  '**/__snapshots__',
+  '**/auto-import?(s).d.ts',
+  '**/components.d.ts',
+];
 
 export default [
   {
     files,
-    ignores: ['node_modules', 'dist'],
+    ignores,
   },
   {
     languageOptions: {
@@ -64,6 +89,9 @@ export default [
     processor: vuePlugin.processors['.vue'],
     rules: {
       ...vuePlugin.configs['vue3-recommended'].rules,
+      'vue/valid-v-slot': ['error', { allowModifiers: true }],
+      'vue/multi-word-component-names': 'off',
+      'vue/no-v-text-v-html-on-component': 'warn',
     },
   },
 
@@ -74,6 +102,15 @@ export default [
     },
     rules: {
       'prettier/prettier': 'error',
+    },
+  },
+
+  // Base config
+  {
+    rules: {
+      'unocss/blocklist': 'warn',
+      'no-console': 'warn',
+      'no-debugger': 'warn',
     },
   },
 ];
