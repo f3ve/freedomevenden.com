@@ -12,16 +12,16 @@ const publishDate = computed(() =>
 </script>
 
 <template>
-  <li class="hoverable rounded-lg">
+  <li class="rounded-lg hoverable">
     <RouterLink
       :key="post.path"
       :to="post.path"
       class="block pa-4 decoration-none"
     >
-      <p class="font-header ma-none mb-0 text-2xl font-bold italic">
+      <p class="ma-none mb-0 text-2xl font-bold font-header italic">
         {{ post.title }}
       </p>
-      <p class="font-header my-0 text-sm text-primary">{{ publishDate }}</p>
+      <p class="my-0 text-sm font-header text-primary">{{ publishDate }}</p>
       <p v-if="post.description" class="my-0 op-75">{{ post.description }}</p>
     </RouterLink>
   </li>

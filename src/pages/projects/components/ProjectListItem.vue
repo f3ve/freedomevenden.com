@@ -7,17 +7,17 @@ defineProps<{
 </script>
 
 <template>
-  <li class="hoverable rounded-lg">
+  <li class="rounded-lg hoverable">
     <a
       class="block pa-4 decoration-none"
       :href="project.link"
       target="_blank"
       rel="noopener"
     >
-      <p class="font-header ma-none mb-0 text-2xl font-bold italic">
+      <p class="ma-none mb-0 text-2xl font-bold font-header italic">
         {{ project.name }}
       </p>
-      <p class="font-header my-0 text-sm text-primary">
+      <p class="my-0 text-sm font-header text-primary">
         {{ project.role }}
       </p>
       <p class="my-0 op-75">{{ project.description }}</p>

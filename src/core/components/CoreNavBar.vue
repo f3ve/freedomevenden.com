@@ -26,7 +26,7 @@ const toggleDark = useToggle(isDark);
         rel="noopener"
       ></a>
       <button
-        class="dark:i-solar-moon-outline i-solar-sun-2-outline"
+        class="i-solar-sun-2-outline dark:i-solar-moon-outline"
         aria-label="Toggle Theme"
         @click="toggleDark()"
       />

@@ -44,14 +44,14 @@ export default defineConfig({
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
-      ([a, b]) => {
+      ([, b]) => {
         const borderClass = b ? `border-${b}` : `border`;
         return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-dark-300`;
       },
     ],
     [
       /^(\w+)-primary$/,
-      ([a, b]) => `${b}-primary-dark dark:${b}-primary-default`,
+      ([, b]) => `${b}-primary-dark dark:${b}-primary-default`,
     ],
   ],
   theme: {
