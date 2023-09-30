@@ -53,6 +53,7 @@ export default [
   },
   {
     languageOptions: {
+      name: 'f3ve:javascript',
       ecmaVersion: 2021,
       sourceType: 'module',
       parser: vueEslintParser,
