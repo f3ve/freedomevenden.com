@@ -76,6 +76,9 @@ devDependencies:
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
+  markdown-it:
+    specifier: ^13.0.2
+    version: 13.0.2
   markdown-it-anchor:
     specifier: ^8.6.7
     version: 8.6.7(@types/markdown-it@13.0.2)(markdown-it@13.0.2)
