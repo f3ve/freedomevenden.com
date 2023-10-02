@@ -22,9 +22,6 @@ dependencies:
     version: 4.2.5(vue@3.3.4)
 
 devDependencies:
-  '@eslint/eslintrc':
-    specifier: ^2.1.2
-    version: 2.1.2
   '@f3ve/eslint-config':
     specifier: ^1.0.3
     version: 1.0.3(eslint@8.50.0)(prettier@3.0.3)(typescript@5.2.2)
@@ -43,9 +40,6 @@ devDependencies:
   '@types/node':
     specifier: ^20.7.1
     version: 20.7.1
-  '@unocss/eslint-config':
-    specifier: ^0.56.4
-    version: 0.56.4(eslint@8.50.0)(typescript@5.2.2)
   '@unocss/reset':
     specifier: ^0.56.4
     version: 0.56.4
