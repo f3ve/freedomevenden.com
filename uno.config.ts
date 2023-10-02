@@ -41,6 +41,9 @@ export default defineConfig({
       'text-base-color': 'text-dark-200 dark:text-light-100',
       hoverable:
         'transition-colors @hover:bg-dark @hover:bg-op-10 @hover:dark:bg-op-30',
+      'bg-surface': 'bg-light-100 dark: dark:bg-dark',
+      'core-btn':
+        'cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,

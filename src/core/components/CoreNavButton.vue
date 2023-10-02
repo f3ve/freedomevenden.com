@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RouteLocationRaw } from 'vue-router';
+import { type RouteLocationRaw } from 'vue-router';
 
 defineProps<{
   to: RouteLocationRaw;
@@ -7,14 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <router-link
-    v-slot="{ isActive }"
-    :to="to"
-    class="cursor-pointer decoration-none"
-  >
-    <span>
-      <slot />
-    </span>
-    <core-divider :full-width="isActive" />
-  </router-link>
+  <core-btn :to="to" underline>
+    <slot />
+  </core-btn>
 </template>

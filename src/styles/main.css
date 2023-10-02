@@ -56,3 +56,13 @@ h6 {
 .prose ol:not(.blog-list) {
   --at-apply: ml-6;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
