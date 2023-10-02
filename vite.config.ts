@@ -85,12 +85,6 @@ export default defineConfig({
       ],
       dirs: ['src/core/composables', 'src/store'],
       vueTemplate: true,
-      dts: './src/auto-import.d.ts',
-      eslintrc: {
-        enabled: true,
-        filepath: './.eslintrc-auto-import.json',
-        globalsPropValue: true,
-      },
     }),
 
     UnoCSS({
