@@ -17,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/eslintrc": "^2.1.2",
-    "@f3ve/eslint-config": "link:../packages/@f3ve/eslint-config",
+    "@f3ve/eslint-config": "^1.0.3",
     "@iconify/json": "^2.2.121",
     "@types/fs-extra": "^11.0.2",
     "@types/markdown-it": "^13.0.2",
