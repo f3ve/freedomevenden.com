@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
-    fullWidth?: boolean;
+    fullWidth?: boolean | ComputedRef<boolean>;
     height?: string | number;
   }>(),
   {
