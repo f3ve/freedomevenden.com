@@ -18,13 +18,19 @@ const toggleDark = useToggle(isDark);
       <a
         class="i-ic-round-alternate-email"
         href="mailto:me@freedomevenden.com"
-      ></a>
+      />
+      <a
+        rel="noopener"
+        href="https://mastodon.social/@f3ve"
+        class="i-mdi-mastodon"
+        target="_blank"
+      />
       <a
         class="i-mdi-github"
         href="https://github.com/f3ve"
         target="_blank"
         rel="noopener"
-      ></a>
+      />
       <button
         class="i-solar-sun-2-outline dark:i-solar-moon-outline"
         aria-label="Toggle Theme"
