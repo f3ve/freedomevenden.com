@@ -44,7 +44,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     md({
-      headEnabled: true,
+      headEnabled: 'unhead',
       wrapperComponent: 'CoreMdWrapper',
       markdownItOptions: {
         linkify: true,
