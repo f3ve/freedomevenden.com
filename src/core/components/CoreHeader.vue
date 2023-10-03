@@ -17,7 +17,7 @@ const toggleDark = useToggle(isDark);
 
     <core-menu class="sm:hidden">
       <template #toggler>
-        <core-btn icon="mdi-menu"></core-btn>
+        <core-btn icon="i-mdi-menu"></core-btn>
       </template>
       <nav class="pa-4 fe-border-b">
         <ul class="blog-list ma-0 list-none pl-0">
@@ -38,7 +38,7 @@ const toggleDark = useToggle(isDark);
           <li>
             <core-btn
               href="mailto:me@freedomevenden.com"
-              icon="ic-round-alternate-email"
+              icon="i-ic-round-alternate-email"
             >
               Email me
             </core-btn>
@@ -48,7 +48,7 @@ const toggleDark = useToggle(isDark);
               rel="noopener"
               href="https://mastodon.social/@f3ve"
               target="_blank"
-              icon="mdi-mastodon"
+              icon="i-mdi-mastodon"
             >
               Mastodon
             </core-btn>
@@ -57,7 +57,7 @@ const toggleDark = useToggle(isDark);
             <core-btn
               rel="noopener"
               href="https://twitter.com/f3ve_"
-              icon="ri-twitter-x-fill"
+              icon="i-ri-twitter-x-fill"
               target="_blank"
             >
               Twitter
@@ -65,7 +65,7 @@ const toggleDark = useToggle(isDark);
           </li>
           <li>
             <core-btn
-              icon="mdi-github"
+              icon="i-mdi-github"
               href="https://github.com/f3ve"
               target="_blank"
               rel="noopener"
@@ -79,7 +79,7 @@ const toggleDark = useToggle(isDark);
         <ul class="blog-list ma-0 list-none pl-0">
           <li>
             <core-btn
-              icon="ci-sun dark:i-ci-moon"
+              icon="i-ci-sun dark:i-ci-moon"
               aria-label="Toggle Theme"
               @click="toggleDark()"
             >
@@ -92,29 +92,29 @@ const toggleDark = useToggle(isDark);
 
     <address class="hidden items-center sm:flex">
       <core-btn
-        icon="ic-round-alternate-email"
+        icon="i-ic-round-alternate-email"
         href="mailto:me@freedomevenden.com"
       />
       <core-btn
         rel="noopener"
         href="https://twitter.com/f3ve_"
-        icon="ri-twitter-x-fill"
+        icon="i-ri-twitter-x-fill"
         target="_blank"
       />
       <core-btn
         rel="noopener"
         href="https://mastodon.social/@f3ve"
-        icon="mdi-mastodon"
+        icon="i-mdi-mastodon"
         target="_blank"
       />
       <core-btn
-        icon="mdi-github"
+        icon="i-mdi-github"
         href="https://github.com/f3ve"
         target="_blank"
         rel="noopener"
       />
       <core-btn
-        icon="ci-sun dark:i-ci-moon"
+        icon="i-ci-sun dark:i-ci-moon"
         aria-label="Toggle Theme"
         @click="toggleDark()"
       />

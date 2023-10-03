@@ -24,7 +24,7 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
 
 <template>
   <tag :href="href" class="core-btn" @click="link?.navigate">
-    <i v-if="icon" :class="`i-${icon}`" />
+    <i v-if="icon" :class="icon" style="height: 20px width: 20px" />
     <slot />
     <core-divider v-if="underline" :full-width="link?.isActive" />
   </tag>
