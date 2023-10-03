@@ -13,7 +13,7 @@ function toggle(value?: boolean) {
 </script>
 
 <template>
-  <div class="relative" @click="toggle">
+  <div class="relative" @click="toggle()">
     <slot name="toggler">
       <button>Toggle</button>
     </slot>
