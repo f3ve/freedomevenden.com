@@ -49,3 +49,9 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
     />
   </tag>
 </template>
+
+<style scoped>
+.core-btn * {
+  pointer-events: none;
+}
+</style>

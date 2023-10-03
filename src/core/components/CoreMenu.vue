@@ -4,19 +4,22 @@ const menu = ref();
 const isVisible = ref(false);
 
 onClickOutside(menu, () => {
-  toggle(false);
+  isVisible.value = false;
 });
 
-function toggle(value?: boolean) {
-  isVisible.value = value !== undefined ? value : !isVisible.value;
+function showMenu() {
+  if (!isVisible.value) isVisible.value = true;
 }
 </script>
 
 <template>
-  <div class="relative" @click="toggle()">
-    <slot name="toggler">
-      <button>Toggle</button>
-    </slot>
+  <div class="relative">
+    <slot
+      name="toggler"
+      class="menu-toggler"
+      :disabled="isVisible"
+      @click="showMenu"
+    />
 
     <transition name="fade">
       <div
