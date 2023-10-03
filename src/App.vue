@@ -28,7 +28,11 @@ useHead({
   <div class="relative m-a min-h-screen w-screen prose fe-border-x bg-base">
     <core-app-header class="m-w-screen" />
     <main class="min-h-screen" style="padding-bottom: 100px">
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
     <CoreFooter class="absolute bottom-0" />
   </div>
