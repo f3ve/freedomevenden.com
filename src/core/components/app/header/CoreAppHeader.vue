@@ -1,13 +1,50 @@
+<script lang="ts" setup>
+const { toggleDark } = useTheme();
+</script>
+
 <template>
   <header class="w-full flex items-center justify-between px-6 py-4">
-    <core-btn to="/" noBg>
-      <img
-        src="/android-chrome-192x192.png"
-        style="width: 40px"
-        alt="Freedom Evenden's website logo"
+    <div class="flex items-center">
+      <core-btn to="/" noBg>
+        <img
+          src="/android-chrome-192x192.png"
+          style="width: 40px"
+          alt="Freedom Evenden's website logo"
+        />
+      </core-btn>
+      <core-nav-buttons className="hidden sm:flex" />
+    </div>
+
+    <address class="hidden items-center sm:flex">
+      <core-btn
+        icon="i-ic-round-alternate-email"
+        href="mailto:me@freedomevenden.com"
       />
-    </core-btn>
+      <core-btn
+        rel="noopener"
+        href="https://twitter.com/f3ve_"
+        icon="i-ri-twitter-x-fill"
+        target="_blank"
+      />
+      <core-btn
+        rel="noopener"
+        href="https://mastodon.social/@f3ve"
+        icon="i-mdi-mastodon"
+        target="_blank"
+      />
+      <core-btn
+        icon="i-mdi-github"
+        href="https://github.com/f3ve"
+        target="_blank"
+        rel="noopener"
+      />
+      <core-btn
+        icon="i-ci-sun dark:i-ci-moon"
+        aria-label="Toggle Theme"
+        @click="toggleDark()"
+      />
+    </address>
+
     <core-nav-menu class="sm:hidden" />
-    <core-nav-buttons className="hidden sm:flex" />
   </header>
 </template>
