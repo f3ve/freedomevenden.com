@@ -16,7 +16,6 @@ declare module 'vue' {
     CoreHeader: typeof import('./src/core/components/CoreHeader.vue')['default']
     CoreMdWrapper: typeof import('./src/core/components/CoreMdWrapper.vue')['default']
     CoreMenu: typeof import('./src/core/components/CoreMenu.vue')['default']
-    CoreNavBar: typeof import('./src/core/components/CoreNavBar.vue')['default']
     CoreNavButton: typeof import('./src/core/components/CoreNavButton.vue')['default']
     ProjectListItem: typeof import('./src/pages/projects/components/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/pages/projects/components/ProjectsList.vue')['default']
