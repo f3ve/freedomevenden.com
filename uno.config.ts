@@ -38,8 +38,9 @@ export default defineConfig({
       'text-base-color': 'text-dark-200 dark:text-light-100',
       hoverable: 'transition-shadow @hover:bg-lighten',
       'bg-surface': 'bg-light-100 dark: dark:bg-dark',
+      'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
-        'cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center',
+        'transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center if-disabled',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,

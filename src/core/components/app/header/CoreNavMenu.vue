@@ -4,8 +4,8 @@ const { toggleDark } = useTheme();
 
 <template>
   <core-menu>
-    <template #toggler>
-      <core-btn icon="i-mdi-menu"></core-btn>
+    <template #toggler="props">
+      <core-btn icon="i-mdi-menu" v-bind="props"></core-btn>
     </template>
     <nav class="pa-4 fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
