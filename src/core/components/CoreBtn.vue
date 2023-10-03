@@ -5,8 +5,8 @@ const props = defineProps<{
   to?: RouteLocationRaw;
   replace?: boolean;
   href?: string;
-  underline?: boolean;
   icon?: string;
+  underline?: boolean;
 }>();
 
 const link = props.to
@@ -23,9 +23,28 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
 </script>
 
 <template>
-  <tag :href="href" class="core-btn" @click="link?.navigate">
-    <i v-if="icon" :class="icon" style="height: 20px width: 20px" />
+  <tag
+    :href="href"
+    class="relative core-btn"
+    :class="{
+      'bg-primary': link?.isActive && !underline,
+      'text-on-primary-default': link?.isActive && !underline,
+    }"
+    :disabled="link?.isActive"
+    @click="link?.navigate"
+  >
+    <i
+      v-if="icon"
+      :class="{
+        ...(!!icon && { [icon]: true }),
+        'mr-2': !!$slots.default,
+      }"
+    />
     <slot />
-    <core-divider v-if="underline" :full-width="link?.isActive" />
+    <core-divider
+      v-if="underline"
+      :full-width="link?.isActive"
+      class="absolute bottom-0 left-0"
+    />
   </tag>
 </template>

@@ -32,18 +32,14 @@ export default defineConfig({
   ],
 
   transformers: [transformerDirectives()],
-
   shortcuts: [
     {
-      'list-item-clickable':
-        'border rounded-lg pa-4 transition-colors @hover:bg-gray @hover:bg-op-7',
       'bg-base': 'bg-light-100 dark:bg-dark-900',
       'text-base-color': 'text-dark-200 dark:text-light-100',
-      hoverable:
-        'transition-colors @hover:bg-dark @hover:bg-op-10 @hover:dark:bg-op-30',
+      hoverable: 'transition-shadow @hover:bg-lighten',
       'bg-surface': 'bg-light-100 dark: dark:bg-dark',
       'core-btn':
-        'cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable',
+        'cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
@@ -54,7 +50,20 @@ export default defineConfig({
     ],
     [
       /^(\w+)-primary$/,
-      ([, b]) => `${b}-primary-dark dark:${b}-primary-default`,
+      ([, b]) =>
+        `${b}-primary-dark dark:${b}-primary-default ${
+          b !== 'text' ? 'text-light dark:text-dark' : ''
+        }`,
+    ],
+  ],
+  rules: [
+    [
+      'bg-lighten',
+      {
+        '-moz-box-shadow': 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
+        '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
+        boxShadow: 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
+      },
     ],
   ],
   theme: {

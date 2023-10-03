@@ -16,7 +16,7 @@ function toggle() {
       <div
         v-if="isVisible"
         class="not-prose absolute right-0 w-fit rounded shadow bg-surface"
-        style="width: 150px"
+        style="min-width: 150px"
       >
         <slot />
       </div>
