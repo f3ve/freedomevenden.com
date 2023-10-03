@@ -7,6 +7,7 @@ const props = defineProps<{
   href?: string;
   icon?: string;
   underline?: boolean;
+  noBg?: boolean;
 }>();
 
 const link = props.to
@@ -27,8 +28,8 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
     :href="href"
     class="relative core-btn"
     :class="{
-      'bg-primary': link?.isActive && !underline,
-      'text-on-primary-default': link?.isActive && !underline,
+      'bg-primary': link?.isActive && !underline && !noBg,
+      'text-on-primary-default': link?.isActive && !underline && !noBg,
     }"
     :disabled="link?.isActive"
     @click="link?.navigate"
