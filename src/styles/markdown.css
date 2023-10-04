@@ -1,5 +1,5 @@
 .markdown-body p a,
-.markdown-body li a {
+.markdown-body li a:not(.block) {
   --at-apply: text-primary;
 }
 
