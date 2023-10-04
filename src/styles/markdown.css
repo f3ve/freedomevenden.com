@@ -1,4 +1,5 @@
-.markdown-body p > a {
+.markdown-body p a,
+.markdown-body li a {
   --at-apply: text-primary;
 }
 
