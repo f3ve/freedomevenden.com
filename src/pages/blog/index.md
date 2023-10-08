@@ -8,4 +8,4 @@ meta:
     content: website
 ---
 
-<BlogPostList />
+<CorePostList postsPath="/blog/" />
