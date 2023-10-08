@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { formatDate } from '@/utils/dateHelpers';
-import type { BlogPostFrontmatter } from './types';
+import type { BlogPostFrontmatter } from '@/types';
 
 const props = defineProps<{
   post: BlogPostFrontmatter;

@@ -18,6 +18,11 @@ const { toggleDark } = useTheme();
         <li>
           <core-btn to="/projects" title="Projects">Projects</core-btn>
         </li>
+        <li>
+          <core-btn to="/digital-garden" title="Digital Garden">
+            Garden
+          </core-btn>
+        </li>
       </ul>
     </nav>
 
