@@ -23,6 +23,9 @@ const { toggleDark } = useTheme();
             Garden
           </core-btn>
         </li>
+        <li>
+          <core-btn to="/contact" title="Contact">Contact</core-btn>
+        </li>
       </ul>
     </nav>
 

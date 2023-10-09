@@ -35,5 +35,6 @@ useHead({
       </router-view>
     </main>
     <CoreFooter class="absolute bottom-0" />
+    <core-toast />
   </div>
 </template>
