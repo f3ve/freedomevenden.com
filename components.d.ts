@@ -15,7 +15,6 @@ declare module 'vue' {
     CoreInput: typeof import('./src/core/components/inputs/CoreInput.vue')['default']
     CoreMdWrapper: typeof import('./src/core/components/containers/CoreMdWrapper.vue')['default']
     CoreMenu: typeof import('./src/core/components/containers/CoreMenu.vue')['default']
-    CoreNavButton: typeof import('./src/core/components/app/header/CoreNavButton.vue')['default']
     CoreNavButtons: typeof import('./src/core/components/app/header/CoreNavButtons.vue')['default']
     CoreNavMenu: typeof import('./src/core/components/app/header/CoreNavMenu.vue')['default']
     CorePostList: typeof import('./src/core/components/posts/CorePostList.vue')['default']
