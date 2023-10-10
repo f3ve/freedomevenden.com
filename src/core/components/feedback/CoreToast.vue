@@ -17,7 +17,7 @@ watch(
   <transition name="fade" mode="out-in">
     <div
       v-if="toast.isVisible"
-      class="absolute bottom-10 left-0 right-0 m-a max-w-lg w-fit rounded-lg bg-green px-4"
+      class="absolute bottom-30 left-0 right-0 m-a max-w-lg w-fit rounded-lg bg-green px-4"
     >
       <div class="flex">
         <p>{{ toast.text }}</p>
