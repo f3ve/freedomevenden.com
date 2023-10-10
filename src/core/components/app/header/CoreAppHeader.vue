@@ -17,30 +17,30 @@ const { toggleDark } = useTheme();
 
     <address class="hidden items-center sm:flex">
       <core-btn
-        icon="i-ic-round-alternate-email"
-        href="mailto:me@freedomevenden.com"
-      />
-      <core-btn
         rel="noopener"
         href="https://twitter.com/f3ve_"
         icon="i-ri-twitter-x-fill"
         target="_blank"
+        title="twitter"
       />
       <core-btn
         rel="noopener"
         href="https://mastodon.social/@f3ve"
         icon="i-mdi-mastodon"
         target="_blank"
+        title="Mastodon"
       />
       <core-btn
         icon="i-mdi-github"
         href="https://github.com/f3ve"
         target="_blank"
         rel="noopener"
+        title="GitHub"
       />
       <core-btn
         icon="i-ci-sun dark:i-ci-moon"
         aria-label="Toggle Theme"
+        title="Toggle Theme"
         @click="toggleDark()"
       />
     </address>

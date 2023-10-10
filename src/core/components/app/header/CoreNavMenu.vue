@@ -5,7 +5,7 @@ const { toggleDark } = useTheme();
 <template>
   <core-menu>
     <template #toggler="props">
-      <core-btn icon="i-mdi-menu" v-bind="props"></core-btn>
+      <core-btn icon="i-mdi-menu" v-bind="props" title="menu"></core-btn>
     </template>
     <nav class="pa-4 fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
@@ -23,19 +23,14 @@ const { toggleDark } = useTheme();
             Garden
           </core-btn>
         </li>
+        <li>
+          <core-btn to="/contact" title="Contact">Contact</core-btn>
+        </li>
       </ul>
     </nav>
 
     <address class="pa-4 not-italic fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
-        <li>
-          <core-btn
-            href="mailto:me@freedomevenden.com"
-            icon="i-ic-round-alternate-email"
-          >
-            Email me
-          </core-btn>
-        </li>
         <li>
           <core-btn
             rel="noopener"

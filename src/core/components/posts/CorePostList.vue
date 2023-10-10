@@ -8,7 +8,12 @@ const { posts, search } = usePosts(props.postsPath);
 
 <template>
   <div>
-    <CoreSearchBar v-model="search" placeholder="Search..." />
+    <CoreInput
+      v-model="search"
+      placeholder="Search..."
+      icon="i-ph-magnifying-glass"
+      name="search"
+    />
     <ul class="blog-list flex flex-col list-none gap-sm pl-none">
       <CorePostListItem v-for="post in posts" :key="post.path" :post="post" />
     </ul>

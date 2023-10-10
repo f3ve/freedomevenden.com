@@ -40,7 +40,7 @@ export default defineConfig({
       'bg-surface': 'bg-light-100 dark: dark:bg-dark',
       'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
-        'transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center if-disabled',
+        'transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
@@ -71,7 +71,7 @@ export default defineConfig({
     colors: {
       primary: {
         default: '#02FFD7',
-        dark: '#008E6D',
+        dark: '#00757C',
       },
     },
   },
