@@ -36,6 +36,7 @@ async function handleSubmit(e: Event) {
     id="contact-form"
     name="contact"
     class="flex flex-col items-center gap-6"
+    netlify
     @submit.prevent="handleSubmit"
   >
     <core-input
