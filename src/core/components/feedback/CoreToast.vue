@@ -14,7 +14,15 @@ watch(
 </script>
 
 <template>
-  <div v-if="toast.isVisible" class="absolute bottom-0 bg-green">
-    <p>{{ toast.text }}</p>
-  </div>
+  <transition name="fade" mode="out-in">
+    <div
+      v-if="toast.isVisible"
+      class="absolute bottom-10 left-0 right-0 m-a w-fit max-w-lg rounded-lg bg-green px-4"
+    >
+      <div class="flex">
+        <p>{{ toast.text }}</p>
+        <core-btn icon="i-material-symbols-close" @click="toast.hide" />
+      </div>
+    </div>
+  </transition>
 </template>

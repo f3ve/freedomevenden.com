@@ -8,7 +8,7 @@ export const useToastStore = defineStore('toast', () => {
   }
 
   function hide() {
-    isVisible.value = true;
+    isVisible.value = false;
     text.value = '';
   }
 

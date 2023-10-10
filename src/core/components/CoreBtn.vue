@@ -8,6 +8,7 @@ const props = defineProps<{
   icon?: string;
   underline?: boolean;
   noBg?: boolean;
+  loading?: boolean;
 }>();
 
 const link = props.to
@@ -41,7 +42,8 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
         'mr-2': !!$slots.default,
       }"
     />
-    <slot />
+    <slot v-if="!loading" />
+    <i v-else class="i-svg-spinners-ring-resize" />
     <core-divider
       v-if="underline"
       :full-width="link?.isActive"

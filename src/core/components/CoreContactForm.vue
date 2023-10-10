@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import axios from 'axios';
+import { useAsyncState } from '@vueuse/core';
+
 const fields = reactive({
   name: '',
   contactMethod: '',
@@ -9,25 +11,23 @@ const fields = reactive({
 
 const toast = useToastStore();
 
-async function handleSubmit(e: SubmitEvent) {
-  try {
-    if (e.target) {
-      const urlEncodedData = new URLSearchParams(fields).toString();
-      console.log(urlEncodedData);
-      await axios.post('/', urlEncodedData, {
+const { isLoading, execute } = useAsyncState(async (e: Event) => {
+  if (e.target) {
+    const urlEncodedData = new URLSearchParams(fields).toString();
+
+    return axios
+      .post('/', urlEncodedData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-      });
-      toast.show('Message was sent successfully. Thanks for reaching out!');
-    } else {
-      throw new Error('Unable to find form');
-    }
-  } catch {
-    toast.show(
-      'Oops, looks like something went wrong. Please try again later.',
-    );
+      })
+      .then((r) => r.data);
   }
+}, {});
+
+async function handleSubmit(e: Event) {
+  await execute(undefined, e);
+  toast.show('Message was sent successfully. Thanks for reaching out!');
 }
 </script>
 
@@ -71,6 +71,8 @@ async function handleSubmit(e: SubmitEvent) {
       required
     />
 
-    <core-btn class="w-fit bg-primary" type="submit">Submit</core-btn>
+    <core-btn class="w-fit bg-primary" type="submit" :loading="isLoading">
+      Submit
+    </core-btn>
   </form>
 </template>
