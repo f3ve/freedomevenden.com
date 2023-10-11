@@ -19,7 +19,8 @@ withDefaults(
       <core-btn to="/digital-garden" title="Digital Garden" underline>
         Garden
       </core-btn>
-      <core-btn to="/contact" title="Contact" underline>Contact</core-btn>
+      <!-- Temporarily disabled -->
+      <!-- <core-btn to="/contact" title="Contact" underline>Contact</core-btn> -->
     </nav>
   </div>
 </template>
