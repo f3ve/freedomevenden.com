@@ -42,14 +42,15 @@ declare module 'vue-router/auto/routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
-    '/blog/how-to-create-custom-video-controls-in-react-native': RouteRecordInfo<'/blog/how-to-create-custom-video-controls-in-react-native', '/blog/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
-    '/blog/how-to-create-your-own-medium-style-rich-text-editor-in-react': RouteRecordInfo<'/blog/how-to-create-your-own-medium-style-rich-text-editor-in-react', '/blog/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
-    '/blog/how-to-fix-a-minimist-vulnerability-in-your-express-application': RouteRecordInfo<'/blog/how-to-fix-a-minimist-vulnerability-in-your-express-application', '/blog/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
     '/blog/redesigning-my-website': RouteRecordInfo<'/blog/redesigning-my-website', '/blog/redesigning-my-website', Record<never, never>, Record<never, never>>,
     '/blog/vue-markdown-it-v0.2.0': RouteRecordInfo<'/blog/vue-markdown-it-v0.2.0', '/blog/vue-markdown-it-v0/2/0', Record<never, never>, Record<never, never>>,
     '/blog/website-updates-10-03-2023': RouteRecordInfo<'/blog/website-updates-10-03-2023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
     '/contact': RouteRecordInfo<'/contact', '/contact', Record<never, never>, Record<never, never>>,
+    '/knowledge': RouteRecordInfo<'/knowledge', '/knowledge', Record<never, never>, Record<never, never>>,
     '/knowledge/': RouteRecordInfo<'/knowledge/', '/knowledge', Record<never, never>, Record<never, never>>,
+    '/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application': RouteRecordInfo<'/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', '/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
+    '/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react': RouteRecordInfo<'/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', '/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
+    '/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native': RouteRecordInfo<'/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', '/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
   }
 }

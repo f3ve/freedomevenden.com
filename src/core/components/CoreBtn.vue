@@ -9,6 +9,9 @@ const props = defineProps<{
   underline?: boolean;
   noBg?: boolean;
   loading?: boolean;
+  tagName?: Element['tagName'];
+  active?: boolean;
+  disabled?: boolean;
 }>();
 
 const link = props.to
@@ -21,7 +24,9 @@ const link = props.to
   : undefined;
 
 const href = computed(() => (link?.href ? link.href : props.href));
-const tag = computed(() => (href.value ? 'a' : 'button'));
+const tag = computed(() => (href.value ? 'a' : props.tagName || 'button'));
+
+const isActive = computed(() => props.active || link?.isActive);
 </script>
 
 <template>
@@ -29,24 +34,26 @@ const tag = computed(() => (href.value ? 'a' : 'button'));
     :href="href"
     class="relative core-btn"
     :class="{
-      'bg-primary': link?.isActive && !underline && !noBg,
-      'text-on-primary-default': link?.isActive && !underline && !noBg,
+      'bg-primary': isActive && !underline && !noBg,
+      'text-on-primary-default': isActive && !underline && !noBg,
     }"
-    :disabled="link?.isActive"
+    :disabled="isActive || disabled"
     @click="link?.navigate"
   >
-    <i
-      v-if="icon"
-      :class="{
-        ...(!!icon && { [icon]: true }),
-        'mr-2': !!$slots.default,
-      }"
-    />
+    <slot name="icon" :class="{ 'mr-2': !!$slots.default }">
+      <i
+        v-if="icon"
+        :class="{
+          ...(!!icon && { [icon]: true }),
+          'mr-2': !!$slots.default,
+        }"
+      />
+    </slot>
     <slot v-if="!loading" />
     <i v-else class="i-svg-spinners-ring-resize" />
     <core-divider
       v-if="underline"
-      :full-width="link?.isActive"
+      :full-width="isActive"
       class="absolute bottom-0 left-0"
     />
   </tag>

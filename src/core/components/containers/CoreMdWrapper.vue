@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <article class="m-a px-6">
+  <article class="m-a px-6 prose">
     <div class="mb-10 py-10 fe-border-b">
       <h1 v-if="frontmatter.title" class="mb-5 text-center">
         {{ frontmatter.title.replace('- Freedom Evenden', '') }}

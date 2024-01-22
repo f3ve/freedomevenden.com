@@ -21,6 +21,10 @@ h6 {
   --at-apply: font-header;
 }
 
+details {
+  --at-apply: m-0, p-0;
+}
+
 .prose {
   max-width: 50rem !important;
 }
