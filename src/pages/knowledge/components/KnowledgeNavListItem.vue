@@ -5,7 +5,7 @@ const props = defineProps<{ route: RouteRecordRaw }>();
 const name = computed(() => formatName(props.route.path));
 const $details = ref<HTMLDetailsElement>();
 const isOpen = ref(false);
-const height = ref(`-${(props.route.children?.length || 0) * 32}px`);
+const height = ref(`-${(props.route.children?.length || 0) * 32}px`); //32px is the default height of buttons
 
 const content = ref<HTMLDivElement>();
 
@@ -85,6 +85,6 @@ function onClick() {
 
 .expand-enter-from,
 .expand-leave-to {
-  margin-top: v-bind(height); /* 32px is the height of the button component */
+  margin-top: v-bind(height);
 }
 </style>
