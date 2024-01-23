@@ -12,10 +12,19 @@ function formatName(name: string) {
 
 function onClick() {
   if ($details.value) {
-    $details.value.open = !$details.value.open;
-    nextTick(() => {
-      isOpen.value = !!$details.value?.open;
-    });
+    const { open } = $details.value;
+    if (open) {
+      isOpen.value = false;
+
+      setTimeout(() => {
+        if ($details.value) $details.value.open = !open;
+      }, 350);
+    }
+
+    if (!open) {
+      isOpen.value = true;
+      $details.value.open = !open;
+    }
   }
 }
 </script>
@@ -40,16 +49,30 @@ function onClick() {
         </template>
         {{ name }}
       </CoreBtn>
-      <ul :class="['ml-4', 'list-none']">
-        <KnowledgeNavListItem
-          v-for="r in route.children"
-          :key="r.name"
-          :route="r"
-        />
-      </ul>
+      <transition name="expand">
+        <ul v-show="isOpen" :class="['ml-4', 'list-none']">
+          <KnowledgeNavListItem
+            v-for="r in route.children"
+            :key="r.name"
+            :route="r"
+          />
+        </ul>
+      </transition>
     </details>
-    <CoreBtn v-else :to="route" underline style="width: fit-content">{{
-      name
-    }}</CoreBtn>
+    <CoreBtn v-else :to="route" underline style="width: fit-content">
+      {{ name }}
+    </CoreBtn>
   </li>
 </template>
+
+<style scoped>
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.35s ease-in-out;
+}
+
+.expand-enter-from,
+.expand-leave-to {
+  margin-top: -100% !important;
+}
+</style>

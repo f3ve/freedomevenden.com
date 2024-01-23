@@ -19,7 +19,6 @@ declare module 'vue' {
     CoreNavMenu: typeof import('./src/core/components/app/header/CoreNavMenu.vue')['default']
     CorePostList: typeof import('./src/core/components/posts/CorePostList.vue')['default']
     CorePostListItem: typeof import('./src/core/components/posts/CorePostListItem.vue')['default']
-    CoreRevursiveListItem: typeof import('./src/core/components/CoreRevursiveListItem.vue')['default']
     CoreTextarea: typeof import('./src/core/components/inputs/CoreTextarea.vue')['default']
     CoreToast: typeof import('./src/core/components/feedback/CoreToast.vue')['default']
     KnowledgeNavListItem: typeof import('./src/pages/knowledge/components/KnowledgeNavListItem.vue')['default']
