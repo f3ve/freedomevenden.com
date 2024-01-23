@@ -5,6 +5,9 @@ const props = defineProps<{ route: RouteRecordRaw }>();
 const name = computed(() => formatName(props.route.path));
 const $details = ref<HTMLDetailsElement>();
 const isOpen = ref(false);
+const height = ref(`-${(props.route.children?.length || 0) * 32}px`);
+
+const content = ref<HTMLDivElement>();
 
 function formatName(name: string) {
   return name.charAt(0).toUpperCase() + name.substring(1).replace(/-/g, ' ');
@@ -13,6 +16,13 @@ function formatName(name: string) {
 function onClick() {
   if ($details.value) {
     const { open } = $details.value;
+
+    if (content.value) {
+      height.value = content.value.offsetHeight
+        ? `-${content.value.offsetHeight}px`
+        : height.value;
+    }
+
     if (open) {
       isOpen.value = false;
 
@@ -49,15 +59,17 @@ function onClick() {
         </template>
         {{ name }}
       </CoreBtn>
-      <transition name="expand">
-        <ul v-show="isOpen" :class="['ml-4', 'list-none']">
-          <KnowledgeNavListItem
-            v-for="r in route.children"
-            :key="r.name"
-            :route="r"
-          />
-        </ul>
-      </transition>
+      <div ref="content" class="h-full overflow-hidden">
+        <transition name="expand">
+          <ul v-show="isOpen" :class="['ml-4', 'list-none', 'h-full', 'mt-0']">
+            <KnowledgeNavListItem
+              v-for="r in route.children"
+              :key="r.name"
+              :route="r"
+            />
+          </ul>
+        </transition>
+      </div>
     </details>
     <CoreBtn v-else :to="route" underline style="width: fit-content">
       {{ name }}
@@ -68,11 +80,11 @@ function onClick() {
 <style scoped>
 .expand-enter-active,
 .expand-leave-active {
-  transition: all 0.35s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .expand-enter-from,
 .expand-leave-to {
-  margin-top: -100% !important;
+  margin-top: v-bind(height); /* 32px is the height of the button component */
 }
 </style>
