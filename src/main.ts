@@ -3,7 +3,6 @@ import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';
 import 'uno.css';
-// import VueMatomo from 'vue-matomo';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
@@ -24,16 +23,8 @@ export const createApp = ViteSSG(
     },
     routes,
   },
-  ({ app, router, isClient }) => {
+  ({ app }) => {
     const pinia = createPinia();
     app.use(pinia);
-    // if (isClient) {
-    //   app.use(VueMatomo, {
-    //     router,
-    //     host: 'https://freedomevenden.matomo.cloud/',
-    //     siteId: 1,
-    //     disableCookies: true,
-    //   });
-    // }
   },
 );
