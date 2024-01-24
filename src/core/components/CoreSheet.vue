@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-4 bg-base">
+  <div class="pa-4 bg-surface">
     <slot />
   </div>
 </template>

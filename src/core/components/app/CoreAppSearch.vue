@@ -18,23 +18,26 @@ whenever(ctrl_k, () => searchOverlay.toggle());
 </script>
 
 <template>
-  <CoreOverlay v-model="searchOverlay.isVisible">
+  <CoreOverlay v-model="searchOverlay.isVisible" width="600px">
     <core-sheet
       ref="target"
-      class="h-full w-full overflow-hidden rounded shadow"
+      class="relative h-full w-full overflow-auto rounded shadow"
     >
-      <CoreInput
-        v-model="search"
-        name="Search"
-        placeholder="search"
-        icon="i-ph-magnifying-glass"
-      />
-      <div class="h-full flex flex-col items-center overflow-auto pt-4">
+      <div class="fixed z-10 w-full border-b pb-2 bg-surface">
+        <CoreInput
+          v-model="search"
+          name="Search"
+          placeholder="search"
+          icon="i-ph-magnifying-glass"
+          auto-focus
+        />
+      </div>
+      <div class="h-full flex flex-col items-center pt-14">
         <ul v-if="search.length && pages.length" class="w-full">
-          <CorePostListItem
+          <CoreAppSearchResult
             v-for="page in pages"
             :key="page.path"
-            :post="page"
+            :page="page"
           />
         </ul>
 

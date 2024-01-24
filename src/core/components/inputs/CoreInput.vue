@@ -8,6 +8,7 @@ const props = withDefaults(
     type?: string;
     name?: string;
     required?: boolean;
+    autoFocus?: boolean;
   }>(),
   {
     type: 'text',
@@ -34,6 +35,10 @@ const inputText = computed({
 function focusInput() {
   input.value?.focus();
 }
+
+onMounted(() => {
+  if (props.autoFocus) focusInput();
+});
 </script>
 
 <template>

@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CoreAppHeader: typeof import('./src/core/components/app/header/CoreAppHeader.vue')['default']
     CoreAppSearch: typeof import('./src/core/components/app/CoreAppSearch.vue')['default']
+    CoreAppSearchResult: typeof import('./src/core/components/app/CoreAppSearchResult.vue')['default']
     CoreBtn: typeof import('./src/core/components/CoreBtn.vue')['default']
     CoreContactForm: typeof import('./src/core/components/CoreContactForm.vue')['default']
     CoreDivider: typeof import('./src/core/components/CoreDivider.vue')['default']
