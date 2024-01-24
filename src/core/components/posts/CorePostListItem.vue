@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { formatDate } from '@/utils/dateHelpers';
-import type { BlogPostFrontmatter } from '@/types';
+import type { PageFrontmatter } from '@/types';
 
 const props = defineProps<{
-  post: BlogPostFrontmatter;
+  post: PageFrontmatter;
 }>();
 
 const publishDate = computed(() =>
@@ -21,7 +21,9 @@ const publishDate = computed(() =>
       <p class="ma-none mb-0 text-2xl font-bold font-header italic">
         {{ post.title }}
       </p>
-      <p class="my-0 text-sm font-header text-primary">{{ publishDate }}</p>
+      <p v-if="publishDate" class="my-0 text-sm font-header text-primary">
+        {{ publishDate }}
+      </p>
       <p v-if="post.description" class="my-0 op-75">{{ post.description }}</p>
     </RouterLink>
   </li>

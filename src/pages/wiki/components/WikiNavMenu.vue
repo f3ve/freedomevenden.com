@@ -8,7 +8,7 @@ const routes = router
 </script>
 
 <template>
-  <ul class="not-prose blog-list">
+  <ul class="blog-list not-prose">
     <WikiNavListItem v-for="route in routes" :key="route.path" :route="route" />
   </ul>
 </template>

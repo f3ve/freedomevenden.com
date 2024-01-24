@@ -70,3 +70,13 @@ details {
 .fade-leave-to {
   opacity: 0;
 }
+
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.15s ease-in-out;
+}
+
+.expand-enter-from,
+.expand-leave-to {
+  margin-top: -100%;
+}

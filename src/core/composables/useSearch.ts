@@ -5,10 +5,13 @@ export function useSearch(path = '') {
   const router = useRouter();
   const search = ref('');
 
-  const pages = computed(() => {
+  const pages = computed<PageFrontmatter[]>(() => {
     return router
       .getRoutes()
-      .filter((route) => route.path.startsWith(path))
+      .filter(
+        (route) =>
+          route.path.startsWith(path) && !route.path.includes('/:all(.*)'),
+      )
       .map((route) => ({
         path: route.path,
         ...route.meta.frontmatter,
