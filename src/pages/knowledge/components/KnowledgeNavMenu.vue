@@ -8,11 +8,13 @@ const routes = router
 </script>
 
 <template>
-  <ul>
-    <KnowledgeNavListItem
-      v-for="route in routes"
-      :key="route.path"
-      :route="route"
-    />
-  </ul>
+  <CoreNavDrawer>
+    <ul>
+      <KnowledgeNavListItem
+        v-for="route in routes"
+        :key="route.path"
+        :route="route"
+      />
+    </ul>
+  </CoreNavDrawer>
 </template>
