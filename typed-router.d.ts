@@ -45,12 +45,12 @@ declare module 'vue-router/auto/routes' {
     '/blog/vue-markdown-it-v0.2.0': RouteRecordInfo<'/blog/vue-markdown-it-v0.2.0', '/blog/vue-markdown-it-v0/2/0', Record<never, never>, Record<never, never>>,
     '/blog/website-updates-10-03-2023': RouteRecordInfo<'/blog/website-updates-10-03-2023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
     '/contact': RouteRecordInfo<'/contact', '/contact', Record<never, never>, Record<never, never>>,
-    '/knowledge': RouteRecordInfo<'/knowledge', '/knowledge', Record<never, never>, Record<never, never>>,
-    '/knowledge/': RouteRecordInfo<'/knowledge/', '/knowledge', Record<never, never>, Record<never, never>>,
-    '/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application': RouteRecordInfo<'/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', '/knowledge/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
-    '/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react': RouteRecordInfo<'/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', '/knowledge/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
-    '/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native': RouteRecordInfo<'/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', '/knowledge/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
+    '/wiki': RouteRecordInfo<'/wiki', '/wiki', Record<never, never>, Record<never, never>>,
+    '/wiki/': RouteRecordInfo<'/wiki/', '/wiki', Record<never, never>, Record<never, never>>,
+    '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application': RouteRecordInfo<'/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
+    '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react': RouteRecordInfo<'/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
+    '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native': RouteRecordInfo<'/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
   }
 }
 

@@ -25,12 +25,13 @@ useHead({
 </script>
 
 <template>
-  <div class="relative m-a min-h-screen w-screen fe-border-x bg-base">
-    <core-app-header class="m-w-screen" />
-    <main class="min-h-screen pt-20.2" style="padding-bottom: 100px">
+  <div class="relative m-a min-h-screen w-200 fe-border-x bg-base">
+    <core-app-header />
+    <main style="padding-bottom: 100px">
       <RouterView />
     </main>
     <CoreFooter class="absolute bottom-0" />
     <core-toast />
   </div>
+  <CoreAppSearch />
 </template>

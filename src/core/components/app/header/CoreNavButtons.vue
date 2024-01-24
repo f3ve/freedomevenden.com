@@ -16,9 +16,7 @@ withDefaults(
       <core-btn to="/" title="Home" underline>Home</core-btn>
       <core-btn to="/blog" title="blog" underline>Blog</core-btn>
       <core-btn to="/projects" title="Projects" underline>Projects</core-btn>
-      <core-btn to="/knowledge" title="Digital Garden" underline>
-        Knowledge Base
-      </core-btn>
+      <core-btn to="/wiki" title="Digital Garden" underline> Wiki </core-btn>
       <!-- Temporarily disabled -->
       <!-- <core-btn to="/contact" title="Contact" underline>Contact</core-btn> -->
     </nav>

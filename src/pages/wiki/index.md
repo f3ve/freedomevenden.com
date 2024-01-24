@@ -8,4 +8,5 @@ meta:
     content: website
 ---
 
-Hey this is my knowledge base.
+Hey
+<WikiNavMenu />

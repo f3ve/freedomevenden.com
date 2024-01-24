@@ -62,7 +62,7 @@ function onClick() {
       <div ref="content" class="h-full overflow-hidden">
         <transition name="expand">
           <ul v-show="isOpen" :class="['ml-4', 'list-none', 'h-full', 'mt-0']">
-            <KnowledgeNavListItem
+            <WikiNavListItem
               v-for="r in route.children"
               :key="r.name"
               :route="r"

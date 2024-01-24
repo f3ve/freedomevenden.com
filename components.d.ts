@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CoreAppHeader: typeof import('./src/core/components/app/header/CoreAppHeader.vue')['default']
+    CoreAppSearch: typeof import('./src/core/components/app/CoreAppSearch.vue')['default']
     CoreBtn: typeof import('./src/core/components/CoreBtn.vue')['default']
     CoreContactForm: typeof import('./src/core/components/CoreContactForm.vue')['default']
     CoreDivider: typeof import('./src/core/components/CoreDivider.vue')['default']
@@ -18,6 +19,7 @@ declare module 'vue' {
     CoreNavButtons: typeof import('./src/core/components/app/header/CoreNavButtons.vue')['default']
     CoreNavDrawer: typeof import('./src/core/components/containers/CoreNavDrawer.vue')['default']
     CoreNavMenu: typeof import('./src/core/components/app/header/CoreNavMenu.vue')['default']
+    CoreOverlay: typeof import('./src/core/components/containers/CoreOverlay.vue')['default']
     CorePostList: typeof import('./src/core/components/posts/CorePostList.vue')['default']
     CorePostListItem: typeof import('./src/core/components/posts/CorePostListItem.vue')['default']
     CoreSheet: typeof import('./src/core/components/CoreSheet.vue')['default']
@@ -29,5 +31,8 @@ declare module 'vue' {
     ProjectsList: typeof import('./src/pages/projects/components/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WikieNavMenu: typeof import('./src/pages/wiki/components/WikieNavMenu.vue')['default']
+    WikiNavListItem: typeof import('./src/pages/wiki/components/WikiNavListItem.vue')['default']
+    WikiNavMenu: typeof import('./src/pages/wiki/components/WikiNavMenu.vue')['default']
   }
 }

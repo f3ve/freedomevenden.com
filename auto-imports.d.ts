@@ -75,9 +75,12 @@ declare global {
   const usePosts: typeof import('./src/core/composables/usePosts')['usePosts']
   const useRoute: typeof import('vue-router/auto')['useRoute']
   const useRouter: typeof import('vue-router/auto')['useRouter']
+  const useSearch: typeof import('./src/core/composables/useSearch')['useSearch']
+  const useSearchOverlay: typeof import('./src/store/searchOverlay')['useSearchOverlay']
   const useSlots: typeof import('vue')['useSlots']
   const useTheme: typeof import('./src/core/composables/useTheme')['useTheme']
   const useToastStore: typeof import('./src/store/toast')['useToastStore']
+  const useVisibility: typeof import('./src/core/composables/useVisibility')['useVisibility']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -160,9 +163,12 @@ declare module 'vue' {
     readonly usePosts: UnwrapRef<typeof import('./src/core/composables/usePosts')['usePosts']>
     readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useSearch: UnwrapRef<typeof import('./src/core/composables/useSearch')['useSearch']>
+    readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/core/composables/useTheme')['useTheme']>
     readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
+    readonly useVisibility: UnwrapRef<typeof import('./src/core/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
@@ -239,9 +245,12 @@ declare module '@vue/runtime-core' {
     readonly usePosts: UnwrapRef<typeof import('./src/core/composables/usePosts')['usePosts']>
     readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useSearch: UnwrapRef<typeof import('./src/core/composables/useSearch')['useSearch']>
+    readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/core/composables/useTheme')['useTheme']>
     readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
+    readonly useVisibility: UnwrapRef<typeof import('./src/core/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

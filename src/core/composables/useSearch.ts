@@ -1,11 +1,11 @@
 import type { PageFrontmatter } from '@/types';
 import { formatDate } from '@/utils/dateHelpers';
 
-export function usePosts(path: string) {
+export function useSearch(path = '') {
   const router = useRouter();
   const search = ref('');
 
-  const posts = computed<PageFrontmatter[]>(() => {
+  const pages = computed(() => {
     return router
       .getRoutes()
       .filter((route) => route.path.startsWith(path))
@@ -40,7 +40,7 @@ export function usePosts(path: string) {
   });
 
   return {
-    posts,
+    pages,
     search,
   };
 }
