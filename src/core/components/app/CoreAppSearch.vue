@@ -1,11 +1,28 @@
 <script lang="ts" setup>
+import { useMagicKeys, whenever, onClickOutside } from '@vueuse/core';
+
 const searchOverlay = useSearchOverlay();
 const { search, pages } = useSearch();
+const target = ref();
+
+const { ctrl_k } = useMagicKeys({
+  passive: false,
+  onEventFired(e) {
+    if (e.ctrlKey && e.key === 'k' && e.type === 'keydown') e.preventDefault();
+  },
+});
+
+onClickOutside(target, () => searchOverlay.hide());
+
+whenever(ctrl_k, () => searchOverlay.toggle());
 </script>
 
 <template>
   <CoreOverlay v-model="searchOverlay.isVisible">
-    <core-sheet class="h-full w-full overflow-hidden rounded shadow">
+    <core-sheet
+      ref="target"
+      class="h-full w-full overflow-hidden rounded shadow"
+    >
       <CoreInput
         v-model="search"
         name="Search"
