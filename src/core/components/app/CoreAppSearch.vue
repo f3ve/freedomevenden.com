@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useMagicKeys, whenever, onClickOutside } from '@vueuse/core';
+import { useMagicKeys, whenever } from '@vueuse/core';
 
 const searchOverlay = useSearchOverlay();
 const { search, pages } = useSearch();
@@ -12,8 +12,6 @@ const { ctrl_k } = useMagicKeys({
   },
 });
 
-onClickOutside(target, () => searchOverlay.hide());
-
 whenever(ctrl_k, () => searchOverlay.toggle());
 </script>
 
@@ -21,26 +19,23 @@ whenever(ctrl_k, () => searchOverlay.toggle());
   <CoreOverlay v-model="searchOverlay.isVisible" width="600px">
     <core-sheet
       ref="target"
-      class="relative h-full w-full overflow-auto rounded shadow"
+      class="h-full w-full flex flex-col items-center rounded shadow"
     >
-      <div class="fixed z-10 w-full border-b pb-2 bg-surface">
+      <div class="h-auto w-full border-b pb-2 bg-surface">
         <CoreInput
           v-model="search"
           name="Search"
           placeholder="search"
           icon="i-ph-magnifying-glass"
           auto-focus
+          autocomplete="off"
         />
       </div>
-      <div class="h-full flex flex-col items-center pt-14">
-        <ul v-if="search.length && pages.length" class="w-full">
-          <CoreAppSearchResult
-            v-for="page in pages"
-            :key="page.path"
-            :page="page"
-          />
-        </ul>
-
+      <div class="h-full overflow-auto pt-4">
+        <CoreAppSearchList
+          v-if="search.length && pages.length"
+          :pages="pages"
+        />
         <p v-else-if="search.length">No results match your search.</p>
         <p v-else>Start typing to find pages.</p>
       </div>

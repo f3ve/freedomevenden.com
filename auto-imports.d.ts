@@ -71,15 +71,19 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useFocus: typeof import('./src/core/composables/useFocus')['useFocus']
   const useLink: typeof import('vue-router')['useLink']
+  const useOnClickOutside: typeof import('./src/core/composables/useOnClickOutside')['useOnClickOutside']
   const usePosts: typeof import('./src/core/composables/usePosts')['usePosts']
   const useRoute: typeof import('vue-router/auto')['useRoute']
   const useRouter: typeof import('vue-router/auto')['useRouter']
+  const useScrollLocker: typeof import('./src/core/composables/useScrollLocker')['useScrollLocker']
   const useSearch: typeof import('./src/core/composables/useSearch')['useSearch']
   const useSearchOverlay: typeof import('./src/store/searchOverlay')['useSearchOverlay']
   const useSlots: typeof import('vue')['useSlots']
   const useTheme: typeof import('./src/core/composables/useTheme')['useTheme']
   const useToastStore: typeof import('./src/store/toast')['useToastStore']
+  const useVModel: typeof import('./src/core/composables/useVModel')['useVModel']
   const useVisibility: typeof import('./src/core/composables/useVisibility')['useVisibility']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
@@ -160,9 +164,12 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useFocus: UnwrapRef<typeof import('./src/core/composables/useFocus')['useFocus']>
+    readonly useOnClickOutside: UnwrapRef<typeof import('./src/core/composables/useOnClickOutside')['useOnClickOutside']>
     readonly usePosts: UnwrapRef<typeof import('./src/core/composables/usePosts')['usePosts']>
     readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useScrollLocker: UnwrapRef<typeof import('./src/core/composables/useScrollLocker')['useScrollLocker']>
     readonly useSearch: UnwrapRef<typeof import('./src/core/composables/useSearch')['useSearch']>
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
@@ -242,9 +249,12 @@ declare module '@vue/runtime-core' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useFocus: UnwrapRef<typeof import('./src/core/composables/useFocus')['useFocus']>
+    readonly useOnClickOutside: UnwrapRef<typeof import('./src/core/composables/useOnClickOutside')['useOnClickOutside']>
     readonly usePosts: UnwrapRef<typeof import('./src/core/composables/usePosts')['usePosts']>
     readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useScrollLocker: UnwrapRef<typeof import('./src/core/composables/useScrollLocker')['useScrollLocker']>
     readonly useSearch: UnwrapRef<typeof import('./src/core/composables/useSearch')['useSearch']>
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
