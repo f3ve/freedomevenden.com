@@ -11,6 +11,17 @@ const serif: any = { name: 'serif', provider: 'none' };
 const sansSerif: any = { name: 'sans-serif', provider: 'none' };
 
 export default defineConfig({
+  content: {
+    pipeline: {
+      include: [
+        // the default
+        /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+        // include js/ts files
+        'src/**/*.{js,ts}',
+      ],
+    },
+  },
+
   presets: [
     presetUno(),
     presetTypography(),

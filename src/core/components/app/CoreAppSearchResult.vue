@@ -20,7 +20,9 @@ const publishDate = computed(() =>
       <p v-if="publishDate" class="my-0 text-sm font-header text-primary">
         {{ publishDate }}
       </p>
-      <p v-if="page.description" class="my-0 op-75">{{ page.description }}</p>
+      <p v-if="page.description" class="my-0 text-op-75">
+        {{ page.description }}
+      </p>
     </RouterLink>
   </li>
 </template>

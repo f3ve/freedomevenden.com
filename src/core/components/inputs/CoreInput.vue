@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { useInputFocusClasses } from './composables/useInputFocusClasses';
 import type { CoreInputProps } from './types';
+import { useInputFocusClasses } from './composables/useInputFocusClasses';
 
-withDefaults(defineProps<CoreInputProps>(), {
+const props = withDefaults(defineProps<CoreInputProps>(), {
   type: 'text',
 });
 
 const inputText = defineModel<string>();
-const { target, focused, focus } = useFocus();
+const { target, focused, focus } = useFocus(props.autoFocus);
 const classes = useInputFocusClasses(focused);
 </script>
 

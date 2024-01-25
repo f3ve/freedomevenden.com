@@ -12,7 +12,5 @@ export function useOnClickOutside(
   const target = ref<MaybeElement>();
   onClickOutside(target, cb, options);
 
-  return {
-    target,
-  };
+  return { target };
 }

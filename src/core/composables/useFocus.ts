@@ -9,7 +9,8 @@ export function useFocus(autoFocus?: MaybeRefOrGetter<boolean>) {
   }
 
   onMounted(() => {
-    if (toValue(autoFocus)) focus();
+    const isAutoFocus = toValue(autoFocus);
+    if (isAutoFocus) focus();
   });
 
   return {

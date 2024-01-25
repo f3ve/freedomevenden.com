@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import type { BlogPostFrontmatter } from '@/types';
+import type { PageFrontmatter } from '@/types';
 import { formatDate } from '@/utils/dateHelpers';
 
 defineProps<{
-  frontmatter: BlogPostFrontmatter;
+  frontmatter: PageFrontmatter;
 }>();
 </script>
 
@@ -26,7 +26,10 @@ defineProps<{
         >
           {{ formatDate(frontmatter.datePublished) }}
         </p>
-        <p v-if="frontmatter.dateUpdated" class="my-0 font-header italic op-75">
+        <p
+          v-if="frontmatter.dateUpdated"
+          class="text-color-op-75 my-0 font-header italic"
+        >
           Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
         </p>
       </div>

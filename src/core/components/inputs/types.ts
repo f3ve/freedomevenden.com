@@ -6,5 +6,7 @@ export type CoreInputProps = {
   name?: string;
   required?: boolean;
   autoFocus?: boolean;
-  autocomplete: AutoFill;
+
+  /** @see https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete */
+  autocomplete?: string;
 };
