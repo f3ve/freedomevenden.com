@@ -3,16 +3,25 @@ import { useMagicKeys, whenever } from '@vueuse/core';
 
 const searchOverlay = useSearchOverlay();
 const { search, pages } = useSearch();
+const { isMac } = useUserAgent();
 const target = ref();
 
-const { ctrl_k, escape } = useMagicKeys({
+const { ctrl_k, escape, cmd_k } = useMagicKeys({
   passive: false,
   onEventFired(e) {
-    if (e.ctrlKey && e.key === 'k' && e.type === 'keydown') e.preventDefault();
+    if (
+      (e.ctrlKey || (isMac && e.metaKey)) &&
+      e.key === 'k' &&
+      e.type === 'keydown'
+    )
+      e.preventDefault();
   },
 });
 
-whenever(ctrl_k, () => searchOverlay.toggle());
+whenever(
+  () => ctrl_k.value || (cmd_k.value && isMac.value),
+  () => searchOverlay.toggle(),
+);
 whenever(escape, () => {
   if (searchOverlay.isVisible) searchOverlay.hide();
 });

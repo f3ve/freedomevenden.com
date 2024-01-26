@@ -83,6 +83,7 @@ declare global {
   const useSlots: typeof import('vue')['useSlots']
   const useTheme: typeof import('./src/core/composables/useTheme')['useTheme']
   const useToastStore: typeof import('./src/store/toast')['useToastStore']
+  const useUserAgent: typeof import('./src/core/composables/useUserAgent')['useUserAgent']
   const useVModel: typeof import('./src/core/composables/useVModel')['useVModel']
   const useVisibility: typeof import('./src/core/composables/useVisibility')['useVisibility']
   const watch: typeof import('vue')['watch']
@@ -175,6 +176,7 @@ declare module 'vue' {
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/core/composables/useTheme')['useTheme']>
     readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
+    readonly useUserAgent: UnwrapRef<typeof import('./src/core/composables/useUserAgent')['useUserAgent']>
     readonly useVisibility: UnwrapRef<typeof import('./src/core/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
@@ -260,6 +262,7 @@ declare module '@vue/runtime-core' {
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/core/composables/useTheme')['useTheme']>
     readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
+    readonly useUserAgent: UnwrapRef<typeof import('./src/core/composables/useUserAgent')['useUserAgent']>
     readonly useVisibility: UnwrapRef<typeof import('./src/core/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>

@@ -1,11 +1,6 @@
 <script lang="ts" setup>
 const searchOverlay = useSearchOverlay();
-
-const isMac = computed(() =>
-  typeof navigator !== 'undefined'
-    ? navigator.userAgent.includes('Macintosh')
-    : false,
-);
+const { isMac } = useUserAgent();
 
 const icon = computed(() => (isMac.value ? 'icon-mac-cmd' : 'icon-ctrl'));
 </script>
