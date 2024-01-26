@@ -29,6 +29,10 @@ details {
   max-width: 50rem !important;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 .box {
   --mask: radial-gradient(
         15.76px at 50% calc(100% + 11.7px),
