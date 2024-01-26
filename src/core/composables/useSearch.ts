@@ -19,16 +19,19 @@ export function useSearch(path = '') {
       .filter((frontmatter: PageFrontmatter) => {
         const s = search.value.toLowerCase();
         return (
-          frontmatter.title?.toLowerCase().includes(s) ||
-          frontmatter.subtitle?.toLowerCase().includes(s) ||
-          frontmatter.description?.toLowerCase().includes(s) ||
-          frontmatter.path?.toLowerCase().includes(s) ||
-          frontmatter.datePublished?.toLowerCase().includes(s) ||
-          frontmatter.dateUpdated?.toLowerCase().includes(s) ||
-          (frontmatter.datePublished &&
-            formatDate(frontmatter.datePublished).toLowerCase().includes(s)) ||
-          (frontmatter.dateUpdated &&
-            formatDate(frontmatter.dateUpdated).toLowerCase().includes(s))
+          frontmatter.title &&
+          (frontmatter.title?.toLowerCase().includes(s) ||
+            frontmatter.subtitle?.toLowerCase().includes(s) ||
+            frontmatter.description?.toLowerCase().includes(s) ||
+            frontmatter.path?.toLowerCase().includes(s) ||
+            frontmatter.datePublished?.toLowerCase().includes(s) ||
+            frontmatter.dateUpdated?.toLowerCase().includes(s) ||
+            (frontmatter.datePublished &&
+              formatDate(frontmatter.datePublished)
+                .toLowerCase()
+                .includes(s)) ||
+            (frontmatter.dateUpdated &&
+              formatDate(frontmatter.dateUpdated).toLowerCase().includes(s)))
         );
       })
       .sort((a: PageFrontmatter, b: PageFrontmatter) => {

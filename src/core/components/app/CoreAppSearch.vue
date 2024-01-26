@@ -36,7 +36,7 @@ whenever(escape, () => {
         />
         <core-btn icon="icon-close" @click="searchOverlay.hide" />
       </div>
-      <div class="h-full w-full overflow-auto pt-4">
+      <div class="h-full w-full overflow-x-hidden overflow-y-auto pt-4">
         <CoreAppSearchList
           v-if="search.length && pages.length"
           :pages="pages"

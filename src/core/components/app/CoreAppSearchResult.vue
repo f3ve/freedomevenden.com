@@ -51,7 +51,8 @@ function getRelativePath() {
     <RouterLink :to="page.path" class="block pa-4 decoration-none">
       <code
         class="rounded bg-true-gray-100 pa-1 color-true-gray dark:bg-true-gray-700"
-        >{{ relativePath }}</code
+      >
+        {{ relativePath }}</code
       >
       <p class="ma-none mb-0 text-lg font-bold font-header italic">
         {{ page.title?.replace(' - Freedom Evenden', '') }}
