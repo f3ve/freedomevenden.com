@@ -42,7 +42,7 @@ declare module 'vue-router/auto/routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
-    '/blog/vue-markdown-it-v0.2.0': RouteRecordInfo<'/blog/vue-markdown-it-v0.2.0', '/blog/vue-markdown-it-v0/2/0', Record<never, never>, Record<never, never>>,
+    '/blog/vue-markdown-it-v0-2-0': RouteRecordInfo<'/blog/vue-markdown-it-v0-2-0', '/blog/vue-markdown-it-v0-2-0', Record<never, never>, Record<never, never>>,
     '/blog/website-updates-10-03-2023': RouteRecordInfo<'/blog/website-updates-10-03-2023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
     '/contact': RouteRecordInfo<'/contact', '/contact', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,

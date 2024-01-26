@@ -10,18 +10,13 @@ const { toggleDark } = useTheme();
     <nav class="pa-4 fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
         <li>
-          <core-btn to="/" title="Home">Home</core-btn>
-        </li>
-        <li>
           <core-btn to="/blog" title="Blog">Blog</core-btn>
         </li>
         <li>
           <core-btn to="/projects" title="Projects">Projects</core-btn>
         </li>
         <li>
-          <core-btn to="/digital-garden" title="Digital Garden">
-            Garden
-          </core-btn>
+          <core-btn to="/wiki" title="Wiki">Wiki</core-btn>
         </li>
         <!-- Temporarily disabled. -->
         <!-- <li>

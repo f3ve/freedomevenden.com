@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const { toggleDark } = useTheme();
-const searchOverlay = useSearchOverlay();
 </script>
 
 <template>
@@ -16,7 +15,7 @@ const searchOverlay = useSearchOverlay();
         />
       </core-btn>
       <core-nav-buttons className="hidden sm:flex" />
-      <core-btn @click="searchOverlay.show()">Search</core-btn>
+      <core-app-search-button />
     </div>
 
     <address class="hidden items-center sm:flex">

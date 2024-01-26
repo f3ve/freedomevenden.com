@@ -25,7 +25,7 @@ useHead({
 </script>
 
 <template>
-  <div class="relative m-a min-h-screen w-200 fe-border-x bg-base">
+  <div class="relative m-a max-w-200 min-h-screen fe-border-x bg-base">
     <core-app-header />
     <main style="padding-bottom: 100px">
       <RouterView />
