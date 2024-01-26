@@ -1,4 +1,4 @@
-export type BlogPostFrontmatter = {
+export type PageFrontmatter = {
   path: string;
   title?: string;
   subtitle?: string;

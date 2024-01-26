@@ -1,10 +1,11 @@
-import type { BlogPostFrontmatter } from '@/types';
+import type { PageFrontmatter } from '@/types';
+import { formatDate } from '@/utils/dateHelpers';
 
 export function usePosts(path: string) {
   const router = useRouter();
   const search = ref('');
 
-  const posts = computed<BlogPostFrontmatter[]>(() => {
+  const posts = computed<PageFrontmatter[]>(() => {
     return router
       .getRoutes()
       .filter((route) => route.path.startsWith(path))
@@ -12,11 +13,22 @@ export function usePosts(path: string) {
         path: route.path,
         ...route.meta.frontmatter,
       }))
-      .filter(
-        (frontmatter: BlogPostFrontmatter) =>
-          frontmatter.title?.toLowerCase().includes(search.value.toLowerCase()),
-      )
-      .sort((a: BlogPostFrontmatter, b: BlogPostFrontmatter) => {
+      .filter((frontmatter: PageFrontmatter) => {
+        const s = search.value.toLowerCase();
+        return (
+          frontmatter.title?.toLowerCase().includes(s) ||
+          frontmatter.subtitle?.toLowerCase().includes(s) ||
+          frontmatter.description?.toLowerCase().includes(s) ||
+          frontmatter.path?.toLowerCase().includes(s) ||
+          frontmatter.datePublished?.toLowerCase().includes(s) ||
+          frontmatter.dateUpdated?.toLowerCase().includes(s) ||
+          (frontmatter.datePublished &&
+            formatDate(frontmatter.datePublished).toLowerCase().includes(s)) ||
+          (frontmatter.dateUpdated &&
+            formatDate(frontmatter.dateUpdated).toLowerCase().includes(s))
+        );
+      })
+      .sort((a: PageFrontmatter, b: PageFrontmatter) => {
         if (a.datePublished && b.datePublished)
           return (
             new Date(b.datePublished).getTime() -

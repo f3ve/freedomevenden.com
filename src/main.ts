@@ -6,7 +6,7 @@ import 'uno.css';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
-import routes from '~pages';
+import { routes } from 'vue-router/auto/routes';
 
 export const createApp = ViteSSG(
   App,

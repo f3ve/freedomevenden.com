@@ -20,7 +20,7 @@ defineProps<{
       <p class="my-0 text-sm font-header text-primary">
         {{ project.role }}
       </p>
-      <p class="my-0 op-75">{{ project.description }}</p>
+      <p class="my-0 text-op-75">{{ project.description }}</p>
     </a>
   </li>
 </template>

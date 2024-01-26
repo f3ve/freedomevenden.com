@@ -21,8 +21,16 @@ h6 {
   --at-apply: font-header;
 }
 
+details {
+  --at-apply: m-0, p-0;
+}
+
 .prose {
   max-width: 50rem !important;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
 
 .box {
@@ -65,4 +73,14 @@ h6 {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.15s ease-in-out;
+}
+
+.expand-enter-from,
+.expand-leave-to {
+  margin-top: -100%;
 }

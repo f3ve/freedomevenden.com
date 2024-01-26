@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
   <footer
     class="w-full flex items-center justify-center px-16 py-2 text-center text-sm"
   >
-    <p class="op-70 dark:op-75">
+    <p class="text-op-70 dark:text-op-75">
       &#169; {{ dayjs().format('YYYY') }}
       <a
         xmlns:cc="http://creativecommons.org/ns#"
