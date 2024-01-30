@@ -43,6 +43,7 @@ declare module 'vue-router/auto/routes' {
     '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'Blog': RouteRecordInfo<'Blog', '/blog', Record<never, never>, Record<never, never>>,
     'BlogVueMarkdownItV020': RouteRecordInfo<'BlogVueMarkdownItV020', '/blog/vue-markdown-it-v0-2-0', Record<never, never>, Record<never, never>>,
+    'BlogWebsiteUpdates01232024': RouteRecordInfo<'BlogWebsiteUpdates01232024', '/blog/website-updates-01-23-2024', Record<never, never>, Record<never, never>>,
     'BlogWebsiteUpdates10032023': RouteRecordInfo<'BlogWebsiteUpdates10032023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
     'Contact': RouteRecordInfo<'Contact', '/contact', Record<never, never>, Record<never, never>>,
     'Projects': RouteRecordInfo<'Projects', '/projects', Record<never, never>, Record<never, never>>,
