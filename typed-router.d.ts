@@ -39,18 +39,19 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
-    '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
-    '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
-    '/blog/vue-markdown-it-v0-2-0': RouteRecordInfo<'/blog/vue-markdown-it-v0-2-0', '/blog/vue-markdown-it-v0-2-0', Record<never, never>, Record<never, never>>,
-    '/blog/website-updates-10-03-2023': RouteRecordInfo<'/blog/website-updates-10-03-2023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
-    '/contact': RouteRecordInfo<'/contact', '/contact', Record<never, never>, Record<never, never>>,
-    '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
-    '/wiki': RouteRecordInfo<'/wiki', '/wiki', Record<never, never>, Record<never, never>>,
-    '/wiki/': RouteRecordInfo<'/wiki/', '/wiki', Record<never, never>, Record<never, never>>,
-    '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application': RouteRecordInfo<'/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
-    '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react': RouteRecordInfo<'/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
-    '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native': RouteRecordInfo<'/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
+    'Root': RouteRecordInfo<'Root', '/', Record<never, never>, Record<never, never>>,
+    '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
+    'Blog': RouteRecordInfo<'Blog', '/blog', Record<never, never>, Record<never, never>>,
+    'BlogVueMarkdownItV020': RouteRecordInfo<'BlogVueMarkdownItV020', '/blog/vue-markdown-it-v0-2-0', Record<never, never>, Record<never, never>>,
+    'BlogWebsiteUpdates10032023': RouteRecordInfo<'BlogWebsiteUpdates10032023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
+    'Contact': RouteRecordInfo<'Contact', '/contact', Record<never, never>, Record<never, never>>,
+    'Projects': RouteRecordInfo<'Projects', '/projects', Record<never, never>, Record<never, never>>,
+    'Uses': RouteRecordInfo<'Uses', '/uses', Record<never, never>, Record<never, never>>,
+    'WikiParent': RouteRecordInfo<'WikiParent', '/wiki', Record<never, never>, Record<never, never>>,
+    'Wiki': RouteRecordInfo<'Wiki', '/wiki', Record<never, never>, Record<never, never>>,
+    'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication': RouteRecordInfo<'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication', '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
+    'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact': RouteRecordInfo<'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact', '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
+    'WikiProgrammingWebFrontendReactReactNativeHowToCreateCustomVideoControlsInReactNative': RouteRecordInfo<'WikiProgrammingWebFrontendReactReactNativeHowToCreateCustomVideoControlsInReactNative', '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
   }
 }
 

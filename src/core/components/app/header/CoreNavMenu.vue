@@ -18,10 +18,9 @@ const { toggleDark } = useTheme();
         <li>
           <core-btn to="/wiki" title="Wiki">Wiki</core-btn>
         </li>
-        <!-- Temporarily disabled. -->
-        <!-- <li>
-          <core-btn to="/contact" title="Contact">Contact</core-btn>
-        </li> -->
+        <li>
+          <core-btn to="/uses" title>Uses</core-btn>
+        </li>
       </ul>
     </nav>
 

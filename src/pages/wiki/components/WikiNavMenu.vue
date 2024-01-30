@@ -3,7 +3,7 @@ const router = useRouter();
 
 const routes = router
   .getRoutes()
-  .find((route) => route.name === '/wiki' && route.children.length)
+  .find((route) => route.name === 'WikiParent' && route.children.length)
   ?.children.filter((route) => route.path.length && route.path !== '/');
 </script>
 

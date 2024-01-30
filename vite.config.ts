@@ -8,7 +8,10 @@ import { fileURLToPath, URL } from 'node:url';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 import VueRouter from 'unplugin-vue-router/vite';
-import { VueRouterAutoImports } from 'unplugin-vue-router';
+import {
+  getPascalCaseRouteName,
+  VueRouterAutoImports,
+} from 'unplugin-vue-router';
 
 // QOL
 import AutoImport from 'unplugin-auto-import/vite';
@@ -85,6 +88,10 @@ export default defineConfig({
       // Change the import mode of page components. Can be 'async', 'sync', or a function with the following signature:
       // (filepath: string) => 'async' | 'sync'
       importMode: 'async',
+
+      getRouteName(node) {
+        return getPascalCaseRouteName(node);
+      },
 
       extendRoute(route) {
         // Grab the path to the routes component file.
