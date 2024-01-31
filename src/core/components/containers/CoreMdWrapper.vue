@@ -34,6 +34,16 @@ defineProps<{
         </p>
       </div>
     </div>
+    <!-- My Ad Unit -->
+
+    <ins
+      class="adsbygoogle"
+      style="display: block"
+      data-ad-client="ca-pub-3078064320273377"
+      data-ad-slot="9347160337"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
 
     <div class="md:px-16">
       <slot />
