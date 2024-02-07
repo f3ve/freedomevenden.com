@@ -48,7 +48,6 @@ declare module 'vue-router/auto/routes' {
     'Contact': RouteRecordInfo<'Contact', '/contact', Record<never, never>, Record<never, never>>,
     'Projects': RouteRecordInfo<'Projects', '/projects', Record<never, never>, Record<never, never>>,
     'Uses': RouteRecordInfo<'Uses', '/uses', Record<never, never>, Record<never, never>>,
-    'WikiParent': RouteRecordInfo<'WikiParent', '/wiki', Record<never, never>, Record<never, never>>,
     'Wiki': RouteRecordInfo<'Wiki', '/wiki', Record<never, never>, Record<never, never>>,
     'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication': RouteRecordInfo<'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication', '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
     'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact': RouteRecordInfo<'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact', '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,

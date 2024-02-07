@@ -4,7 +4,7 @@ const { toggleDark } = useTheme();
 
 <template>
   <header
-    class="sticky top-0 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
+    class="m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
   >
     <div class="flex items-center">
       <core-btn to="/" noBg>
@@ -15,7 +15,6 @@ const { toggleDark } = useTheme();
         />
       </core-btn>
       <core-nav-buttons className="hidden sm:flex" />
-      <core-app-search-button />
     </div>
 
     <address class="hidden items-center sm:flex">

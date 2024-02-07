@@ -1,9 +1,9 @@
 html {
-  --at-apply: bg-light, scroll-smooth;
+  --at-apply: bg-light scroll-smooth;
 }
 
 html.dark {
-  --at-apply: bg-dark-900;
+  --at-apply: bg-dark;
 }
 
 body {

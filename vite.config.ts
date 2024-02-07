@@ -152,7 +152,7 @@ export default defineConfig({
           ],
         },
       ],
-      dirs: ['src/core/composables', 'src/store'],
+      dirs: ['src/composables', 'src/store'],
       vueTemplate: true,
     }),
 
@@ -161,7 +161,7 @@ export default defineConfig({
     }),
 
     Components({
-      dirs: ['src/core/components', 'src/pages/**/components/**'],
+      dirs: ['src/components'],
       extensions: ['vue', 'md'],
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
