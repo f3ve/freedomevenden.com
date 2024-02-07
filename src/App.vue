@@ -25,13 +25,15 @@ useHead({
 </script>
 
 <template>
-  <div class="relative m-a max-w-200 min-h-screen fe-border-x bg-base">
-    <core-app-header />
-    <main style="padding-bottom: 100px">
-      <RouterView />
+  <div class="relative m-a min-h-screen">
+    <main style="padding-bottom: 100px" class="min-h-full">
+      <RouterView #="{ Component }">
+        <Transition name="fade">
+          <component :is="Component" />
+        </Transition>
+      </RouterView>
     </main>
     <CoreFooter class="absolute bottom-0" />
     <core-toast />
   </div>
-  <CoreAppSearch />
 </template>

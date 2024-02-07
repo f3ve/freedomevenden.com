@@ -1,6 +1,7 @@
 ---
 title: Freedom Evenden
 description: Freedom Evenden's personal website
+image: /images/eugene-golovesov-T7xcXo5iNEo-unsplash.jpg
 meta:
   - name: keywords
     content: freedom evenden,freedom,evenden,programmer,obskur,f3ve

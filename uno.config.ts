@@ -49,7 +49,7 @@ export default defineConfig({
       'icon-mac-cmd': 'i-fluent-key-command-24-regular',
       'icon-ctrl': 'i-fluent-control-button-24-regular',
       'icon-close': 'i-mdi-close',
-      'bg-base': 'bg-light-100 dark:bg-dark-900',
+      'bg-base': 'bg-light dark:bg-dark',
       'text-base-color': 'text-dark-200 dark:text-light-100',
       hoverable: 'transition-shadow @hover:bg-lighten',
       'bg-surface': 'bg-light-100 dark: dark:bg-dark',
