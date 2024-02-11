@@ -9,19 +9,8 @@ defineProps<{
 
 <template>
   <div class="h-full">
-    <div
-      class="h-150 fe-border-b"
-      :style="{
-        backgroundImage: `url('${frontmatter.image}')`,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }"
-    />
-
     <article class="m-a min-h-full px-6 prose">
-      <div class="mb-10 py-10">
+      <div class="mb-10 py-10 fe-border-b">
         <h1 v-if="frontmatter.title" class="mb-5 text-center">
           {{ frontmatter.title.replace('- Freedom Evenden', '') }}
         </h1>
@@ -45,7 +34,6 @@ defineProps<{
             Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
           </p>
         </div>
-        <CoreAppHeader />
       </div>
 
       <div class="md:px-16">

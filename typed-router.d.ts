@@ -42,16 +42,15 @@ declare module 'vue-router/auto/routes' {
     'Root': RouteRecordInfo<'Root', '/', Record<never, never>, Record<never, never>>,
     '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'Blog': RouteRecordInfo<'Blog', '/blog', Record<never, never>, Record<never, never>>,
+    'BlogHowToCreateCustomVideoControlsInReactNative': RouteRecordInfo<'BlogHowToCreateCustomVideoControlsInReactNative', '/blog/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
+    'BlogHowToCreateYourOwnMediumStyleRichTextEditorInReact': RouteRecordInfo<'BlogHowToCreateYourOwnMediumStyleRichTextEditorInReact', '/blog/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
+    'BlogHowToFixAMinimistVulnerabilityInYourExpressApplication': RouteRecordInfo<'BlogHowToFixAMinimistVulnerabilityInYourExpressApplication', '/blog/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
     'BlogVueMarkdownItV020': RouteRecordInfo<'BlogVueMarkdownItV020', '/blog/vue-markdown-it-v0-2-0', Record<never, never>, Record<never, never>>,
     'BlogWebsiteUpdates01232024': RouteRecordInfo<'BlogWebsiteUpdates01232024', '/blog/website-updates-01-23-2024', Record<never, never>, Record<never, never>>,
     'BlogWebsiteUpdates10032023': RouteRecordInfo<'BlogWebsiteUpdates10032023', '/blog/website-updates-10-03-2023', Record<never, never>, Record<never, never>>,
     'Contact': RouteRecordInfo<'Contact', '/contact', Record<never, never>, Record<never, never>>,
     'Projects': RouteRecordInfo<'Projects', '/projects', Record<never, never>, Record<never, never>>,
     'Uses': RouteRecordInfo<'Uses', '/uses', Record<never, never>, Record<never, never>>,
-    'Wiki': RouteRecordInfo<'Wiki', '/wiki', Record<never, never>, Record<never, never>>,
-    'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication': RouteRecordInfo<'WikiProgrammingWebBackendNodeHowToFixAMinimistVulnerabilityInYourExpressApplication', '/wiki/programming/web/backend/node/how-to-fix-a-minimist-vulnerability-in-your-express-application', Record<never, never>, Record<never, never>>,
-    'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact': RouteRecordInfo<'WikiProgrammingWebFrontendReactHowToCreateYourOwnMediumStyleRichTextEditorInReact', '/wiki/programming/web/frontend/react/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
-    'WikiProgrammingWebFrontendReactReactNativeHowToCreateCustomVideoControlsInReactNative': RouteRecordInfo<'WikiProgrammingWebFrontendReactReactNativeHowToCreateCustomVideoControlsInReactNative', '/wiki/programming/web/frontend/react/react-native/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
   }
 }
 

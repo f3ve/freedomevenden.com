@@ -8,10 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CoreAppHeader: typeof import('./src/components/core/app/header/CoreAppHeader.vue')['default']
-    CoreAppSearch: typeof import('./src/components/core/app/CoreAppSearch.vue')['default']
-    CoreAppSearchButton: typeof import('./src/components/core/app/CoreAppSearchButton.vue')['default']
-    CoreAppSearchList: typeof import('./src/components/core/app/CoreAppSearchList.vue')['default']
-    CoreAppSearchResult: typeof import('./src/components/core/app/CoreAppSearchResult.vue')['default']
     CoreBtn: typeof import('./src/components/core/CoreBtn.vue')['default']
     CoreContactForm: typeof import('./src/components/core/CoreContactForm.vue')['default']
     CoreDivider: typeof import('./src/components/core/CoreDivider.vue')['default']
@@ -28,13 +24,10 @@ declare module 'vue' {
     CoreSheet: typeof import('./src/components/core/CoreSheet.vue')['default']
     CoreTextarea: typeof import('./src/components/core/inputs/CoreTextarea.vue')['default']
     CoreToast: typeof import('./src/components/core/feedback/CoreToast.vue')['default']
-    KnowledgeNavListItem: typeof import('./src/pages/knowledge/components/KnowledgeNavListItem.vue')['default']
-    KnowledgeNavMenu: typeof import('./src/pages/knowledge/components/KnowledgeNavMenu.vue')['default']
     ProjectListItem: typeof import('./src/components/projects/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/components/projects/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    WikieNavMenu: typeof import('./src/pages/wiki/components/WikieNavMenu.vue')['default']
     WikiNavListItem: typeof import('./src/components/wiki/WikiNavListItem.vue')['default']
     WikiNavMenu: typeof import('./src/components/wiki/WikiNavMenu.vue')['default']
   }
