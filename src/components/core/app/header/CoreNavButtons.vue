@@ -15,7 +15,6 @@ withDefaults(
     <nav class="flex items-center justify-center">
       <core-btn to="/blog" title="blog" underline>Blog</core-btn>
       <core-btn to="/projects" title="Projects" underline>Projects</core-btn>
-      <core-btn to="/wiki" title="Wiki" underline> Wiki </core-btn>
       <core-btn to="/uses" title="Uses" underline>Uses</core-btn>
     </nav>
   </div>

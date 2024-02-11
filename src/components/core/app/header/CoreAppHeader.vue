@@ -4,7 +4,7 @@ const { toggleDark } = useTheme();
 
 <template>
   <header
-    class="m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
+    class="sticky top-0 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
   >
     <div class="flex items-center">
       <core-btn to="/" noBg>

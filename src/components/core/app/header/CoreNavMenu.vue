@@ -16,9 +16,6 @@ const { toggleDark } = useTheme();
           <core-btn to="/projects" title="Projects">Projects</core-btn>
         </li>
         <li>
-          <core-btn to="/wiki" title="Wiki">Wiki</core-btn>
-        </li>
-        <li>
           <core-btn to="/uses" title>Uses</core-btn>
         </li>
       </ul>
