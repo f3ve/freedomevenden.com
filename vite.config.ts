@@ -111,7 +111,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     md({
-      headEnabled: 'unhead',
+      headEnabled: true,
       wrapperComponent: 'CoreMdWrapper',
       markdownItOptions: {
         linkify: true,
