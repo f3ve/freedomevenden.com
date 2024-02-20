@@ -1,6 +1,21 @@
 <template>
   <header
-    class="fe-border-b sticky top-0 m-a w-full flex items-center justify-between px-6 py-4 bg-base"
+    v-motion="{
+      initial: {
+        opacity: 0,
+        y: -25,
+      },
+      enter: {
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: 'keyframes',
+          delay: 0,
+          duration: 300,
+        },
+      },
+    }"
+    class="sticky top-0 z-100 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
   >
     <div class="flex items-center">
       <core-btn to="/" noBg>
