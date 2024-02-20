@@ -2,13 +2,9 @@ import {
   defineConfig,
   presetTypography,
   presetUno,
-  // presetWebFonts,
   presetIcons,
   transformerDirectives,
 } from 'unocss';
-
-// const serif: any = { name: 'serif', provider: 'none' };
-// const sansSerif: any = { name: 'sans-serif', provider: 'none' };
 
 export default defineConfig({
   content: {
@@ -33,13 +29,6 @@ export default defineConfig({
         'vertical-align': 'text-bottom',
       },
     }),
-    // presetWebFonts({
-    //   provider: 'bunny',
-    //   fonts: {
-    //     'body-1': [{ name: 'Open' }, sansSerif],
-    //     header: [{ name: 'Fira Code' }, sansSerif],
-    //   },
-    // }),
   ],
 
   transformers: [transformerDirectives()],
