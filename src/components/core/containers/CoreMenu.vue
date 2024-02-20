@@ -25,7 +25,7 @@ function showMenu() {
       <div
         v-if="isVisible"
         ref="menu"
-        class="not-prose absolute right-0 w-fit rounded shadow bg-surface"
+        class="not-prose absolute right-0 w-fit rounded shadow fe-border bg-base"
         style="min-width: 150px"
         @click="isVisible = false"
       >
