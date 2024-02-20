@@ -2,13 +2,13 @@ import {
   defineConfig,
   presetTypography,
   presetUno,
-  presetWebFonts,
+  // presetWebFonts,
   presetIcons,
   transformerDirectives,
 } from 'unocss';
 
 // const serif: any = { name: 'serif', provider: 'none' };
-const sansSerif: any = { name: 'sans-serif', provider: 'none' };
+// const sansSerif: any = { name: 'sans-serif', provider: 'none' };
 
 export default defineConfig({
   content: {
@@ -33,13 +33,13 @@ export default defineConfig({
         'vertical-align': 'text-bottom',
       },
     }),
-    presetWebFonts({
-      provider: 'bunny',
-      fonts: {
-        'body-1': [{ name: 'Open' }, sansSerif],
-        header: [{ name: 'Fira Code' }, sansSerif],
-      },
-    }),
+    // presetWebFonts({
+    //   provider: 'bunny',
+    //   fonts: {
+    //     'body-1': [{ name: 'Open' }, sansSerif],
+    //     header: [{ name: 'Fira Code' }, sansSerif],
+    //   },
+    // }),
   ],
 
   transformers: [transformerDirectives()],
@@ -75,6 +75,18 @@ export default defineConfig({
         '-moz-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
         '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
         boxShadow: 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
+      },
+    ],
+    [
+      'font-body-1',
+      {
+        'font-family': "'Open Sans Variable', sans-serif",
+      },
+    ],
+    [
+      'font-header',
+      {
+        'font-family': "'Fira Code Variable', monospace",
       },
     ],
   ],

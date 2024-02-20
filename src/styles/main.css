@@ -16,7 +16,6 @@ h1 {
   --at-apply: font-header text-primary;
 }
 
-
 h2,
 h3,
 h4,
@@ -28,6 +27,14 @@ h6 {
 details {
   --at-apply: m-0, p-0;
 }
+
+/* .font-body-1 {
+  font-family: 'Open Sans Variable', sans-serif;
+}
+
+.font-header {
+  font-family: 'Fira Code Variable', monospace;
+} */
 
 .prose {
   max-width: 50rem !important;

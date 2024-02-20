@@ -20,9 +20,9 @@
     <div class="flex items-center">
       <core-btn to="/" noBg>
         <img
-          src="/android-chrome-192x192.png"
-          style="width: 40px"
+          src="/images/f3ve-logo-50x50.webp"
           alt="Freedom Evenden's website logo"
+          width="40"
         />
       </core-btn>
       <core-nav-buttons className="hidden sm:flex" />

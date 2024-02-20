@@ -39,8 +39,9 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
+  export interface RouteNamedMap {
     'Root': RouteRecordInfo<'Root', '/', Record<never, never>, Record<never, never>>,
-    '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
+  }  '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'Blog': RouteRecordInfo<'Blog', '/blog', Record<never, never>, Record<never, never>>,
     'BlogHowToCreateCustomVideoControlsInReactNative': RouteRecordInfo<'BlogHowToCreateCustomVideoControlsInReactNative', '/blog/how-to-create-custom-video-controls-in-react-native', Record<never, never>, Record<never, never>>,
     'BlogHowToCreateYourOwnMediumStyleRichTextEditorInReact': RouteRecordInfo<'BlogHowToCreateYourOwnMediumStyleRichTextEditorInReact', '/blog/how-to-create-your-own-medium-style-rich-text-editor-in-react', Record<never, never>, Record<never, never>>,
