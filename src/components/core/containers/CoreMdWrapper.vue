@@ -10,11 +10,11 @@ defineProps<{
 <template>
   <div class="h-full">
     <article class="m-a min-h-full px-6 prose">
-      <div class="mb-10 py-10 fe-border-b">
+      <div class="fe-border-b mb-10 py-10">
         <h1 v-if="frontmatter.title" class="mb-5 text-center">
           {{ frontmatter.title.replace('- Freedom Evenden', '') }}
         </h1>
-        <p v-if="frontmatter.subtitle" class="text-center">
+        <p v-if="frontmatter.subtitle" class="text-center font-header">
           {{ frontmatter.subtitle }}
         </p>
         <div
@@ -23,13 +23,13 @@ defineProps<{
         >
           <p
             v-if="frontmatter.datePublished"
-            class="mb-0 font-header text-primary"
+            class="text-secondary mb-0 font-header"
           >
             {{ formatDate(frontmatter.datePublished) }}
           </p>
           <p
             v-if="frontmatter.dateUpdated"
-            class="text-color-op-75 my-0 font-header italic"
+            class="text-accent my-0 font-header"
           >
             Last Updated: {{ formatDate(frontmatter.dateUpdated) }}
           </p>

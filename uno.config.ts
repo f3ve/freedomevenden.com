@@ -7,7 +7,7 @@ import {
   transformerDirectives,
 } from 'unocss';
 
-const serif: any = { name: 'serif', provider: 'none' };
+// const serif: any = { name: 'serif', provider: 'none' };
 const sansSerif: any = { name: 'sans-serif', provider: 'none' };
 
 export default defineConfig({
@@ -36,8 +36,8 @@ export default defineConfig({
     presetWebFonts({
       provider: 'bunny',
       fonts: {
-        'body-1': [{ name: 'Open Sans' }, sansSerif],
-        header: [{ name: 'Georgia' }, serif],
+        'body-1': [{ name: 'Open' }, sansSerif],
+        header: [{ name: 'Fira Code' }, sansSerif],
       },
     }),
   ],
@@ -49,25 +49,25 @@ export default defineConfig({
       'icon-mac-cmd': 'i-fluent-key-command-24-regular',
       'icon-ctrl': 'i-fluent-control-button-24-regular',
       'icon-close': 'i-mdi-close',
-      'bg-base': 'bg-light dark:bg-dark',
-      'text-base-color': 'text-dark-200 dark:text-light-100',
+      'bg-base': 'bg-background',
+      'text-base': 'text-foreground',
       hoverable: 'transition-shadow @hover:bg-lighten',
       'bg-surface': 'bg-light-100 dark: dark:bg-dark',
       'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
-        'transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
+        'text-base transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,
       ([, b]) => {
         const borderClass = b ? `border-${b}` : `border`;
-        return `${borderClass} ${borderClass}-gray-300 dark:${borderClass}-dark-300`;
+        return `${borderClass} ${borderClass}-light-selection dark:${borderClass}-dark-selection`;
       },
     ],
     [
-      /^(\w+)-primary$/,
-      ([, b]) =>
-        `${b}-primary-dark dark:${b}-primary-default ${
+      /^(\w+)-(primary|secondary|accent|error|link|selection|background|foreground|success)$/,
+      ([, b, c]) =>
+        `${b}-light-${c} dark:${b}-dark-${c} ${
           b !== 'text' ? 'text-light dark:text-dark' : ''
         }`,
     ],
@@ -76,17 +76,37 @@ export default defineConfig({
     [
       'bg-lighten',
       {
-        '-moz-box-shadow': 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
-        '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
-        boxShadow: 'inset 0 0 100px 100px rgba(151, 151, 151, 0.25)',
+        '-moz-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
+        '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
+        boxShadow: 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
       },
     ],
   ],
   theme: {
     colors: {
-      primary: {
-        default: '#02FFD7',
-        dark: '#00757C',
+      dark: {
+        background: '#282a36',
+        foreground: '#f8f8f2',
+        selection: '#44475a',
+        accent: '#8be9fd',
+        success: '#50fa7b',
+        primary: '#ff79c6',
+        warning: '#ffb86c',
+        secondary: '#bd93f9',
+        error: '#ff5555',
+        link: '#f1fa8c',
+      },
+      light: {
+        background: '#ffffff',
+        foreground: '#000000',
+        selection: '#44475a',
+        link: '#8be9fd',
+        success: '#50fa7b',
+        primary: '#ff79c6',
+        warning: '#ffb86c',
+        secondary: '#bd93f9',
+        error: '#ff5555',
+        accent: '#f1fa8c',
       },
     },
   },
