@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-const { toggleDark } = useTheme();
-</script>
-
 <template>
   <header
     class="sticky top-0 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-base"
@@ -38,12 +34,6 @@ const { toggleDark } = useTheme();
         target="_blank"
         rel="noopener"
         title="GitHub"
-      />
-      <core-btn
-        icon="i-ci-sun dark:i-ci-moon"
-        aria-label="Toggle Theme"
-        title="Toggle Theme"
-        @click="toggleDark()"
       />
     </address>
 
