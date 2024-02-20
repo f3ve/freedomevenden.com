@@ -1,4 +1,5 @@
 import '@unocss/reset/tailwind.css';
+import 'unfonts.css';
 import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';

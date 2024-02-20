@@ -18,6 +18,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 // CSS Plugins
 import UnoCSS from 'unocss/vite';
+import Unfonts from 'unplugin-fonts/vite';
 
 // Markdown
 import md from 'unplugin-vue-markdown/vite';
@@ -154,6 +155,12 @@ export default defineConfig({
       ],
       dirs: ['src/composables', 'src/store'],
       vueTemplate: true,
+    }),
+
+    Unfonts({
+      fontsource: {
+        families: ['Open Sans Variable', 'Fira Code Variable'],
+      },
     }),
 
     UnoCSS({
