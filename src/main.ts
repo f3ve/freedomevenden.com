@@ -19,7 +19,7 @@ export const createApp = ViteSSG(
       }
 
       if (!to.hash) {
-        return { top: 0, behavior: 'smooth' };
+        return { top: 0, behavior: 'instant' };
       }
     },
     routes,
