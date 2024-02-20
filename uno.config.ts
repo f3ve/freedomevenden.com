@@ -52,7 +52,6 @@ export default defineConfig({
       'bg-base': 'bg-background',
       'text-base': 'text-foreground',
       hoverable: 'transition-shadow @hover:bg-lighten',
-      'bg-surface': 'bg-light-100 dark: dark:bg-dark',
       'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
         'text-base transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
@@ -66,10 +65,7 @@ export default defineConfig({
     ],
     [
       /^(\w+)-(primary|secondary|accent|error|link|selection|background|foreground|success)$/,
-      ([, b, c]) =>
-        `${b}-light-${c} dark:${b}-dark-${c} ${
-          b !== 'text' ? 'text-light dark:text-dark' : ''
-        }`,
+      ([, b, c]) => `${b}-light-${c} dark:${b}-dark-${c}`,
     ],
   ],
   rules: [

@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="h-full">
     <article class="m-a min-h-full px-6 prose">
-      <div class="fe-border-b mb-10 py-10">
+      <div class="pt-10">
         <h1 v-if="frontmatter.title" class="mb-5 text-center">
           {{ frontmatter.title.replace('- Freedom Evenden', '') }}
         </h1>
