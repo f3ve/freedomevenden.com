@@ -1,66 +1,49 @@
 <script lang="ts" setup>
 import type { PageFrontmatter } from '@/types';
 import { formatDate } from '@/utils/dateHelpers';
-import { useMotion, type MotionVariants } from '@vueuse/motion';
 
-defineProps<{
+const props = defineProps<{
   frontmatter: PageFrontmatter;
 }>();
 
-const variants = ref<MotionVariants>({
-  initial: {
-    y: 25,
-    opacity: 0,
-  },
-  fadeIn: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'keyframes',
-      delay: 0,
-      duration: 300,
-    },
-  },
+const numberOfAnimations = computed(() => {
+  let count = 0;
+  if (props.frontmatter.title) count++;
+  if (props.frontmatter.subtitle) count++;
+  if (props.frontmatter.datePublished || props.frontmatter.dateUpdated) count++;
+  return count;
 });
 
-const title = ref<HTMLElement>();
-const titleInstance = useMotion(title, variants);
+const bodyOrder = computed(() => `animate-order-${numberOfAnimations.value}`);
 
-const subTitle = ref<HTMLElement>();
-const subTitleInstance = useMotion(subTitle, variants);
-
-const date = ref<HTMLElement>();
-const dateInstance = useMotion(date, variants);
-
-const body = ref<HTMLElement>();
-const bodyInstance = useMotion(body, variants);
-
-onMounted(async () => {
-  if (title.value) await titleInstance.apply('fadeIn');
-  if (subTitle.value) await subTitleInstance.apply('fadeIn');
-  if (date.value) await dateInstance.apply('fadeIn');
-  if (body.value) await bodyInstance.apply('fadeIn');
-});
+const dateOrder = computed(
+  () =>
+    `animate-order-${numberOfAnimations.value <= 1 ? numberOfAnimations.value : numberOfAnimations.value - 1}`,
+);
+const subtitleOrder = computed(
+  () =>
+    `animate-order-${numberOfAnimations.value <= 1 ? numberOfAnimations.value : numberOfAnimations.value - 1}`,
+);
 </script>
 
 <template>
-  <div class="h-full">
+  <div class="fade-in-up h-full">
     <article class="m-a min-h-full px-6 prose">
       <div class="pb-5 pt-10">
-        <h1 v-if="frontmatter.title" ref="title" class="mb-5 text-center">
+        <h1 v-if="frontmatter.title" class="animate mb-5 text-center">
           {{ frontmatter.title.replace('- Freedom Evenden', '') }}
         </h1>
         <p
           v-if="frontmatter.subtitle"
-          ref="subTitle"
-          class="text-center font-header"
+          class="animate text-center font-header"
+          :class="subtitleOrder"
         >
           {{ frontmatter.subtitle }}
         </p>
         <div
           v-if="frontmatter.datePublished || frontmatter.dateUpdated"
-          ref="date"
-          class="text-center text-sm"
+          class="animate text-center text-sm"
+          :class="dateOrder"
         >
           <p
             v-if="frontmatter.datePublished"
@@ -77,7 +60,7 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div ref="body" class="md:px-16">
+      <div class="animate md:px-16" :class="bodyOrder">
         <slot />
       </div>
     </article>
