@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Project } from './types';
+import type { Project } from '../types';
 
 defineProps<{
   projects: { [key: string]: Project[] };
@@ -8,8 +8,8 @@ defineProps<{
 
 <template>
   <ul class="blog-list flex flex-col list-none gap-sm pl-none">
-    <li v-for="(value, key) in projects" :key="key">
-      <h2 class="w-fit">{{ key }}</h2>
+    <li v-for="(value, key) in projects" :key="key" class="mb-8">
+      <h2 class="mt-0 w-fit">{{ key }}</h2>
 
       <ul
         class="blog-list flex flex-col list-none gap-sm border-l-4 fe-border-l"

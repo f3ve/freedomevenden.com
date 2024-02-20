@@ -51,6 +51,7 @@
   "dependencies": {
     "@unhead/vue": "^1.8.10",
     "@vueuse/core": "^10.7.2",
+    "@vueuse/motion": "^2.0.0",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",
     "pinia": "^2.1.7",

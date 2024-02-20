@@ -18,13 +18,16 @@ const publishDate = computed(() =>
       :to="post.path"
       class="block pa-4 decoration-none"
     >
-      <p class="ma-none mb-0 text-2xl font-bold font-header italic">
+      <p class="text-link ma-none mb-0 text-2xl font-bold font-header">
         {{ post.title }}
       </p>
-      <p v-if="publishDate" class="my-0 text-sm font-header text-primary">
+      <p
+        v-if="publishDate"
+        class="my-0 text-sm font-header font-header text-primary"
+      >
         {{ publishDate }}
       </p>
-      <p v-if="post.description" class="my-0 text-op-75">
+      <p v-if="post.description" class="my-0 text-op-75 font-header">
         {{ post.description }}
       </p>
     </RouterLink>

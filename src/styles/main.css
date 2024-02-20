@@ -1,9 +1,9 @@
 html {
-  --at-apply: bg-light scroll-smooth;
+  --at-apply: bg-light-background scroll-smooth;
 }
 
 html.dark {
-  --at-apply: bg-dark;
+  --at-apply: bg-dark-background;
 }
 
 body {
@@ -12,13 +12,17 @@ body {
   overflow-x: hidden;
 }
 
-h1,
+h1 {
+  --at-apply: font-header text-primary;
+}
+
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  --at-apply: font-header;
+  --at-apply: font-header text-success;
 }
 
 details {

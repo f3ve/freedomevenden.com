@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-const { toggleDark } = useTheme();
-</script>
-
 <template>
   <core-menu>
     <template #toggler="props">
@@ -55,18 +51,5 @@ const { toggleDark } = useTheme();
         </li>
       </ul>
     </address>
-    <div class="pa-4">
-      <ul class="blog-list ma-0 list-none pl-0">
-        <li>
-          <core-btn
-            icon="i-ci-sun dark:i-ci-moon"
-            aria-label="Toggle Theme"
-            @click="toggleDark()"
-          >
-            Theme
-          </core-btn>
-        </li>
-      </ul>
-    </div>
   </core-menu>
 </template>

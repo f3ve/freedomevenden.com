@@ -1,6 +1,6 @@
 .markdown-body p a,
 .markdown-body li a:not(.block) {
-  --at-apply: text-primary;
+  --at-apply: text-link;
 }
 
 .markdown-body pre {

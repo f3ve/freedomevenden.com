@@ -17,7 +17,7 @@ const classes = useInputFocusClasses(focused);
       {{ label }}
     </label>
     <div
-      class="cursor-text border rounded-lg bg-white pa-2 outline-none transition-colors dark:bg-dark-800"
+      class="cursor-text border rounded-lg bg-white pa-2 outline-none transition-colors dark:bg-dark-background"
       :class="classes"
       @click="focus"
     >
@@ -28,7 +28,7 @@ const classes = useInputFocusClasses(focused);
           ref="target"
           v-model="inputText"
           :type="type"
-          class="w-full outline-none dark:bg-dark-800"
+          class="w-full outline-none dark:bg-dark-background"
           :placeholder="placeholder"
           :name="name"
           :required="required"

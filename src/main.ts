@@ -7,6 +7,7 @@ import 'uno.css';
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
 import { routes } from 'vue-router/auto/routes';
+import { MotionPlugin } from '@vueuse/motion';
 
 export const createApp = ViteSSG(
   App,
@@ -18,7 +19,7 @@ export const createApp = ViteSSG(
       }
 
       if (!to.hash) {
-        return { top: 0, behavior: 'smooth' };
+        return { top: 0, behavior: 'instant' };
       }
     },
     routes,
@@ -26,5 +27,6 @@ export const createApp = ViteSSG(
   ({ app }) => {
     const pinia = createPinia();
     app.use(pinia);
+    app.use(MotionPlugin);
   },
 );

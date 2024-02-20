@@ -29,9 +29,7 @@ useHead({
     <CoreAppHeader />
     <main style="padding-bottom: 100px" class="min-h-full">
       <RouterView #="{ Component }">
-        <Transition name="fade">
-          <component :is="Component" />
-        </Transition>
+        <component :is="Component" />
       </RouterView>
     </main>
     <CoreFooter class="absolute bottom-0" />
