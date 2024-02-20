@@ -7,6 +7,13 @@ import {
 } from 'unocss';
 
 export default defineConfig({
+  safelist: [
+    'animate-order-0',
+    'animate-order-1',
+    'animate-order-2',
+    'animate-order-3',
+    'animate-order-4',
+  ],
   content: {
     pipeline: {
       include: [
@@ -77,6 +84,12 @@ export default defineConfig({
       {
         'font-family': "'Fira Code Variable', monospace",
       },
+    ],
+    [
+      /animate-order-(\d+)/,
+      ([, n]) => ({
+        '--animation-order': n,
+      }),
     ],
   ],
   theme: {

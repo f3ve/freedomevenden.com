@@ -28,14 +28,6 @@ details {
   --at-apply: m-0, p-0;
 }
 
-/* .font-body-1 {
-  font-family: 'Open Sans Variable', sans-serif;
-}
-
-.font-header {
-  font-family: 'Fira Code Variable', monospace;
-} */
-
 .prose {
   max-width: 50rem !important;
 }
@@ -86,12 +78,43 @@ details summary::-webkit-details-marker {
   opacity: 0;
 }
 
-.expand-enter-active,
-.expand-leave-active {
-  transition: all 0.15s ease-in-out;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
 
-.expand-enter-from,
-.expand-leave-to {
-  margin-top: -100%;
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-up .animate {
+    animation: fade-in-up 300ms ease-in-out both;
+    animation-delay: calc(var(--animation-order) * 300ms);
+  }
+
+  .fade-in-down {
+    animation: fade-in-down 300ms ease-in-out both;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
