@@ -68,9 +68,9 @@ export default defineConfig({
     [
       'bg-lighten',
       {
-        '-moz-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
-        '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
-        boxShadow: 'inset 0 0 100px 100px rgba(68, 71, 90, 0.5)',
+        '-moz-box-shadow': 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
+        '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
+        boxShadow: 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
       },
     ],
     [
