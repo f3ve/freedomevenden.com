@@ -60,7 +60,7 @@ export default defineConfig({
       },
     ],
     [
-      /^(\w+)-(primary|secondary|accent|error|link|selection|background|foreground|success|warning)$/,
+      /^(\w+)-(primary|secondary|accent|error|link|selection|background|foreground|success|warning|button)$/,
       ([, b, c]) => `${b}-light-${c} dark:${b}-dark-${c}`,
     ],
   ],
@@ -98,6 +98,7 @@ export default defineConfig({
       dark: {
         background: '#282a36',
         foreground: '#f8f8f2',
+        button: '#000000',
         selection: '#44475a',
         accent: '#8be9fd',
         success: '#50fa7b',
@@ -110,6 +111,7 @@ export default defineConfig({
       light: {
         background: '#FFFFFF',
         foreground: '#3D4752',
+        button: '#FFFFFF',
         selection: '#E6E6E6',
         accent: '#70A4B9',
         success: '#05977D',

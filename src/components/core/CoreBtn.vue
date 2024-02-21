@@ -35,6 +35,7 @@ const isActive = computed(() => props.active || link?.isActive);
     class="relative core-btn"
     :class="{
       'bg-primary': isActive && !underline && !noBg,
+      'text-button': isActive && !noBg && !underline,
     }"
     :disabled="isActive || disabled"
     @click="link?.navigate"
