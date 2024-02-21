@@ -63,9 +63,6 @@ details summary::-webkit-details-marker {
   --at-apply: text-4xl md:text-6xl;
 }
 
-.prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
-}
-
 .prose ul:not(.blog-list),
 .prose ol:not(.blog-list) {
   --at-apply: ml-6;
