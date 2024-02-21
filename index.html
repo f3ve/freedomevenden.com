@@ -23,16 +23,16 @@
 
     <script>
       function checkThemePreference() {
-        // const prefersDark = window.matchMedia(
-        //   '(prefers-color-scheme: dark)',
-        // ).matches;
+        const prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)',
+        ).matches;
 
-        // const mode =
-        //   window.localStorage.getItem('vueuse-color-scheme') || 'auto';
+        const mode =
+          window.localStorage.getItem('vueuse-color-scheme') || 'auto';
 
-        // if (mode === 'dark' || (prefersDark && mode !== 'light')) {
-        document.documentElement.classList.toggle('dark', true);
-        // }
+        if (mode === 'dark' || (prefersDark && mode !== 'light')) {
+          document.documentElement.classList.toggle('dark', true);
+        }
       }
 
       checkThemePreference();

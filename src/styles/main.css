@@ -12,15 +12,15 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
+.prose h1 {
   --at-apply: font-header text-primary;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
   --at-apply: font-header text-success;
 }
 
@@ -61,6 +61,9 @@ details summary::-webkit-details-marker {
 .prose h1 {
   /* prettier-ignore */
   --at-apply: text-4xl md:text-6xl;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
 }
 
 .prose ul:not(.blog-list),

@@ -14,10 +14,10 @@ defineProps<{
       target="_blank"
       rel="noopener"
     >
-      <p class="text-link ma-none mb-0 text-2xl font-bold font-header">
+      <p class="text-warning ma-none mb-0 text-2xl font-bold font-header">
         {{ project.name }}
       </p>
-      <p class="my-0 text-sm font-header font-header text-primary">
+      <p class="my-0 text-sm font-header font-header text-secondary">
         {{ project.role }}
       </p>
       <p class="my-0 text-op-75 font-header">{{ project.description }}</p>

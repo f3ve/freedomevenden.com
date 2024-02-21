@@ -18,12 +18,12 @@ const publishDate = computed(() =>
       :to="post.path"
       class="block pa-4 decoration-none"
     >
-      <p class="text-link ma-none mb-0 text-2xl font-bold font-header">
+      <p class="text-warning ma-none mb-0 text-2xl font-bold font-header">
         {{ post.title }}
       </p>
       <p
         v-if="publishDate"
-        class="my-0 text-sm font-header font-header text-primary"
+        class="my-0 text-sm font-header font-header text-secondary"
       >
         {{ publishDate }}
       </p>
