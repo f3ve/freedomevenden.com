@@ -9,9 +9,7 @@ const fields = reactive({
   message: '',
 });
 
-const toast = useToastStore();
-
-const { isLoading, execute, error } = useAsyncState(async (e: Event) => {
+const { isLoading } = useAsyncState(async (e: Event) => {
   if (e.target) {
     const urlEncodedData = new URLSearchParams({
       formName: 'contact',
@@ -27,13 +25,6 @@ const { isLoading, execute, error } = useAsyncState(async (e: Event) => {
       .then((r) => r.data);
   }
 }, {});
-
-async function handleSubmit(e: Event) {
-  await execute(undefined, e);
-  if (!error.value)
-    toast.show('Message was sent successfully. Thanks for reaching out!');
-  else toast.show('Something went wrong. Please try again later.', 'error');
-}
 </script>
 
 <template>
@@ -57,7 +48,7 @@ async function handleSubmit(e: Event) {
       v-model="fields.contactMethod"
       label="How would you like to be contact?"
       placeholder="Enter an email address, twitter handle, or discord username"
-      name="contact method"
+      name="contact-method"
       class="w-full"
       required
     />
@@ -83,5 +74,6 @@ async function handleSubmit(e: Event) {
     <core-btn class="w-fit" type="submit" :loading="isLoading">
       Submit
     </core-btn>
+    <input type="hidden" name="form-name" value="contact" />
   </form>
 </template>
