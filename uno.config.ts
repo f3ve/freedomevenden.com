@@ -70,7 +70,7 @@ export default defineConfig({
       {
         '-moz-box-shadow': 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
         '-webkit-box-shadow': 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
-        boxShadow: 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
+        'box-shadow': 'inset 0 0 100px 100px rgba(121, 126, 154, 0.2)',
       },
     ],
     [
