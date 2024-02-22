@@ -46,8 +46,8 @@ const { toggleDark } = useTheme();
         icon="i-ci-sun dark:i-ci-moon"
         aria-label="Toggle Theme"
         title="Toggle Theme"
-        @click="toggleDark()"
         no-bg
+        @click="toggleDark()"
       />
     </address>
 

@@ -69,8 +69,8 @@ const { toggleDark } = useTheme();
             class="w-full"
             icon="i-ci-sun dark:i-ci-moon"
             aria-label="Toggle Theme"
-            @click="toggleDark()"
             no-bg
+            @click="toggleDark()"
           >
             Theme
           </core-btn>
