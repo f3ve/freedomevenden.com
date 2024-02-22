@@ -3,12 +3,12 @@ import axios from 'axios';
 import { useAsyncState } from '@vueuse/core';
 
 const fields = reactive({
-  formName: 'contact',
+  'form-name': 'contact',
   name: '',
-  contactMethod: '',
+  'contact-method': '',
   subject: '',
   message: '',
-  botField: '',
+  'bot-field': '',
 });
 
 const router = useRouter();
@@ -48,8 +48,8 @@ const { execute, isLoading } = useAsyncState(async (e: Event) => {
     />
 
     <core-input
-      v-model="fields.contactMethod"
-      label="How would you like to be contact?"
+      v-model="fields['contact-method']"
+      label="How would you like to be contacted?"
       placeholder="Enter an email address, twitter handle, or discord username"
       name="contact-method"
       class="w-full"
@@ -78,6 +78,6 @@ const { execute, isLoading } = useAsyncState(async (e: Event) => {
       Submit
     </core-btn>
     <input type="hidden" name="form-name" value="contact" />
-    <input v-model="fields.botField" type="hidden" name="bot-field" />
+    <input v-model="fields['bot-field']" type="hidden" name="bot-field" />
   </form>
 </template>
