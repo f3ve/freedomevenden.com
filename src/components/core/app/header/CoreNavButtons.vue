@@ -16,6 +16,7 @@ withDefaults(
       <core-btn to="/blog" title="blog" underline>Blog</core-btn>
       <core-btn to="/projects" title="Projects" underline>Projects</core-btn>
       <core-btn to="/uses" title="Uses" underline>Uses</core-btn>
+      <core-btn to="/contact" title="Uses" underline>Contact</core-btn>
     </nav>
   </div>
 </template>

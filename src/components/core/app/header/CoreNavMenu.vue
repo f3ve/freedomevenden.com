@@ -5,7 +5,7 @@ const { toggleDark } = useTheme();
 <template>
   <core-menu>
     <template #toggler="props">
-      <core-btn icon="i-mdi-menu" v-bind="props" title="menu"></core-btn>
+      <core-btn icon="i-mdi-menu" v-bind="props" title="menu" no-bg></core-btn>
     </template>
     <nav class="pa-4 fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
@@ -18,6 +18,9 @@ const { toggleDark } = useTheme();
         <li>
           <core-btn to="/uses" title>Uses</core-btn>
         </li>
+        <li>
+          <core-btn to="/contact" title>Contact</core-btn>
+        </li>
       </ul>
     </nav>
 
@@ -29,6 +32,7 @@ const { toggleDark } = useTheme();
             href="https://mastodon.social/@f3ve"
             target="_blank"
             icon="i-mdi-mastodon"
+            no-bg
           >
             Mastodon
           </core-btn>
@@ -39,6 +43,7 @@ const { toggleDark } = useTheme();
             href="https://twitter.com/f3ve_"
             icon="i-ri-twitter-x-fill"
             target="_blank"
+            no-bg
           >
             Twitter
           </core-btn>
@@ -49,6 +54,7 @@ const { toggleDark } = useTheme();
             href="https://github.com/f3ve"
             target="_blank"
             rel="noopener"
+            no-bg
           >
             GitHub
           </core-btn>
@@ -64,6 +70,7 @@ const { toggleDark } = useTheme();
             icon="i-ci-sun dark:i-ci-moon"
             aria-label="Toggle Theme"
             @click="toggleDark()"
+            no-bg
           >
             Theme
           </core-btn>
