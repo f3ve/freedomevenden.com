@@ -29,7 +29,5 @@ declare module 'vue' {
     ProjectsList: typeof import('./src/components/projects/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    WikiNavListItem: typeof import('./src/components/wiki/WikiNavListItem.vue')['default']
-    WikiNavMenu: typeof import('./src/components/wiki/WikiNavMenu.vue')['default']
   }
 }

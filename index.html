@@ -16,7 +16,7 @@
     <title>Freedom Evenden</title>
 
     <script>
-      function checkThemePreference() {
+      (function () {
         const prefersDark =
           window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -27,13 +27,11 @@
         if (mode === 'dark' || (prefersDark && mode !== 'light')) {
           document.documentElement.classList.toggle('dark', true);
         }
-      }
-
-      checkThemePreference();
+      })();
     </script>
   </head>
   <body class="text-base relative overflow-y-scroll">
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script async type="module" src="/src/main.ts"></script>
   </body>
 </html>
