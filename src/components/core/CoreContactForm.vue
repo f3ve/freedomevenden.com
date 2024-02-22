@@ -77,5 +77,6 @@ const { isLoading } = useAsyncState(async (e: Event) => {
       Submit
     </core-btn>
     <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
   </form>
 </template>
