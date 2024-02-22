@@ -3,28 +3,30 @@ import axios from 'axios';
 import { useAsyncState } from '@vueuse/core';
 
 const fields = reactive({
+  formName: 'contact',
   name: '',
   contactMethod: '',
   subject: '',
   message: '',
+  botField: '',
 });
 
-const { isLoading } = useAsyncState(async (e: Event) => {
+const router = useRouter();
+
+const { execute, isLoading } = useAsyncState(async (e: Event) => {
   if (e.target) {
-    const urlEncodedData = new URLSearchParams({
-      formName: 'contact',
-      ...fields,
-    }).toString();
+    const urlEncodedData = new URLSearchParams(fields).toString();
 
     return axios
-      .post('/', urlEncodedData, {
+      .post('/contact', urlEncodedData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       })
-      .then((r) => r.data);
+      .then(() => router.push('/contact/success'))
+      .catch(() => router.push('/contact/error'));
   }
-}, {});
+}, undefined);
 </script>
 
 <template>
@@ -34,8 +36,7 @@ const { isLoading } = useAsyncState(async (e: Event) => {
     class="flex flex-col items-center gap-6"
     data-netlify="true"
     netlify-honeypot="bot-field"
-    method="POST"
-    action="/contact/success"
+    @submit.prevent="execute(0, $event)"
   >
     <core-input
       v-model="fields.name"
@@ -77,6 +78,6 @@ const { isLoading } = useAsyncState(async (e: Event) => {
       Submit
     </core-btn>
     <input type="hidden" name="form-name" value="contact" />
-    <input type="hidden" name="bot-field" />
+    <input v-model="fields.botField" type="hidden" name="bot-field" />
   </form>
 </template>

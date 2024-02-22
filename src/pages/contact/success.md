@@ -9,4 +9,4 @@ meta:
 
 Your message was successfully sent! Thank you! 
 
-<RouterLink to="/">Back to site</RouterLink>
+<p><RouterLink to="/"><- Back to site</RouterLink></p>
