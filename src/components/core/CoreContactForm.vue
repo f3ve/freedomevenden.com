@@ -42,6 +42,7 @@ async function handleSubmit(e: Event) {
     name="contact"
     class="flex flex-col items-center gap-6"
     data-netlify="true"
+    method="POST"
   >
     <core-input
       v-model="fields.name"
