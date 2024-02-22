@@ -24,6 +24,15 @@ body {
   --at-apply: font-header text-success;
 }
 
+.prose h1 a,
+.prose h3 a,
+.prose h2 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+  --at-apply: decoration-none hoverable rounded;
+}
+
 details {
   --at-apply: m-0, p-0;
 }

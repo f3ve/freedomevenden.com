@@ -28,9 +28,7 @@ useHead({
   <div class="relative m-a min-h-screen">
     <CoreAppHeader />
     <main style="padding-bottom: 100px" class="min-h-full">
-      <RouterView #="{ Component }">
-        <component :is="Component" />
-      </RouterView>
+      <RouterView />
     </main>
     <CoreFooter class="absolute bottom-0" />
     <core-toast />

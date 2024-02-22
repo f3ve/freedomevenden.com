@@ -24,6 +24,7 @@ declare module 'vue' {
     CoreSheet: typeof import('./src/components/core/CoreSheet.vue')['default']
     CoreTextarea: typeof import('./src/components/core/inputs/CoreTextarea.vue')['default']
     CoreToast: typeof import('./src/components/core/feedback/CoreToast.vue')['default']
+    PostsRecent: typeof import('./src/components/posts/PostsRecent.vue')['default']
     ProjectListItem: typeof import('./src/components/projects/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/components/projects/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

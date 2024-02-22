@@ -1,14 +1,14 @@
 import type { PageFrontmatter } from '@/types';
 import { formatDate } from '@/utils/dateHelpers';
 
-export function usePosts(path: string) {
+export function usePosts(limit?: number) {
   const router = useRouter();
   const search = ref('');
 
   const posts = computed<PageFrontmatter[]>(() => {
-    return router
+    let p = router
       .getRoutes()
-      .filter((route) => route.path.startsWith(path))
+      .filter((route) => route.path.startsWith('/blog/'))
       .map((route) => ({
         path: route.path,
         ...route.meta.frontmatter,
@@ -37,6 +37,12 @@ export function usePosts(path: string) {
 
         return 1;
       });
+
+    if (typeof limit !== 'undefined') {
+      p = p.slice(0, limit);
+    }
+
+    return p;
   });
 
   return {

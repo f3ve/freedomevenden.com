@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  postsPath: string;
-}>();
-
-const { posts, search } = usePosts(props.postsPath);
+const { posts, search } = usePosts();
 </script>
 
 <template>

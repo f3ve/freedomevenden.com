@@ -1,6 +1,7 @@
 .markdown-body p a,
 .markdown-body li a:not(.block) {
-  --at-apply: text-link;
+  --at-apply: text-link hoverable decoration-none rounded-t px-1 border-primary
+    border-b;
 }
 
 .markdown-body pre {
