@@ -34,8 +34,10 @@ const isActive = computed(() => props.active || link?.isActive);
     :href="href"
     class="relative core-btn"
     :class="{
-      'bg-primary': isActive && !underline && !noBg,
-      'text-button': isActive && !noBg && !underline,
+      'bg-primary':
+        (isActive || typeof isActive === 'undefined') && !underline && !noBg,
+      'text-button':
+        (isActive || typeof isActive === 'undefined') && !underline && !noBg,
     }"
     :disabled="isActive || disabled"
     @click="link?.navigate"

@@ -11,9 +11,12 @@ const fields = reactive({
 
 const toast = useToastStore();
 
-const { isLoading, execute } = useAsyncState(async (e: Event) => {
+const { isLoading, execute, error } = useAsyncState(async (e: Event) => {
   if (e.target) {
-    const urlEncodedData = new URLSearchParams(fields).toString();
+    const urlEncodedData = new URLSearchParams({
+      formName: 'contact',
+      ...fields,
+    }).toString();
 
     return axios
       .post('/', urlEncodedData, {
@@ -27,7 +30,9 @@ const { isLoading, execute } = useAsyncState(async (e: Event) => {
 
 async function handleSubmit(e: Event) {
   await execute(undefined, e);
-  toast.show('Message was sent successfully. Thanks for reaching out!');
+  if (!error.value)
+    toast.show('Message was sent successfully. Thanks for reaching out!');
+  else toast.show('Something went wrong. Please try again later.', 'error');
 }
 </script>
 
@@ -36,7 +41,7 @@ async function handleSubmit(e: Event) {
     id="contact-form"
     name="contact"
     class="flex flex-col items-center gap-6"
-    netlify
+    data-netlify="true"
     @submit.prevent="handleSubmit"
   >
     <core-input
@@ -47,14 +52,16 @@ async function handleSubmit(e: Event) {
       class="w-full"
       required
     />
+
     <core-input
       v-model="fields.contactMethod"
-      label="How should we contact you?"
+      label="How would you like to be contact?"
       placeholder="Enter an email address, twitter handle, or discord username"
       name="contact method"
       class="w-full"
       required
     />
+
     <core-input
       v-model="fields.subject"
       label="Subject"
@@ -63,6 +70,7 @@ async function handleSubmit(e: Event) {
       class="w-full"
       required
     />
+
     <core-textarea
       v-model="fields.message"
       label="Message"
@@ -72,7 +80,7 @@ async function handleSubmit(e: Event) {
       required
     />
 
-    <core-btn class="w-fit bg-primary" type="submit" :loading="isLoading">
+    <core-btn class="w-fit" type="submit" :loading="isLoading">
       Submit
     </core-btn>
   </form>

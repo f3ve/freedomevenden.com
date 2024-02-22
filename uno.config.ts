@@ -50,7 +50,7 @@ export default defineConfig({
       hoverable: 'transition-shadow @hover:bg-lighten',
       'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
-        'text-base transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
+        'transition-colors cursor-pointer rounded-lg px-2 py-1 decoration-none hoverable flex items-center justify-center if-disabled',
     },
     [
       /fe-border$|fe-border-(x|y|b|t|l|r)$/,

@@ -14,6 +14,8 @@ I'm Freedom. Welcome to my little corner of the internet. I'm a Software Enginee
 
 If you're interested in supporting me and my work, consider [buying me a beer 🍺](https://www.buymeacoffee.com/f3ve) or [sponsoring me on GitHub](https://github.com/sponsors/f3ve).
 
+If you want to get in touch feel free to <RouterLink to="/contact">contact me</RouterLink>
+
 ## Recent Posts
 
 <PostsRecent />

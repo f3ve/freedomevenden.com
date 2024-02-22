@@ -24,6 +24,7 @@ const { toggleDark } = useTheme();
         icon="i-ri-twitter-x-fill"
         target="_blank"
         title="twitter"
+        no-bg
       />
       <core-btn
         rel="noopener"
@@ -31,6 +32,7 @@ const { toggleDark } = useTheme();
         icon="i-mdi-mastodon"
         target="_blank"
         title="Mastodon"
+        no-bg
       />
       <core-btn
         icon="i-mdi-github"
@@ -38,12 +40,14 @@ const { toggleDark } = useTheme();
         target="_blank"
         rel="noopener"
         title="GitHub"
+        no-bg
       />
       <core-btn
         icon="i-ci-sun dark:i-ci-moon"
         aria-label="Toggle Theme"
         title="Toggle Theme"
         @click="toggleDark()"
+        no-bg
       />
     </address>
 
