@@ -33,7 +33,9 @@ const { isLoading } = useAsyncState(async (e: Event) => {
     name="contact"
     class="flex flex-col items-center gap-6"
     data-netlify="true"
+    netlify-honeypot="bot-field"
     method="POST"
+    action="/contact/success"
   >
     <core-input
       v-model="fields.name"
