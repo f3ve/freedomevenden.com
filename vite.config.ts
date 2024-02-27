@@ -1,5 +1,5 @@
 // Learn more about Vite: https://vitejs.dev/
-import { defineConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 
 import fs from 'fs-extra';
 import { fileURLToPath, URL } from 'node:url';
@@ -34,6 +34,7 @@ import generateSitemap from 'vite-ssg-sitemap';
 
 export default defineConfig({
   optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/core'],
     entries: ['./src/**/*.vue'],
   },
 
@@ -84,9 +85,12 @@ export default defineConfig({
       },
     }),
 
-    // @vitejs/plugin-vue: https://github.com/posva/unplugin-vue-router
+    // @vitejs/plugin-vue: https://github.com/vitejs/vite-plugin-vue
     vue({
       include: [/\.vue$/, /\.md$/],
+      script: {
+        propsDestructure: true,
+      },
     }),
 
     // unplugin-vue-markdown: https://github.com/unplugin/unplugin-vue-markdown
@@ -103,11 +107,11 @@ export default defineConfig({
         });
         md.use(toc, { includeLevel: [1, 2, 3, 4] });
         md.use(markdownItHighlights, {
-          auto: true, // default true
-          code: true, //default true
-          register: null, // default null
-          inline: true, // default false
-          ignoreIllegals: true, // default true
+          auto: true,
+          code: true,
+          register: null,
+          inline: true,
+          ignoreIllegals: true,
         });
         md.use(linkAttrs, {
           matcher: (link: string) => /^https?:\/\//.test(link),
@@ -157,5 +161,7 @@ export default defineConfig({
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
+
+    splitVendorChunkPlugin(),
   ],
 });

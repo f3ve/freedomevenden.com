@@ -21,8 +21,7 @@
           window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        const mode =
-          window.localStorage.getItem('vueuse-color-scheme') || 'auto';
+        const mode = localStorage.getItem('vueuse-color-scheme') || 'auto';
 
         if (mode === 'dark' || (prefersDark && mode !== 'light')) {
           document.documentElement.classList.toggle('dark', true);

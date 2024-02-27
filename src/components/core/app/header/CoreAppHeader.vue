@@ -5,15 +5,18 @@ const { toggleDark } = useTheme();
 <template>
   <header
     class="top-0 z-1000 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-background"
+    style="height: 73px"
   >
     <div class="flex items-center">
-      <core-btn to="/" noBg>
+      <router-link to="/" noBg class="mr-1 rounded hoverable">
         <img
           src="/images/f3ve-logo-50x50.webp"
           alt="Freedom Evenden's website logo"
-          width="40"
+          width="40px"
+          height="40px"
+          loading="eager"
         />
-      </core-btn>
+      </router-link>
       <core-nav-buttons className="hidden sm:flex" />
     </div>
 
