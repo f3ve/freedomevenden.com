@@ -10,8 +10,8 @@ declare global {
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const createPinia: typeof import('pinia')['createPinia']
-  const createRouter: typeof import('vue-router/auto')['createRouter']
-  const createWebHistory: typeof import('vue-router/auto')['createWebHistory']
+  const createRouter: typeof import('vue-router')['createRouter']
+  const createWebHistory: typeof import('vue-router')['createWebHistory']
   const customRef: typeof import('vue')['customRef']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
@@ -75,8 +75,8 @@ declare global {
   const useLink: typeof import('vue-router')['useLink']
   const useOnClickOutside: typeof import('./src/composables/useOnClickOutside')['useOnClickOutside']
   const usePosts: typeof import('./src/composables/usePosts')['usePosts']
-  const useRoute: typeof import('vue-router/auto')['useRoute']
-  const useRouter: typeof import('vue-router/auto')['useRouter']
+  const useRoute: typeof import('vue-router')['useRoute']
+  const useRouter: typeof import('vue-router')['useRouter']
   const useScrollLocker: typeof import('./src/composables/useScrollLocker')['useScrollLocker']
   const useSearch: typeof import('./src/composables/useSearch')['useSearch']
   const useSearchOverlay: typeof import('./src/store/searchOverlay')['useSearchOverlay']
@@ -107,13 +107,11 @@ declare module 'vue' {
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
-    readonly createRouter: UnwrapRef<typeof import('vue-router/auto')['createRouter']>
-    readonly createWebHistory: UnwrapRef<typeof import('vue-router/auto')['createWebHistory']>
+    readonly createRouter: UnwrapRef<typeof import('vue-router')['createRouter']>
+    readonly createWebHistory: UnwrapRef<typeof import('vue-router')['createWebHistory']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
-    readonly defineLoader: UnwrapRef<typeof import('vue-router/auto')['defineLoader']>
-    readonly definePage: UnwrapRef<typeof import('unplugin-vue-router/runtime')['_definePage']>
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
@@ -134,8 +132,6 @@ declare module 'vue' {
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router/auto')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router/auto')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
     readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
@@ -170,8 +166,8 @@ declare module 'vue' {
     readonly useFocus: UnwrapRef<typeof import('./src/composables/useFocus')['useFocus']>
     readonly useOnClickOutside: UnwrapRef<typeof import('./src/composables/useOnClickOutside')['useOnClickOutside']>
     readonly usePosts: UnwrapRef<typeof import('./src/composables/usePosts')['usePosts']>
-    readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
-    readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
+    readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
     readonly useScrollLocker: UnwrapRef<typeof import('./src/composables/useScrollLocker')['useScrollLocker']>
     readonly useSearch: UnwrapRef<typeof import('./src/composables/useSearch')['useSearch']>
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
@@ -194,13 +190,11 @@ declare module '@vue/runtime-core' {
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
-    readonly createRouter: UnwrapRef<typeof import('vue-router/auto')['createRouter']>
-    readonly createWebHistory: UnwrapRef<typeof import('vue-router/auto')['createWebHistory']>
+    readonly createRouter: UnwrapRef<typeof import('vue-router')['createRouter']>
+    readonly createWebHistory: UnwrapRef<typeof import('vue-router')['createWebHistory']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
-    readonly defineLoader: UnwrapRef<typeof import('vue-router/auto')['defineLoader']>
-    readonly definePage: UnwrapRef<typeof import('unplugin-vue-router/runtime')['_definePage']>
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
@@ -221,8 +215,6 @@ declare module '@vue/runtime-core' {
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router/auto')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router/auto')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
     readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
@@ -257,8 +249,8 @@ declare module '@vue/runtime-core' {
     readonly useFocus: UnwrapRef<typeof import('./src/composables/useFocus')['useFocus']>
     readonly useOnClickOutside: UnwrapRef<typeof import('./src/composables/useOnClickOutside')['useOnClickOutside']>
     readonly usePosts: UnwrapRef<typeof import('./src/composables/usePosts')['usePosts']>
-    readonly useRoute: UnwrapRef<typeof import('vue-router/auto')['useRoute']>
-    readonly useRouter: UnwrapRef<typeof import('vue-router/auto')['useRouter']>
+    readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
+    readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
     readonly useScrollLocker: UnwrapRef<typeof import('./src/composables/useScrollLocker')['useScrollLocker']>
     readonly useSearch: UnwrapRef<typeof import('./src/composables/useSearch')['useSearch']>
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>

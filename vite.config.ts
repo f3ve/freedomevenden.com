@@ -3,18 +3,15 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite';
 
 import fs from 'fs-extra';
 import { fileURLToPath, URL } from 'node:url';
+import { resolve } from 'node:path';
 
 // Vue
 import vue from '@vitejs/plugin-vue';
-import VueRouter from 'unplugin-vue-router/vite';
 
 // QOL
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import {
-  getPascalCaseRouteName,
-  VueRouterAutoImports,
-} from 'unplugin-vue-router';
+import Pages from 'vite-plugin-pages';
 
 // CSS Plugins
 import UnoCSS from 'unocss/vite';
@@ -47,6 +44,10 @@ export default defineConfig({
   // vite-ssg https://github.com/antfu/vite-ssg
   ssgOptions: {
     formatting: 'minify',
+    script: 'async',
+    crittersOptions: {
+      preload: false,
+    },
     format: 'cjs',
     onFinished() {
       generateSitemap({
@@ -57,34 +58,6 @@ export default defineConfig({
   },
 
   plugins: [
-    // unplugin-vue-router: https://github.com/posva/unplugin-vue-router
-    VueRouter({
-      routesFolder: 'src/pages',
-      extensions: ['.vue', '.md'],
-      exclude: ['**/components/*'],
-      routeBlockLang: 'yaml',
-
-      // Setting the base index file as 'sync' import. All other files are 'async'
-      importMode: (filepath: string) =>
-        filepath.endsWith('src/pages/index/index.md') ? 'sync' : 'async',
-
-      getRouteName(node) {
-        return getPascalCaseRouteName(node);
-      },
-
-      extendRoute(route) {
-        // Grab the path to the routes component file.
-        const path = route.components.get('default');
-
-        if (path?.endsWith('.md')) {
-          // Adding Markdown file frontmatter to the meta info of the route.
-          const markdown = fs.readFileSync(path, 'utf-8');
-          const { data } = matter(markdown);
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data });
-        }
-      },
-    }),
-
     // @vitejs/plugin-vue: https://github.com/vitejs/vite-plugin-vue
     vue({
       include: [/\.vue$/, /\.md$/],
@@ -128,9 +101,8 @@ export default defineConfig({
       imports: [
         'vue',
         'pinia',
-        VueRouterAutoImports,
         {
-          'vue-router/auto': [
+          'vue-router': [
             'createRouter',
             'createWebHistory',
             'useRouter',
@@ -160,6 +132,22 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+    }),
+
+    Pages({
+      extensions: ['vue', 'md'],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1));
+
+        if (path?.endsWith('.md')) {
+          // Adding Markdown file frontmatter to the meta info of the route.
+          const markdown = fs.readFileSync(path, 'utf-8');
+          const { data } = matter(markdown);
+          route.meta = Object.assign(route.metac || {}, { frontmatter: data });
+        }
+
+        return route;
+      },
     }),
 
     splitVendorChunkPlugin(),
