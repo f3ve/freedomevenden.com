@@ -4,7 +4,7 @@ const { toggleDark } = useTheme();
 
 <template>
   <header
-    class="top-0 z-1000 m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-background"
+    class="m-a w-full flex items-center justify-between px-6 py-4 fe-border-b bg-background"
     style="height: 73px"
   >
     <div class="flex items-center">

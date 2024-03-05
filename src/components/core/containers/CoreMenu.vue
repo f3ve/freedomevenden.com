@@ -13,7 +13,7 @@ function showMenu() {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative z-1000">
     <slot
       name="toggler"
       class="menu-toggler"
