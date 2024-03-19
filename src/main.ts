@@ -1,5 +1,6 @@
 import '@unocss/reset/tailwind.css';
 import 'unfonts.css';
+import '@f3ve/vue-notify/dist/style.css';
 import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';

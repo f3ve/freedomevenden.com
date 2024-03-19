@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@f3ve/vue-notify':
-    specifier: ^0.2.5
-    version: 0.2.5(pinia@2.1.7)(vue@3.4.21)
+    specifier: ^0.3.1
+    version: 0.3.1(pinia@2.1.7)(vue@3.4.21)
   '@fontsource-variable/fira-code':
     specifier: ^5.0.17
     version: 5.0.17
@@ -55,6 +55,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.11.25
     version: 20.11.25
+  '@types/tinycolor2':
+    specifier: ^1.4.6
+    version: 1.4.6
   '@unocss/reset':
     specifier: ^0.58.5
     version: 0.58.5
@@ -103,6 +106,9 @@ devDependencies:
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
+  tinycolor2:
+    specifier: ^1.6.0
+    version: 1.6.0
   typescript:
     specifier: ^5.4.2
     version: 5.4.2
@@ -744,12 +750,43 @@ packages:
       - typescript
     dev: true
 
-  /@f3ve/vue-notify@0.2.5(pinia@2.1.7)(vue@3.4.21):
-    resolution: {integrity: sha512-FDKSZFcqyOi2A859ZSx2dbxKg+lcXVOkezYpuMsyPKdyEXnV8/jN1+PCHScv5+8gj/ceOARzjN6lGJLm1PpuXQ==}
+  /@f3ve/vue-notify-components@0.3.1(pinia@2.1.7)(vue@3.4.21):
+    resolution: {integrity: sha512-ZHyUHFGbRz3AlEI7FZpGhxqZ6ixv9G7+s8g9y/7jpRLEnz+5atyo29TQ36Oy4rS9ZNgGJ6aRzHtA0X9nroj3ww==}
     peerDependencies:
       pinia: ^2.1.7
       vue: ^3.4.21
     dependencies:
+      pinia: 2.1.7(typescript@5.4.2)(vue@3.4.21)
+      vue: 3.4.21(typescript@5.4.2)
+    dev: false
+
+  /@f3ve/vue-notify-composables@0.3.1(vue@3.4.21):
+    resolution: {integrity: sha512-CA6e0atDnDNpQVrr1Jt6/V3Pm8+y6u+Wh+P1/BWLjVGDoti4TnCAlgqQp7TfrG/kcAkOwSsqLIKDZZSQrC8syQ==}
+    peerDependencies:
+      vue: ^3.4.21
+    dependencies:
+      vue: 3.4.21(typescript@5.4.2)
+    dev: false
+
+  /@f3ve/vue-notify-store@0.3.1(pinia@2.1.7)(vue@3.4.21):
+    resolution: {integrity: sha512-37Cn6Vu5o+0kmCAPpfOP1OQ+pJrIQrYts7Y89ZKKdsHl6SBNku6O5v6Dvr2QPHUDHsQpXyFNYwr9p6Z6s6XDJg==}
+    peerDependencies:
+      pinia: ^2.1.7
+      vue: ^3.4.21
+    dependencies:
+      pinia: 2.1.7(typescript@5.4.2)(vue@3.4.21)
+      vue: 3.4.21(typescript@5.4.2)
+    dev: false
+
+  /@f3ve/vue-notify@0.3.1(pinia@2.1.7)(vue@3.4.21):
+    resolution: {integrity: sha512-wXgQeMN3myAk1QCHN5oJAMIUv8Bz32D43Bl6DwCG+BPsqIb+57QyGeixqEdY+jf6ADEAPHULyct30PWbSVyd8g==}
+    peerDependencies:
+      pinia: ^2.1.7
+      vue: ^3.4.21
+    dependencies:
+      '@f3ve/vue-notify-components': 0.3.1(pinia@2.1.7)(vue@3.4.21)
+      '@f3ve/vue-notify-composables': 0.3.1(vue@3.4.21)
+      '@f3ve/vue-notify-store': 0.3.1(pinia@2.1.7)(vue@3.4.21)
       pinia: 2.1.7(typescript@5.4.2)(vue@3.4.21)
       vue: 3.4.21(typescript@5.4.2)
     dev: false
@@ -1064,6 +1101,10 @@ packages:
 
   /@types/semver@7.5.8:
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+    dev: true
+
+  /@types/tinycolor2@1.4.6:
+    resolution: {integrity: sha512-iEN8J0BoMnsWBqjVbWH/c0G0Hh7O21lpR2/+PrvAVgWdzL7eexIFm4JN/Wn10PTcmNdtS6U67r499mlWMXOxNw==}
     dev: true
 
   /@types/web-bluetooth@0.0.20:
@@ -3765,6 +3806,10 @@ packages:
 
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
+    dev: true
+
+  /tinycolor2@1.6.0:
+    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
     dev: true
 
   /to-fast-properties@2.0.0:

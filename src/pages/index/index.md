@@ -9,6 +9,8 @@ meta:
     content: website
 ---
 
+<CoreAvatar src="/images/freedom-evenden.webp" class="mx-auto" :size="200" eager />
+
 ## Hey 👋
 I'm Freedom. Welcome to my little corner of the internet. I'm a Software Engineer based in Alaska. I specialize in Frontend Web Development, particularly building [Vue](https://vuejs.org/) based websites and applications. I also maintain a few <RouterLink to="/projects">open-source projects</RouterLink>.
 

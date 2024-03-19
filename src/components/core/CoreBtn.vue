@@ -1,18 +1,32 @@
 <script lang="ts" setup>
 import { useLink, type RouteLocationRaw } from 'vue-router';
 
-const props = defineProps<{
-  to?: RouteLocationRaw;
-  replace?: boolean;
-  href?: string;
-  icon?: string;
-  underline?: boolean;
-  noBg?: boolean;
-  loading?: boolean;
-  tagName?: Element['tagName'];
-  active?: boolean;
-  disabled?: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    to?: RouteLocationRaw;
+    replace?: boolean;
+    href?: string;
+    icon?: string;
+    underline?: boolean;
+    noBg?: boolean;
+    loading?: boolean;
+    tagName?: Element['tagName'];
+    active?: boolean;
+    disabled?: boolean;
+    color?:
+      | 'primary'
+      | 'secondary'
+      | 'selection'
+      | 'accent'
+      | 'success'
+      | 'warning'
+      | 'error'
+      | 'link';
+  }>(),
+  {
+    color: 'primary',
+  },
+);
 
 const link = props.to
   ? reactive(
@@ -27,18 +41,19 @@ const href = computed(() => (link?.href ? link.href : props.href));
 const tag = computed(() => (href.value ? 'a' : props.tagName || 'button'));
 
 const isActive = computed(() => props.active || link?.isActive);
+const hideBackground = computed(
+  () =>
+    !(isActive.value || typeof isActive.value === 'undefined') ||
+    !!props.underline ||
+    !!props.noBg,
+);
 </script>
 
 <template>
   <tag
     :href="href"
     class="relative core-btn"
-    :class="{
-      'bg-primary':
-        (isActive || typeof isActive === 'undefined') && !underline && !noBg,
-      'text-button':
-        (isActive || typeof isActive === 'undefined') && !underline && !noBg,
-    }"
+    :class="['relative core-btn', ...(!hideBackground ? [`bg-${color}`] : [])]"
     :disabled="isActive || disabled"
     @click="link?.navigate"
   >

@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CoreAppHeader: typeof import('./src/components/core/app/header/CoreAppHeader.vue')['default']
+    CoreAvatar: typeof import('./src/components/core/CoreAvatar.vue')['default']
     CoreBtn: typeof import('./src/components/core/CoreBtn.vue')['default']
     CoreContactForm: typeof import('./src/components/core/CoreContactForm.vue')['default']
     CoreDivider: typeof import('./src/components/core/CoreDivider.vue')['default']
@@ -23,7 +24,7 @@ declare module 'vue' {
     CorePostListItem: typeof import('./src/components/core/posts/CorePostListItem.vue')['default']
     CoreSheet: typeof import('./src/components/core/CoreSheet.vue')['default']
     CoreTextarea: typeof import('./src/components/core/inputs/CoreTextarea.vue')['default']
-    CoreToast: typeof import('./src/components/core/feedback/CoreToast.vue')['default']
+    NotifyDemo: typeof import('./src/components/posts/NotifyDemo.vue')['default']
     PostsRecent: typeof import('./src/components/posts/PostsRecent.vue')['default']
     ProjectListItem: typeof import('./src/components/projects/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/components/projects/ProjectsList.vue')['default']

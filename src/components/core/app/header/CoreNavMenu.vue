@@ -10,16 +10,16 @@ const { toggleDark } = useTheme();
     <nav class="pa-4 fe-border-b">
       <ul class="blog-list ma-0 list-none pl-0">
         <li>
-          <core-btn to="/blog" title="Blog">Blog</core-btn>
+          <core-btn to="/blog">Blog</core-btn>
         </li>
         <li>
-          <core-btn to="/projects" title="Projects">Projects</core-btn>
+          <core-btn to="/projects">Projects</core-btn>
         </li>
         <li>
-          <core-btn to="/uses" title>Uses</core-btn>
+          <core-btn to="/uses">Uses</core-btn>
         </li>
         <li>
-          <core-btn to="/contact" title>Contact</core-btn>
+          <core-btn to="/contact">Contact</core-btn>
         </li>
       </ul>
     </nav>

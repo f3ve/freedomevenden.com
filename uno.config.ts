@@ -5,6 +5,7 @@ import {
   presetIcons,
   transformerDirectives,
 } from 'unocss';
+import tinycolor from 'tinycolor2';
 
 export default defineConfig({
   safelist: [
@@ -13,6 +14,14 @@ export default defineConfig({
     'animate-order-2',
     'animate-order-3',
     'animate-order-4',
+    'bg-primary',
+    'bg-secondary',
+    'bg-selection',
+    'bg-accent',
+    'bg-success',
+    'bg-warning',
+    'bg-error',
+    'bg-link',
   ],
   content: {
     pipeline: {
@@ -81,6 +90,19 @@ export default defineConfig({
       'font-header',
       {
         'font-family': "'Fira Code Variable', monospace",
+      },
+    ],
+    [
+      /^bg-(dark|light)-(.*)$/,
+      ([, m, c], { theme }) => {
+        if (theme.colors[m][c]) {
+          return {
+            color: tinycolor(theme.colors[m][c]).isDark()
+              ? '#ffffff'
+              : '#000000',
+            'background-color': theme.colors[m][c],
+          };
+        }
       },
     ],
     [

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue';
+import { VNotifications } from '@f3ve/vue-notify';
 
 useHead({
   title: 'Freedom Evenden',
@@ -31,6 +32,6 @@ useHead({
       <RouterView />
     </main>
     <CoreFooter class="absolute bottom-0" />
-    <core-toast />
+    <VNotifications />
   </div>
 </template>

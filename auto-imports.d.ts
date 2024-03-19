@@ -173,7 +173,6 @@ declare module 'vue' {
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/composables/useTheme')['useTheme']>
-    readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
     readonly useUserAgent: UnwrapRef<typeof import('./src/composables/useUserAgent')['useUserAgent']>
     readonly useVisibility: UnwrapRef<typeof import('./src/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
@@ -256,7 +255,6 @@ declare module '@vue/runtime-core' {
     readonly useSearchOverlay: UnwrapRef<typeof import('./src/store/searchOverlay')['useSearchOverlay']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTheme: UnwrapRef<typeof import('./src/composables/useTheme')['useTheme']>
-    readonly useToastStore: UnwrapRef<typeof import('./src/store/toast')['useToastStore']>
     readonly useUserAgent: UnwrapRef<typeof import('./src/composables/useUserAgent')['useUserAgent']>
     readonly useVisibility: UnwrapRef<typeof import('./src/composables/useVisibility')['useVisibility']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
