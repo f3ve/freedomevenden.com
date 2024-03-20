@@ -52,22 +52,23 @@ const hideBackground = computed(
 <template>
   <tag
     :href="href"
-    class="relative core-btn"
     :class="['relative core-btn', ...(!hideBackground ? [`bg-${color}`] : [])]"
     :disabled="isActive || disabled"
     @click="link?.navigate"
   >
-    <slot name="icon" :class="{ 'mr-2': !!$slots.default }">
-      <i
-        v-if="icon"
-        :class="{
-          ...(!!icon && { [icon]: true }),
-          'mr-2': !!$slots.default,
-        }"
-      />
-    </slot>
-    <slot v-if="!loading" />
-    <i v-else class="i-svg-spinners-ring-resize" />
+    <div :class="[{ 'op-0': loading }]">
+      <slot name="icon" :class="{ 'mr-2': !!$slots.default }">
+        <i
+          v-if="icon"
+          :class="{
+            ...(!!icon && { [icon]: true }),
+            'mr-2': !!$slots.default,
+          }"
+        />
+      </slot>
+      <slot />
+    </div>
+    <i v-if="loading" class="i-svg-spinners-ring-resize absolute op70" />
     <core-divider
       v-if="underline"
       :full-width="isActive"
