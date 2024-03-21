@@ -143,7 +143,7 @@ export default defineConfig({
           // Adding Markdown file frontmatter to the meta info of the route.
           const markdown = fs.readFileSync(path, 'utf-8');
           const { data } = matter(markdown);
-          route.meta = Object.assign(route.metac || {}, { frontmatter: data });
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data });
         }
 
         return route;
