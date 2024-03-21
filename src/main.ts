@@ -4,6 +4,7 @@ import '@f3ve/vue-notify/dist/style.css';
 import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';
+import 'vue3-carousel/dist/carousel.css';
 import 'uno.css';
 
 import App from '@/App.vue';

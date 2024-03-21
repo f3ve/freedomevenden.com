@@ -6,4 +6,6 @@ export type PageFrontmatter = {
   datePublished?: string;
   dateUpdated?: string;
   image?: string;
+  /** Role I had on a project */
+  role?: string;
 };
