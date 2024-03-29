@@ -15,7 +15,7 @@ const props = defineProps<{
 }>();
 
 const imageRootUrl =
-  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/obskur/';
+  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/images/';
 
 const source = computed<string | undefined>(() =>
   props.name ? `${imageRootUrl}${props.name}` : props.src,

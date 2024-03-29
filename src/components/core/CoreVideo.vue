@@ -2,7 +2,7 @@
 const props = defineProps<{ name: string }>();
 
 const videoUrlRoot =
-  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/obskur/';
+  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/videos/';
 
 const webm = computed(() => `${videoUrlRoot}${props.name}.webm`);
 const mp4 = computed(() => `${videoUrlRoot}${props.name}.mp4`);

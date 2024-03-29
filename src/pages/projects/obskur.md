@@ -1,8 +1,10 @@
 ---
-title: OBSKUR - Freedom Evenden
+title: OBSKUR
 subtitle: Broadcasting Software built in Unreal Engine 5.
 description: A project description of OBSKUR from Freedom Evenden's Portfolio.
 role: Frontend Web Developer
+type: job
+dates: June 2020 - Present
 meta:
   - name: type
     content: website
@@ -10,38 +12,36 @@ meta:
 
 [OBSKUR](https://obskur.com) is a broadcasting software built with Unreal Engine 5. It features a built in VTuber character creator and a 3D environment builder powered by Unreal Engine 5.
 
-
-
 ## Table of Contents
 [[toc]]
 
 ## Videos
 
 ### Marketing Landing Page
-<CoreVideo name="obskur-marketing-website" />
+<CoreVideo name="obskur/obskur-marketing-website" />
 
 ### Marketing Blog
-<CoreVideo name="obskur-marketing-website-blog" />
+<CoreVideo name="obskur/obskur-marketing-website-blog" />
 
 ### Marketplace
-<CoreVideo name="obskur-marketplace" />
+<CoreVideo name="obskur/obskur-marketplace" />
 
 ## Screenshots
 
 ### Landing Screen Dark
-<CoreImg name="landing-dark.webp" alt="obskur marketing landing page in dark theme" />
+<CoreImg name="obskur/landing-dark.webp" alt="obskur marketing landing page in dark theme" />
 
 ### Landing Screen Light
-<CoreImg name="landing-light.webp" alt="obskur marketing landing page in light theme" />
+<CoreImg name="obskur/landing-light.webp" alt="obskur marketing landing page in light theme" />
 
 ### Marketplace
-<CoreImg name="marketplace.webp" alt="obskur marketplace" />
+<CoreImg name="obskur/marketplace.webp" alt="obskur marketplace" />
 
 ### Marketplace Product Page
-<CoreImg name="product-page.webp" alt="obskur marketplace browse page" />
+<CoreImg name="obskur/product-page.webp" alt="obskur marketplace browse page" />
 
 ### Help Page
-<CoreImg name="help-dark.webp" alt="obskur marketplace help page" />
+<CoreImg name="obskur/help-dark.webp" alt="obskur marketplace help page" />
 
 ## My Contributions
 
