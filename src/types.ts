@@ -8,4 +8,6 @@ export type PageFrontmatter = {
   image?: string;
   /** Role I had on a project */
   role?: string;
+  dates?: string;
+  type?: string;
 };
