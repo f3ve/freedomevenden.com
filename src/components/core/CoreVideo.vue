@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{ name: string }>();
 
-const videoUrlRoot =
-  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/videos/';
+const videoUrlRoot = 'https://di4rxb3cqg7tj.cloudfront.net/videos/';
 
 const webm = computed(() => `${videoUrlRoot}${props.name}.webm`);
 const mp4 = computed(() => `${videoUrlRoot}${props.name}.mp4`);

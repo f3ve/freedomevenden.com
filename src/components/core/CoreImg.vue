@@ -14,8 +14,7 @@ const props = defineProps<{
   alt?: string;
 }>();
 
-const imageRootUrl =
-  'https://freedomevenden-website-assets.s3.us-west-2.amazonaws.com/images/';
+const imageRootUrl = 'https://di4rxb3cqg7tj.cloudfront.net/images/';
 
 const source = computed<string | undefined>(() =>
   props.name ? `${imageRootUrl}${props.name}` : props.src,
