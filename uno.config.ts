@@ -54,6 +54,7 @@ export default defineConfig({
       'icon-mac-cmd': 'i-fluent-key-command-24-regular',
       'icon-ctrl': 'i-fluent-control-button-24-regular',
       'icon-close': 'i-mdi-close',
+      'icon-fullscreen': 'i-mdi-fullscreen',
       hoverable: 'transition-shadow @hover:bg-lighten',
       'if-disabled': 'disabled:bg-lighten disabled:text-gray',
       'core-btn':
