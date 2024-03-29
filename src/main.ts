@@ -5,7 +5,6 @@ import './styles/main.css';
 import './styles/markdown.css';
 import './styles/highlight-js.css';
 import 'uno.css';
-import 'vue3-carousel/dist/carousel.css';
 
 import App from '@/App.vue';
 import { ViteSSG } from 'vite-ssg';
