@@ -29,23 +29,12 @@ const { toggleDark } = useTheme();
         <li>
           <core-btn
             rel="noopener"
-            href="https://mastodon.social/@f3ve"
-            target="_blank"
-            icon="i-mdi-mastodon"
-            no-bg
-          >
-            Mastodon
-          </core-btn>
-        </li>
-        <li>
-          <core-btn
-            rel="noopener"
-            href="https://twitter.com/f3ve_"
-            icon="i-ri-twitter-x-fill"
+            href="https://www.linkedin.com/in/freedom-evenden-dev/"
+            icon="i-mdi-linkedin"
             target="_blank"
             no-bg
           >
-            Twitter
+            LinkedIn
           </core-btn>
         </li>
         <li>

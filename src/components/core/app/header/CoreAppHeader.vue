@@ -23,18 +23,10 @@ const { toggleDark } = useTheme();
     <address class="hidden items-center sm:flex">
       <core-btn
         rel="noopener"
-        href="https://twitter.com/f3ve_"
-        icon="i-ri-twitter-x-fill"
+        href="https://www.linkedin.com/in/freedom-evenden-dev/"
+        icon="i-mdi-linkedin"
         target="_blank"
-        title="twitter"
-        no-bg
-      />
-      <core-btn
-        rel="noopener"
-        href="https://mastodon.social/@f3ve"
-        icon="i-mdi-mastodon"
-        target="_blank"
-        title="Mastodon"
+        title="LinkedIn"
         no-bg
       />
       <core-btn
