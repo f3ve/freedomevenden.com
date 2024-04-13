@@ -1,6 +1,6 @@
 ---
 title: Vue Markdown-it v0.2.2
-datePublished: April 13, 2024 AKST
+datePublished: April 13, 2024 11:00
 description: Announcing the release of @f3ve/vue-markdown-it v0.2.2
 meta:
   - name: type
