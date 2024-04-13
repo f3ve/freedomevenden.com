@@ -1,6 +1,6 @@
 ---
 title: Website Updates February 26th, 2024
-datePublished: 2024-02-26T12:00:00
+datePublished: February 26. 2024 12:00 PM
 description: Recent updates to Freedom Evenden's website.
 meta:
   - name: type

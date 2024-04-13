@@ -1,8 +1,8 @@
 ---
 title: How to Create Your Own Medium-Style Rich Text Editor in React
 description: Learn how to create a custom text editor from scratch using React and JavaScript
-datePublished: 2020-06-25T00:00:00
-dateUpdated: 2023-09-21T00:00:00
+datePublished: June 25, 2020 12:00:00
+dateUpdated: September 21, 2023 12:00:00
 meta:
   - name: keywords
     content: medium-style rich text editor, react, how to, create your own

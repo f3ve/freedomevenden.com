@@ -1,7 +1,7 @@
 ---
 title: Announcing Vue Notify
 description: Freedom Evenden is excited to announce his latest web dev project and give you a small sample.
-datePublished: 2024-03-20T12:00:00
+datePublished: March 20, 2024 12:00:00
 meta:
   - name: type
     content: article

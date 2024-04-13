@@ -1,8 +1,8 @@
 ---
 title: How to Create Custom Video Controls in React Native
 description: In this post I walk you through how to create custom controls for videos in React Native.
-datePublished: 2020-12-18T00:00:00
-dateUpdated: 2023-09-17T00:00:00
+datePublished: December 18, 2020 12:00
+dateUpdated: September 17, 2023 12:00
 meta:
   - name: keywords
     content: how to create custom video controls,react native,react,video controls

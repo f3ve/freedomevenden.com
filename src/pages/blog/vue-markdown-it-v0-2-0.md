@@ -1,6 +1,6 @@
 ---
 title: Vue Markdown-it v0.2.0
-datePublished: 2023-10-04T13:30:00
+datePublished: October 4, 2023 1:30 PM
 description: Announcing the release of @f3ve/vue-markdown-it v0.2.0
 meta:
   - name: type

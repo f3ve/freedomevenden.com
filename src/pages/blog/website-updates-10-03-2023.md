@@ -1,6 +1,6 @@
 ---
 title: Website Update October 3rd, 2023
-datePublished: 2023-10-04T00:00:00
+datePublished: October 3, 2023 12:00 PM
 description: I made some small changes to the layout, added social links, and more.
 meta:
   - name: type
