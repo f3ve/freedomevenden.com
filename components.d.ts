@@ -28,7 +28,6 @@ declare module 'vue' {
     CoreVideo: typeof import('./src/components/core/CoreVideo.vue')['default']
     NotifyDemo: typeof import('./src/components/posts/NotifyDemo.vue')['default']
     PostsRecent: typeof import('./src/components/posts/PostsRecent.vue')['default']
-    ProjectCarousel: typeof import('./src/components/projects/ProjectCarousel.vue')['default']
     ProjectListItem: typeof import('./src/components/projects/ProjectListItem.vue')['default']
     ProjectsList: typeof import('./src/components/projects/ProjectsList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
