@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue';
 import { VNotifications } from '@f3ve/vue-notify';
+import { doAThing } from './utils/generalHelpers';
+
+onMounted(() => {
+  doAThing();
+});
 
 useHead({
   title: 'Freedom Evenden',
